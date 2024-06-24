@@ -1,0 +1,2889 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Orange widget 小部件简介 | Dreamstar</title><meta name="author" content="dreamstar"><meta name="copyright" content="dreamstar"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Orange widget 小部件简介Data - 数据File - 文件 从输入文件读取数据的属性值。 输出  数据 - Data：来自文件中的数据集   File小部件读取输入数据文件（带有数据实例的数据表）然后将数据集发送到其输出通道。最近打开的文件的历史记录保存在部件(widget)中。该部件还包括一个目录，其中包含与Orange一起预装的示例数据集。 该小部件从Excel（.xlsx）、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Orange widget 小部件简介">
+<meta property="og:url" content="http://dreamstar.top/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/index.html">
+<meta property="og:site_name" content="Dreamstar">
+<meta property="og:description" content="Orange widget 小部件简介Data - 数据File - 文件 从输入文件读取数据的属性值。 输出  数据 - Data：来自文件中的数据集   File小部件读取输入数据文件（带有数据实例的数据表）然后将数据集发送到其输出通道。最近打开的文件的历史记录保存在部件(widget)中。该部件还包括一个目录，其中包含与Orange一起预装的示例数据集。 该小部件从Excel（.xlsx）、">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://dreamstar.top/img/for_post/orange_illustration_landing.png">
+<meta property="article:published_time" content="2024-03-18T14:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-24T15:00:00.000Z">
+<meta property="article:author" content="dreamstar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://dreamstar.top/img/for_post/orange_illustration_landing.png"><link rel="shortcut icon" href="../../../../../../../img/favicon-mf.ico"><link rel="canonical" href="http://dreamstar.top/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="../../../../../../../css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Orange widget 小部件简介',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-24 23:00:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="../img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="../tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="../music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="../Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="../movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('../../../../../../../img/for_post/orange_illustration_landing.png')"><nav id="nav"><span id="blog-info"><a href="../index.html" title="Dreamstar"><img class="site-icon" src="../img/favicon-mf.ico"/><span class="site-name">Dreamstar</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="../tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="../music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="../Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="../movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Orange widget 小部件简介</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-18T14:00:00.000Z" title="发表于 2024-03-18 22:00:00">2024-03-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-24T15:00:00.000Z" title="更新于 2024-06-24 23:00:00">2024-06-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../../../../../../../categories/Orange/">Orange</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Orange widget 小部件简介"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Orange-widget-小部件简介"><a href="#Orange-widget-小部件简介" class="headerlink" title="Orange widget 小部件简介"></a>Orange widget 小部件简介</h1><h1 id="Data-数据"><a href="#Data-数据" class="headerlink" title="Data - 数据"></a>Data - 数据</h1><h2 id="File-文件"><a href="#File-文件" class="headerlink" title="File - 文件"></a>File - 文件</h2><blockquote>
+<p>从输入文件读取数据的属性值。</p>
+<p><strong>输出</strong></p>
+<ul>
+<li>数据 - Data：来自文件中的数据集</li>
+</ul>
+</blockquote>
+<p><strong>File</strong>小部件读取输入数据文件（带有数据实例的数据表）然后将数据集发送到其输出通道。最近打开的文件的历史记录保存在部件(widget)中。该部件还包括一个目录，其中包含与Orange一起预装的示例数据集。</p>
+<p>该小部件从Excel（.xlsx）、简单制表符分隔的文件（.txt）、逗号分隔文件（.csv）或URL读取数据。有关其他格式，请参阅下面的“其他格式”部分。</p>
+<p><img src="images/File-stamped.png" alt="img"></p>
+<ol>
+<li><p>浏览以前打开的数据文件，或加载任何示例文件。</p>
+</li>
+<li><p>浏览数据文件。</p>
+</li>
+<li><p>重新加载当前选定的数据文件。</p>
+</li>
+<li><p>插入URL地址中的数据，包括Google表单中的数据。</p>
+</li>
+<li><p>加载数据集的信息：数据集大小、数据特征的数量和类型。</p>
+</li>
+<li><p>有关数据集中功能的其他信息。可以通过双击功能进行编辑。用户可以更改属性名称，为每个属性选择变量类型（Continuous、Nominal、String、Datetime），并选择如何进一步定义属性（Features、Targets或Meta）。用户还可以决定忽略属性。</p>
+</li>
+<li><p>浏览文档数据集。</p>
+</li>
+<li><p>制作报告。</p>
+</li>
+</ol>
+<p><strong>示例</strong></p>
+<p>大多数Orange工作流可能会从**文件(File)**部件开始。在下面的模式中，部件用于读取数据并发送到<code>数据表(Data Table)</code>和 <code>箱型图(Box Plot)</code>部件。</p>
+<p><img src="images/File-Workflow.png" alt="img"></p>
+<p>读取数据</p>
+<ul>
+<li>Orange可以导入任何逗号、.xlsx或制表符分隔的数据文件或URL链接。使用<strong>File</strong>部件，然后根据需要选择class和meta属性。</li>
+<li>要指定属性的域和类型，可以在属性名称前面加上标签，后缀哈希值。c表示类，m表示元属性，i表示忽略列，C、D、S表示连续、离散和字符串属性类型。示例：C#mpg、mS#name、i#dummy。</li>
+<li>Orange的原生格式是一个制表符分隔的文本文件，有三个标题行。第一行包含属性名称，第二行包含类型（连续-<em>continuous</em>、离散-<em>discrete</em>或字符串-<em>string</em>），第三行包含可选元素（类-<em>class</em>、元-<em>meta</em>或时间-<em>time</em>）。</li>
+</ul>
+<p><img src="images/spreadsheet-simple-head1.png" alt="img"></p>
+<p>在<a target="_blank" rel="noopener" href="https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/loading-your-data/index.html">此处</a>阅读有关加载数据的更多信息。</p>
+<p>其他格式</p>
+<p>支持的格式和加载它们的小部件：</p>
+<ul>
+<li>distance matrix - 距离矩阵：<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/unsupervised/distancefile/">距离文件</a></li>
+<li>rpredictive model - 预测模型：<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/model/loadmodel/">载入模型</a></li>
+<li>network - 网络：网络插件中的网络文件</li>
+<li>images - 图像：图像分析-Image Analytics插件中加载的图像</li>
+<li>text&#x2F;corpus - 文本&#x2F;语料库：文本插件中的语料库或导入文档</li>
+<li>single cell data - 单个单元数据：从单个单元数据插件中加载数据</li>
+<li>several spectroscopy files - 几个光谱文件：spectroscopy插件中的多文件</li>
+</ul>
+<h2 id="CSV-File-Import-CSV文件导入"><a href="#CSV-File-Import-CSV文件导入" class="headerlink" title="CSV File Import - CSV文件导入"></a>CSV File Import - CSV文件导入</h2><blockquote>
+<p>从CSV格式的文件中导入一个数据表。</p>
+<p><strong>输出</strong></p>
+<ul>
+<li><p>数据-Data：来自.csv文件中的数据集</p>
+</li>
+<li><p>数据帧-Data Frame：pandas包中的Dataframe对象</p>
+</li>
+</ul>
+</blockquote>
+<p>**CSV文件导入(CSV File Import)**部件读取逗号分隔的文件，并将数据集发送到其输出通道。文件分隔符可以是逗号、分号、空格、制表符或手动定义的分隔符。最近打开的文件的历史记录会保存在部件中。</p>
+<p>数据帧输出可以用在<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/pythonscript/">Python脚本部件(Python Script)</a>中，将数据帧的输出连接到<code>in_object</code>输入（例如<code>df=in_object</code>）。然后可以作为常规DataFrame进行使用。</p>
+<p>输入选项</p>
+<p>用户设置导入参数的导入窗口，可以通过按下部件中的导入选项重新打开。</p>
+<p>右键单击列名称以设置列类型。右键单击行索引（左侧），将行标记为页眉、跳过或普通数据行。</p>
+<p><img src="images/CSVFileImport-ImportOptions-stamped.png" alt="img"></p>
+<ol>
+<li>文件编码：默认为UTF-8，详见编码分章。</li>
+<li>导入设置：<ul>
+<li>单元分隔符：<ul>
+<li>Tab</li>
+<li>Comma - 逗号</li>
+<li>Semicolon - 分号</li>
+<li>Space - 空格</li>
+<li>其他（在右侧设置字段中的分隔符）</li>
+</ul>
+</li>
+<li>引号字符：“或”。定义什么是文本。</li>
+<li>数字分隔符：<ul>
+<li>分组：千位分隔符，例如1000</li>
+<li>小数：小数的分隔符，例如1.234</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>列类型：在预览中选择列并设置其类型。也可以通过右键单击所选列来设置列类型。<ul>
+<li>自动：Orange将自动尝试确定列类型。（默认）</li>
+<li>数字：用于连续数据类型，例如（1.23、1.32、1.42、1.32）</li>
+<li>分类：用于离散数据类型，例如（棕色、绿色、蓝色）</li>
+<li>文本：用于字符串数据类型，例如（John、Olivia、Mike、Jane）</li>
+<li>日期时间：用于时间变量，例如（1970-01-01）</li>
+<li>忽略：不输出该列。</li>
+</ul>
+</li>
+<li>“重置-Reset”可将设置恢复到先前设置的状态（通过在导入选项对话框中按OK（确定）保存）。“恢复默认值-<em>Restore Defaults</em>”将设置为其默认值。“取消”将中止导入，而“确定”将导入数据并保存设置。</li>
+</ol>
+<p>部件 - Widget</p>
+<p>成功导入数据后的部件截图。</p>
+<p><img src="images/CSVFileImport-widget-stamped.png" alt="img"></p>
+<ol>
+<li>文件夹图标可以打开对话框(用于导入本地.csv文件)。它可以用于加载第一个文件或更改现有文件（加载新数据）。文件下拉列表存储以前加载的数据集的路径。</li>
+<li>有关导入数据集的信息。报告实例（行）、变量（t特征或列）和元组变量（特殊列）的数量。</li>
+<li>导入选项-<em>Import Options</em>可以重新打开导入对话框，用户可以在其中设置分隔符、编码、文本字段等。取消将中止数据导入。重新加载将再次导入文件，并将在原始文件中所做的任何更改添加到数据中。</li>
+</ol>
+<p>编码 - Encoding</p>
+<p>“导入选项-编码”下拉列表中用于设置自定义编码的对话框。选择自定义编码列表…(<em>Customize Encodings List…</em>)以更改列表中显示的编码。要保存更改，只需关闭对话框。关闭和重新打开橙色（即使使用重置小部件设置）也不会重新设置列表。要执行此操作，请按Restore Defaults。要在列表中显示所有可用编码，请按全选。</p>
+<p><img src="images/CSVFileImport-encodings.png" alt="img"></p>
+<p><strong>示例</strong></p>
+<p>**CSV文件导入(CSV File Import)<strong>工作方式几乎与</strong>文件部件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/data/file.md">File</a>)**完全相同，区别在于添加了用于导入不同类型.CSV文件的选项。在此工作流中，部件从文件中读取数据，并将其发送到数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable/">Data Table</a>)以供检查。</p>
+<p><img src="images/CSVFileImport-Example.png" alt="img"></p>
+<h2 id="Datasets-数据集"><a href="#Datasets-数据集" class="headerlink" title="Datasets - 数据集"></a>Datasets - 数据集</h2><blockquote>
+<p>从在线存储库加载数据集。</p>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Data-数据：输出数据集</li>
+</ul>
+</blockquote>
+<p>数据集部件(<strong>Datasets</strong>)从服务器检索选定的数据集并将其发送到输出。文件被下载到本地存储器，因此即使没有互联网连接也可以立即使用。每个数据集都提供了关于数据大小、实例数量、变量数量、目标和标记的描述和信息。</p>
+<p><img src="images/Datasets-stamped.png" alt="img"></p>
+<ol>
+<li>可用数据集数量以及已下载数据集数量的信息。</li>
+<li>可用数据集的内容。每个数据集都描述了大小、实例和变量的数量、目标变量的类型和标记。</li>
+<li>所选数据集的正式描述。</li>
+<li>如果勾选了“自动发送数据-<em>Send Data Automatically</em>”，则所选数据集将自动传送。或者，按”发送数据-<em>Send Data</em>“。</li>
+</ol>
+<p><strong>示例</strong></p>
+<p>Orange工作流可从“数据集”部件(<strong>Datasets</strong> )开始，而不是文件部件(<strong>File</strong>)。在下面的示例中，部件从在线存储库中检索数据集（Kickstarter数据），随后将其发送到”数据表-<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/data/datatable">Data Table</a>“和”分布-<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/distributions">Distributions</a>“部件。</p>
+<p><img src="images/Datasets-Workflow.png" alt="img"></p>
+<h2 id="SQL-Table-数据库表"><a href="#SQL-Table-数据库表" class="headerlink" title="SQL Table - 数据库表"></a>SQL Table - 数据库表</h2><blockquote>
+<p>从 SQL 数据库中读取数据。</p>
+<p><strong>输出</strong></p>
+<ul>
+<li><strong>数据：来自数据库的数据集</strong></li>
+</ul>
+</blockquote>
+<p><strong>SQL 小部件</strong>访问存储在SQL数据库中的数据。它可以连接到 PostgreSQL（需要 <a target="_blank" rel="noopener" href="http://initd.org/psycopg/">psycopg2</a> 模块）或 <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/sql-server/">SQL Server</a>（需要 <a target="_blank" rel="noopener" href="http://www.pymssql.org/en/stable/">pymssql</a> 模块）。</p>
+<p>为了处理大型数据库，Orange 尝试在不下载数据的情况下在数据库中执行部分计算。这仅适用于 PostgreSQL 数据库，并且需要在服务器上安装分位数和 <a target="_blank" rel="noopener" href="https://github.com/biolab/orange3/wiki/Installation-of-SQL-extensions">tsm_system_time</a> 扩展。如果没有安装这些扩展，数据将下载到本地。<img src="images/AgAABvmS4SQLiQrTNKNKDqr2NJVh3fen.png" alt="img"></p>
+<ol>
+<li><p>数据库类型（可以是 PostgreSQL 或 MSSQL）。</p>
+</li>
+<li><p>主机名。</p>
+</li>
+<li><p>数据库名称。</p>
+</li>
+<li><p>用户名。</p>
+</li>
+<li><p>密码。</p>
+</li>
+<li><p>按蓝色按钮连接到数据库。然后在下拉列表中选择表格。</p>
+</li>
+<li><p>自动发现分类变量会将具有少于 20 个不同值的 INT 和 CHAR 列转换为分类变量（在大型表上查找所有不同值可能很慢）。未选择时，INT 将被视为数字，CHAR 将被视为文本。下载到本地内存将选定的表下载到本地计算机。</p>
+</li>
+</ol>
+<p><strong>安装说明</strong></p>
+<p><strong>PostgreSQL</strong></p>
+<p>安装后端。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install psycopg2</span><br></pre></td></tr></table></figure>
+
+<p>或者，您可以按照<a target="_blank" rel="noopener" href="https://blog.biolab.si/2018/02/16/how-to-enable-sql-widget-in-orange/">这些说明</a>安装后端。</p>
+<p>如果 psycopg2 安装失败，请按照您收到的错误消息中的说明（它解释了如何解决错误）或安装已编译版本的 psycopg2-binary 包：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install psycopg2-binary</span><br></pre></td></tr></table></figure>
+
+<p>注意：psycopg2-binary 自带几个 C 库的自己版本，其中 libpq 和 libssl，无论客户端上是否有其他库，都会使用它们：升级系统库不会升级 psycopg2 使用的库。如果您想保持二进制可升级性，请从源代码构建 psycopg2。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/biolab/orange3/wiki/Installation-of-SQL-extensions">安装扩展</a> [选修的]</p>
+<p><strong>MSSQL</strong></p>
+<p>安装后端。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install pymssql</span><br></pre></td></tr></table></figure>
+
+<p>如果您遇到问题，请按照<a target="_blank" rel="noopener" href="https://github.com/biolab/orange3/wiki/Installation-of-SQL-extensions#mssql">这些说明</a>进行操作。</p>
+<p><strong>示例</strong></p>
+<p>下面是一个关于如何使用 <strong>SQL 表小部件的</strong>简单示例。将小部件放在画布上，输入您的数据库凭据并连接到您的数据库。然后选择要分析的表。</p>
+<p>将 <strong>SQL 表</strong>连接到<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable/">数据表</a>小部件以检查输出。如果表已填充，则您的数据已正确传输。现在，您可以像使用<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file/">文件小部件</a>一样使用 SQL 表小部件。</p>
+<h2 id="Data-Table-数据表"><a href="#Data-Table-数据表" class="headerlink" title="Data Table - 数据表"></a>Data Table - 数据表</h2><blockquote>
+<p>在电子表格中显示属性值数据。</p>
+<p><strong>输入</strong></p>
+<ul>
+<li>数据-Data：输入数据集</li>
+</ul>
+<p><strong>输出</strong></p>
+<ul>
+<li>选定数据-Selected Data：从表中选择的实例</li>
+</ul>
+</blockquote>
+<p>数据表(<strong>Data Table</strong>)部件在其输入中接收一个或多个数据集，并将其作为电子表格显示。数据实例可以按属性值排序。该部件还支持手动选择数据实例。</p>
+<p><img src="images/DataTable-stamped.png" alt="img"></p>
+<ol>
+<li>数据集的名称（通常是输入数据文件）。数据实例以行为单位，其属性值以列为单位。在上图的示例中，数据集按属性“sepal length”排序。</li>
+<li>有关当前数据集大小、数量和属性类型的信息</li>
+<li>连续属性的值可以用条形图可视化；颜色可以归属于不同的类别。</li>
+<li>可以选择数据实例（行）并将其发送到小部件的输出通道。</li>
+<li>在基于属性的排序之后，使用“恢复原始顺序”按钮对数据实例重新排序。</li>
+<li>制作报告。</li>
+<li>当启用自动发送时，所有更改都将自动传递给其他小部件。否则，按发送选定行。</li>
+</ol>
+<p><strong>示例</strong></p>
+<p>我们使用两个<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file/">File</a>部件读取<em>Iris</em>和<em>Glass</em>数据集（在Orange发行版中有提供），并将它们发送到<strong>DataTable</strong>部件。</p>
+<p><img src="images/DataTable-Schema.png" alt="img"></p>
+<p>第一个<strong>数据表</strong>中被选定的数据实例将传递到第二个<strong>数据表</strong>中。注意，我们可以选择要查看的数据集（iris 或 glass）。如果选择了“提交任何更改(<em>Commit on any change</em>)”，则从一个数据集更改会提交到另一个数据集中。</p>
+<p><img src="images/DataTable-Example.png" alt="img"></p>
+<h2 id="Paint-Data-绘制数据"><a href="#Paint-Data-绘制数据" class="headerlink" title="Paint Data - 绘制数据"></a>Paint Data - 绘制数据</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>在二维平面上绘制数据。您可以放置单个数据点或使用画笔绘制更大的数据集。</p>
+<p><strong>输出</strong></p>
+<ul>
+<li>Data-数据：图中绘制的数据集</li>
+</ul>
+</blockquote>
+<p>该部件支持通过在二维平面上直观地放置数据点来创建新数据集。数据点可以单独放置在平面上（Put），也可以通过刷（Brush）以更大的数量放置。如果数据用于监督学习，则数据点可以属于类。</p>
+<p><img src="images/PaintData-stamped.png" alt="img"></p>
+<ol>
+<li>命名轴并选择一个类来绘制数据实例。您可以添加或删除类。只使用一个类创建无类、无监督的数据集。</li>
+<li>绘图工具。使用Brush（多个数据实例）或Put（单个数据实例）绘制数据点。使用“选择”选择数据点，然后使用“删除&#x2F;退格”键删除数据点。使用抖动 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Jitter">Jitter</a>（扩展）和磁铁（聚焦）重新定位数据点。使用缩放和滚动可放大或缩小。下面，设置笔刷、放置、抖动和磁铁工具的半径和强度。</li>
+<li>重置为输入数据。</li>
+<li>保存图像，将图像以.svg或.png格式保存到计算机。</li>
+<li>制作报告。</li>
+<li>勾选左侧的框，自动提交对其他小部件的更改。或者，按发送应用它们。</li>
+</ol>
+<p><strong>示例 - example</strong></p>
+<p>在下面的示例中，我们绘制了一个包含4个类的数据集。这样的数据集非常适合演示k均值(k-means)和层次聚类(hierarchical cluster)方法。在截图中，我们看到总体上，<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/unsupervised/kmeans.md">k-Means</a>比<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/unsupervised/hierarchicalclustering/">Hierarchical Clustering</a>更能识别集群。它返回一个分数等级，其中最佳分数（具有最高值的分数）表示最可能的簇数。然而，分层聚类并不能将正确的类分组在一起。这是学习和探索统计概念的绝佳工具。</p>
+<p><img src="images/PaintData-Example.png" alt="img"></p>
+<h2 id="Data-Info-数据信息"><a href="#Data-Info-数据信息" class="headerlink" title="Data Info - 数据信息"></a>Data Info - 数据信息</h2><blockquote>
+<p>显示选定数据集的信息。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+</ul>
+</blockquote>
+<p>一个简单的小部件，提供有关数据集大小、特征、目标、元属性和位置的信息。</p>
+<p><img src="images/data-info-stamped.png" alt="img"></p>
+<ol>
+<li>关于数据集大小的信息</li>
+<li>关于离散和连续特征的信息</li>
+<li>关于目标信息</li>
+<li>关于元组属性的信息</li>
+<li>关于数据存储位置的信息</li>
+<li>制作一份报告。</li>
+</ol>
+<p><strong>Example - 示例</strong></p>
+<p>下面的案例中，我们比较一下两个数据信息窗口<strong>Data Info</strong>小部件的基本统计数据，使用了Iris数据集，一个是关于整个数据集的信息，另一个是来自散点绘图(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/scatterplot">Scatter Plot</a>)窗口小部件（手动）选择的子集的信息。</p>
+<p><img src="images/DataInfo-Example.png" alt="img"></p>
+<h2 id="Rank-排名"><a href="#Rank-排名" class="headerlink" title="Rank - 排名"></a>Rank - 排名</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>分类或回归数据集中属性的排序。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+<li>Scorer-分数：特征评分模型</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Reduced Data-精简数据：具有选定属性的数据集</li>
+<li>Scores-分数：具有特征分数的数据表</li>
+<li>Features-特征：属性列表</li>
+</ul>
+</blockquote>
+<p><strong>Rank</strong>部件根据变量与离散或数字目标变量的相关性，基于适用的内部评分器（如信息增益、卡方检验和线性回归）和支持评分的任何关联外部模型（如线性回归、逻辑回归、随机森林、SGD等）对变量进行评分。该部件还可以处理无监督数据，但仅由外部记分器（例如PCA）进行。</p>
+<p><img src="images/Rank-stamped.png" alt="img"></p>
+<ol>
+<li>选择评分方法。请参阅评分方法(<strong>Scoring methods</strong>)部分中的分类、回归和无监督数据选项。</li>
+<li>选择要输出的属性。<em>None</em>不会输出任何属性，而<em>All</em>将输出所有属性。通过手动选择，从右侧的表中选择属性。<em>Best ranked</em>将输出n个最佳排序属性。如果勾选了“<em>Send Automatically</em>”，小部件会自动将更改传递给其他小部件。</li>
+<li>状态栏。单击文件图标生成报告。观察小部件的输入和输出。右侧显示警告和错误。</li>
+</ol>
+<p><strong>Scoring methods (classification) - 评分方法（分类）</strong></p>
+<ol>
+<li>Information Gain-信息增益：预期的信息量（熵的减少）</li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Information_gain_ratio">Gain Ratio</a>-增益比：信息增益与属性固有信息的比率，减少了信息增益中对多值特征的偏见</li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Gini_coefficient">Gini</a>-基尼：频率分布值之间的不等式</li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/One-way_analysis_of_variance">ANOVA</a>-方差分析：不同类别特征平均值之间的差异</li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Chi-squared_distribution">Chi2</a>-卡方分析：通过卡方统计(chi-square statistic)测量的特征和类之间的相关性</li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Relief_(feature_selection)">ReliefF</a>：属性区分相似数据实例上类的能力</li>
+<li><a target="_blank" rel="noopener" href="https://www.aaai.org/Papers/ICML/2003/ICML03-111.pdf">FCBF (Fast Correlation Based Filter)</a>（基于快速相关性的滤波器）：基于熵的度量，它还识别由于特征之间的成对相关性而导致的冗余</li>
+</ol>
+<p>此外，您可以连接某些学习器，使其能够根据其在学习者构建的模型中的重要性对特征进行评分（例如，<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/model/linearregression.md">线性回归</a>, <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/model/randomforest.md">随机森林</a>, <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/model/stochasticgradient">随机梯度下降</a>）。请注意，在排名前数据已标准化。</p>
+<p><strong>Scoring methods (regression) - 评分方法（回归）</strong></p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Simple_linear_regression">Univariate Regression</a>-单变量回归：单个变量的线性回归</li>
+<li><a target="_blank" rel="noopener" href="http://www.clopinet.com/isabelle/Projects/reading/robnik97-icml.pdf">RReliefF</a>：两个实例的预测（类）值之间的相对距离。</li>
+</ol>
+<p>此外，您可以连接回归学习器-regression learners（例如，<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/model/linearregression.md">线性回归</a>, <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/model/randomforest.md">随机森林</a>, <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/model/stochasticgradient">随机梯度下降</a>）。请注意，排名前数据已标准化。</p>
+<p><strong>Scoring method (unsupervised)-评分方法(无监督）</strong></p>
+<p>目前，无监督数据仅支持<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/unsupervised/PCA/">PCA</a>。将PCA连接到Rank以获得分数。得分对应于变量与单个主成分的相关性。</p>
+<p><strong>Scoring with learners - 与学习期一起评分</strong></p>
+<p>Rank还可以使用某些学习者进行特征评分。例如，请参见<a target="_blank" rel="noopener" href="https://orangedatamining.com/learners-as-scorers/index/">Learners as Scorers</a>。</p>
+<p><strong>Example: Attribute Ranking and Selection - 示例：属性排序和选择</strong></p>
+<p>下面，我们在<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>小部件之后立即使用了<strong>Rank</strong>部件，以减少数据属性集，并仅包括信息量最大的属性：</p>
+<p><img src="images/Rank-Select-Schema.png" alt="img"></p>
+<p>请注意小部件如何输出仅包含最佳得分属性的数据集：</p>
+<p><img src="images/Rank-Select-Widgets.png" alt="img"></p>
+<p><strong>Example: Feature Subset Selection for Machine Learning - 机器学习中的特征子集选择</strong></p>
+<p>下面是一个更复杂的例子。在下面的工作流中，我们首先将数据分为训练集和测试集。在上面的分支中，训练数据通过<strong>Rank</strong>小部件来选择信息量最大的属性，而在下面的分支中没有特征选择。选择的特征和原始数据集都被传递到他们自己的<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/evaluate/testandscore/">Test &amp; Score</a>部件，这些小部件开发了一个Naive Bayes分类器，并在测试集上对其进行评分。</p>
+<p><img src="images/Rank-and-Test.png" alt="img"></p>
+<p>对于具有许多特征的数据集，如上所示，朴素的贝叶斯分类器特征选择通常会产生更好的预测精度。</p>
+<h2 id="Edit-Domain-编辑域"><a href="#Edit-Domain-编辑域" class="headerlink" title="Edit Domain - 编辑域"></a>Edit Domain - 编辑域</h2><blockquote>
+<p>重命名特征和它的值。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Data-数据: 编辑域后的数据集</li>
+</ul>
+</blockquote>
+<p>此部件可用于编辑&#x2F;更改数据集的域 - 重命名特征、重命名或合并分类特征的值、添加分类值和分配标签。</p>
+<p><img src="images/EditDomain-stamped.png" alt="img"></p>
+<ol>
+<li>输入数据集的所有特征（包括元属性）都列在变量(<em>Variables</em>)列表中。选择一个功能将在右侧显示一个编辑器。</li>
+<li>编辑选项：<ul>
+<li>更改特征的名称。</li>
+<li>更改特征的类型。例如，将字符串变量转换为类别变量。</li>
+<li>取消变量与其源变量的链接。该选项删除了变量的现有计算（比如聚类是如何计算聚类的），使其“简单”。这允许被合并变量有和(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/mergedata/">Merge Data</a>.)中一样的名称。</li>
+<li>在“值(<em>Values</em>)”列表框中更改离散特征的值的名称。双击以编辑名称。</li>
+<li>在“标签(<em>Labels</em>)”框中添加、删除或编辑其他特征的注释&#x2F;标注。使用”+”按钮添加新标签，并为新条目添加键(<em>Key</em>)和值(<em>Value</em> )。键(<em>Value</em> )将显示在数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable/">Data Table</a>)的左上角，而值将显示在指定列的下方。使用”-“按钮删除现有标签。</li>
+</ul>
+</li>
+<li>重新排序或合并分类特征的值。若要对值重新排序（例如，要在“分布(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/distributions/">Distributions</a>)”中显示它们，请使用框底部的向上键和向下键。若要添加或删除值，请使用”+”和”-“按钮。选择两个或多个变量，然后单击”&#x3D;”将它们合并为一个值。根据条件使用”M”按钮合并变量。</li>
+<li>重命名输出表。用于在维恩图&#x2F;文氏图(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/venndiagram/">Venn Diagram</a>)中显示表名。</li>
+<li>要恢复对所选功能所做的更改，请在“变量”列表中选择该功能时按下“重置选定项”按钮。按全部重置将删除对域的所有更改。按Apply将新域发送到输出。</li>
+</ol>
+<p><strong>合并选项</strong></p>
+<p><img src="images/EditDomain-merge.png" alt="img"></p>
+<ul>
+<li><em>Group selected values</em>-对选定值进行分组：选定的类别值变为单个变量。</li>
+<li><em>Group values with less than N occurrences</em>-对出现次数少于N次的值进行分组：数据中出现次数少于N次的值将被分组为单个值。</li>
+<li><em>Group values with less than % occurrences</em>-对出现次数少于%的值进行分组：数据中出现时间少于X%的值将被分组为单个值。</li>
+<li><em>Group all except N most frequent values</em>-将除N个最频繁值外的所有值分组：除N个最大频繁值之外的所有值将分组为一个变量。</li>
+<li><em>New value name</em>-新值名称：分组值的名称。</li>
+</ul>
+<p><strong>示例</strong></p>
+<p>下面，我们将演示如何简单地编辑现有域。我们选择了heart_disese.tab数据集并编辑了<em>gender</em>属性。在最初我们有女性(<em>female</em> )和男性(<em>male</em>)的值，我们将其改为女性(F)和男性(M)。然后我们使用向<em>下键</em>来切换变量的顺序。最后，我们添加了一个标签来标记属性是二进制(binary)的。我们可以在数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable/">Data Table</a>)部件中观察编辑的数据。</p>
+<p><img src="images/EditDomain-Example.png" alt="img"></p>
+<h2 id="Color-颜色"><a href="#Color-颜色" class="headerlink" title="Color - 颜色"></a>Color - 颜色</h2><blockquote>
+<p>为变量设置颜色图例。</p>
+<p>输入：</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出：</p>
+<ul>
+<li>数据：具有新颜色图例的数据集</li>
+</ul>
+</blockquote>
+<p><strong>Color</strong>颜色小部件设置可视化的颜色图例。</p>
+<p><img src="images/Color-stamped.png" alt="img"></p>
+<ol>
+<li><p>离散变量列表。通过双击它设置每个变量的颜色。该小部件还可以通过单击名称来重命名变量。</p>
+</li>
+<li><p>连续变量列表。单击颜色条以选择不同的调色板。要对所有变量使用相同的调色板，请为一个变量更改它，然后单击出现在右侧的“复制到所有”。该小部件还可以通过单击名称来重命名变量。</p>
+</li>
+<li><p>制作报告。</p>
+</li>
+<li><p>应用更改。如果勾选自动应用，更改将自动传达。或者，只需单击应用。</p>
+<p><img src="images/Color-Continuous_unindexed.png" alt="img"></p>
+</li>
+</ol>
+<p>数字变量的调色板按其属性分组和标记。</p>
+<ul>
+<li><p>发散调色板的两端有两种颜色，中间有一种中心色（白色或黑色）。当值可以是正数或负数时，此类调色板特别有用，因为某些小部件（例如热图）会将 0 放在调色板的中间点。</p>
+</li>
+<li><p>构建线性调色板是为了使人类对颜色变化的感知与值的变化成线性关系。</p>
+</li>
+<li><p>色盲调色板涵盖了不同类型的色盲，也可以是线性的或发散的。</p>
+</li>
+<li><p>在等亮度调色板中，所有颜色都具有相同的亮度。</p>
+</li>
+<li><p>彩虹调色板特别适用于在可视化中对数值进行分类的小部件。</p>
+</li>
+</ul>
+<p>示例</p>
+<p>我们选择使用 heart_disease 数据集。我们打开调色板并为直径缩小变量选择了两种新颜色。然后我们打开散点图小部件并查看对散点图所做的更改。</p>
+<p><img src="images/Color-Example-Discrete.png" alt="img"></p>
+<p>为了查看调色板对数值变量的影响，我们用胆固醇为散点图中的点着色，并在 Color 小部件中更改此属性的调色板。</p>
+<p><img src="images/Color-Example-Continuous.png" alt="img"></p>
+<h2 id="Feature-Statistics-特征统计"><a href="#Feature-Statistics-特征统计" class="headerlink" title="Feature Statistics - 特征统计"></a>Feature Statistics - 特征统计</h2><blockquote>
+<p>显示数据特征的基本统计信息。</p>
+<p>输入：</p>
+<ul>
+<li>数据：输入数据</li>
+</ul>
+<p>输出：</p>
+<ul>
+<li><p>减少数据：仅包含选定特征的表</p>
+</li>
+<li><p>统计数据：包含所选特征统计数据的表格</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>Feature Statistics</strong> 特征统计小部件提供了一种快速检查和查找给定数据集中感兴趣特征的方法。</p>
+<p><img src="images/feature_statistics-stamped.png" alt="img"></p>
+<p>心脏病(<em>heart-disease</em>)数据集上的特征统计小部件。出于说明目的，特征 exerc ind ang 已手动更改为元变量。</p>
+<ol>
+<li><p>有关当前数据集大小以及特征数量和类型的信息</p>
+</li>
+<li><p>右侧的直方图可以按任何特征着色。如果所选特征是分类特征，则使用离散调色板（如示例所示）。如果所选特征是数字特征，则使用连续的调色板。右侧的表格包含有关数据集中每个特征的统计信息。这些特征可以按我们现在描述的每个统计数据进行排序。</p>
+</li>
+<li><p>特征类型 - 可以是分类、数值、时间和字符串之一。</p>
+</li>
+<li><p>特征的名称。</p>
+</li>
+<li><p>特征值的直方图。如果特征是数字，我们适当地将值离散化到 bin 中。如果特征是分类特征，则每个值在直方图中都分配有自己的条。</p>
+</li>
+<li><p>特征值的集中趋势。对于分类特征，这是众数。对于数字特征，这是平均值。</p>
+</li>
+<li><p>特征值的分散情况。对于分类特征，这是值分布的熵。对于数字特征，这是变异系数。</p>
+</li>
+<li><p>最小值。这是针对数值和序数分类特征计算的。</p>
+</li>
+<li><p>最大值。这是针对数值和序数分类特征计算的。</p>
+</li>
+<li><p>数据中缺失值的数量。</p>
+</li>
+</ol>
+<p>另请注意，某些行的颜色不同。白色行表示常规特征，灰色行表示类变量，浅灰色表示元变量。</p>
+<p><strong>示例</strong></p>
+<p>特征统计小部件最常在文件小部件之后使用，以检查和查找给定数据集中可能感兴趣的特征。在以下示例中，我们使用心脏病(<em>heart-disease</em>)数据集。</p>
+<p><img src="images/feature_statistics_workflow.png" alt="img"></p>
+<p>一旦我们找到了可能感兴趣的特征的一个子集，或者我们找到了想要排除的特征，我们可以简单地选择我们想要保留的特征。小部件输出仅具有这些特征的新数据集。</p>
+<p><img src="images/feature_statistics_example1.png" alt="img"></p>
+<p>或者，如果我们想要存储特征统计信息，我们可以使用统计信息输出并根据需要操作这些值。在此示例中，我们在表格中显示统计信息。</p>
+<p><img src="images/feature_statistics_example2.png" alt="img"></p>
+<h2 id="Save-Data-保存数据"><a href="#Save-Data-保存数据" class="headerlink" title="Save Data - 保存数据"></a>Save Data - 保存数据</h2><blockquote>
+<p>将数据保存到文件中。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+</blockquote>
+<p><strong>Save Data</strong>保存数据小部件考虑输入通道中提供的数据集，并将其保存到具有指定名称的数据文件中。它可以将数据保存为：</p>
+<ul>
+<li><p>制表符分隔文件 (.tab)</p>
+</li>
+<li><p>逗号分隔文件 (.csv)</p>
+</li>
+<li><p>pickle (.pkl)，用于存储语料库对象的预处理</p>
+</li>
+<li><p>Excel 电子表格 (.xlsx)</p>
+</li>
+<li><p>光谱 ASCII (.dat)</p>
+</li>
+<li><p>高光谱图 ASCII (.xyz)</p>
+</li>
+<li><p>压缩格式（.tab.gz、.csv.gz、.pkl.gz）</p>
+</li>
+</ul>
+<p>小部件不会在每次在输入中收到新信号时都保存数据，因为这会不断（而且，大多数情况下是无意中）覆盖文件。相反，只有在设置新文件名或用户按下“保存”按钮后才会保存数据。</p>
+<p>如果文件保存到与工作流相同的目录或该目录的子树中，则小部件会记住相对路径。否则，它将存储绝对路径但出于安全原因禁用自动保存。</p>
+<p><img src="images/SaveData.png" alt="img"></p>
+<ul>
+<li><p>向标题添加类型注释：在输出文件中包含 Orange 的三行标题。</p>
+</li>
+<li><p>接收新数据时自动保存：始终保存新数据。当心！这将覆盖您系统上的现有数据。</p>
+</li>
+<li><p>通过覆盖现有文件来保存。</p>
+</li>
+<li><p>另存为创建一个新文件。</p>
+</li>
+</ul>
+<p><strong>示例</strong></p>
+<p>在下面的工作流程中，我们使用了 <em>Zoo</em> 数据集。我们将数据加载到散点图小部件中，我们使用它选择了数据实例的子集并将它们推送到保存数据小部件以将它们存储在文件中。</p>
+<p><img src="images/Save-Workflow.png" alt="img"></p>
+<h1 id="Transform-转换"><a href="#Transform-转换" class="headerlink" title="Transform - 转换"></a>Transform - 转换</h1><h2 id="Data-Sampler-数据采样器"><a href="#Data-Sampler-数据采样器" class="headerlink" title="Data Sampler - 数据采样器"></a>Data Sampler - 数据采样器</h2><blockquote>
+<p><strong>撰写：FE  校对：MF</strong></p>
+<p>从输入数据集中选择数据实例的子集。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>数据采样：采样数据实例</p>
+</li>
+<li><p>剩余数据：样本外数据</p>
+</li>
+</ul>
+</blockquote>
+<p><strong>Data Sampler</strong>小部件实现了多种数据采样方法。它输出一个采样数据集和一个补充数据集（输入集中的实例不包含在采样数据集中）。在提供输入数据集并按下<em>Sample Data</em>(采样数据)后，对输出进行处理。</p>
+<p><img src="images/DataSampler-stamped.png" alt="img"></p>
+<ol>
+<li>有关输入和输出数据集的信息。</li>
+<li>所需的采样方法：<ul>
+<li><strong>固定比例的数据</strong>：返回选定百分比的数据（例如，所有数据的 70%）</li>
+<li><strong>固定样本大小</strong>：返回选定数量的数据实例，可以设置Sample with replacement，它总是从整个数据集中采样（不减去子集中已有的实例）。通过替换，您可以生成更多的比输入数据可用的数据实例。</li>
+<li>交叉验证(<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross Validation</a>)：将数据实例划分为指定数量的互补子集。按照典型的验证模式，除了用户选择的子集之外的所有子集都作为数据样本输出，并且选择的子集进入剩余数据。（注意：在旧版本中，输出被交换。如果小部件是从旧工作流程加载的，它会切换到兼容模式。）</li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)">Bootstrap</a>：从总体统计数据中推断出样本。</li>
+</ul>
+</li>
+<li>可复制抽样(<em>Replicable sampling</em>)保持了可以跨用户携带的抽样模式，而分层样本(<em>stratify sample</em>)则模仿输入数据集的组成。 </li>
+<li>按”采样数据“(<em>Sample Data</em>)来输出数据样本。</li>
+</ol>
+<p>如果选择了所有数据实例（通过将比例设置为 100% 或将固定样本大小设置为整个数据大小），输出实例仍会打乱顺序。</p>
+<p><strong>示例</strong></p>
+<p>首先，让我们看看<strong>数据采样器(Data Sampler)<strong>是如何工作的。我们将使用来自文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件的虹膜数据。我们看到数据中有 150 个实例。我们使用</strong>Data Sampler</strong>小部件对数据进行采样，为简单起见，我们选择使用 5 个实例的固定样本大小。我们可以在<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>部件中（Data Table (in-sample)）中观察采样数据。第二个数据表（数据表（样本外））显示了剩余的 145 个不在样本中的实例。要输出样本外数据，请双击小部件之间的连接并将输出重新连接到<em>Remaining Data –&gt; Data</em>。</p>
+<p><img src="images/DataSampler-Example1.png" alt="img"></p>
+<p>现在，我们将使用<strong>Data Sampler</strong>将数据拆分为训练和测试部分。我们正在使用文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件加载的鸢尾花(<em>iris</em>)数据。在<strong>Data Sampler</strong>中，我们以固定比例的数据(<em>Fixed proportion of data</em>)拆分数据，样本中保留 70% 的数据实例。</p>
+<p>然后我们将两个输出连接到测试和评分(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/evaluate/testandscore.md">Test &amp; Score</a>)小部件，<em>Data Sample –&gt; Data</em> and <em>Remaining Data –&gt; Test Data</em>。最后，我们添加了逻辑回归(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/model/logisticregression">Logistic Regression</a>)作为学习器。对数据输入运行逻辑回归并评估测试数据的结果。</p>
+<p><img src="images/DataSampler-Example2.png" alt="img"></p>
+<p><strong>过采样&#x2F;欠采样(Over&#x2F;Undersampling)</strong></p>
+<p>数据采样器(<strong>Data Sampler</strong>)还可用于对数据中的少数类进行过采样或对多数类进行欠采样。让我们展示一个过采样的例子。首先，使用选择行(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/selectrows.md">Select Rows</a>)小部件分离少数类别。我们正在使用来自文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件的虹膜数据。该数据集有150 个数据实例，每个类 50 个。让我们对<em>iris-setosa</em>进行过采样。</p>
+<p>在选择行(<strong>Select Rows</strong>)部件中，将条件设置为<em>iris is iris-setosa</em>。这将输出 <em>iris-setosa</em> 类的 50 个实例。现在，将匹配的数据(<em>Matching Data</em>)连接到数据采样器(<strong>Data Sampler</strong>)，选择固定的样本大小(<em>Fixed sample size</em>)，将其设置为100，然后选择替换样本(<em>Sample with replacement</em>)。按下 <em>Sample Data</em> 后，小部件将输出 100 个 <em>iris-setosa</em> 类的实例，其中一些将被复制（因为我们使用了 <em>Sample with replacement</em>）。</p>
+<p>最后，使用 <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/concatenate">Concatenate</a> 部件连接过采样实例和 <strong>Select Row</strong> 小部件的 <em>Unmatched Data</em> 输出。这将输出一个包含 200 个实例的数据集。我们可以在分布(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/distributions">Distributions</a>)部件中观察最终结果。</p>
+<p><img src="images/DataSampler-Example-OverUnderSampling.png" alt="img"></p>
+<h2 id="Select-Columns-选择列"><a href="#Select-Columns-选择列" class="headerlink" title="Select Columns - 选择列"></a>Select Columns - 选择列</h2><blockquote>
+<p>手动选择数据属性和数据域的组成。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：具有在小部件中设置的列的数据集</li>
+</ul>
+</blockquote>
+<p>Select Columns 小部件用于手动组成您的数据域。用户可以决定使用哪些属性以及如何使用。 Orange 区分普通属性、（可选）类属性和元属性。例如，为了构建分类模型，域将由一组属性和一个离散的类属性组成。元属性不用于建模，但一些小部件可以将它们用作实例标签。</p>
+<p>橙色属性有一个类型，可以是离散的、连续的或字符串。属性类型用属性名称前出现的符号标记（分别为 D、C、S）。</p>
+<p><img src="images/SelectColumns-stamped.png" alt="img"></p>
+<ol>
+<li><p>不会出现在输出数据文件中的遗漏数据属性</p>
+</li>
+<li><p>新数据文件中的数据属性</p>
+</li>
+<li><p>目标变量。如果没有，新数据集将没有目标变量。</p>
+</li>
+<li><p>新数据文件的元属性。这些属性包含在数据集中，但对于大多数方法而言，分析中未考虑这些属性。</p>
+</li>
+<li><p>制作报告。</p>
+</li>
+<li><p>将域组成重置为输入数据文件的域组成。</p>
+</li>
+<li><p>如果您希望自动应用数据域的更改，请勾选。</p>
+</li>
+<li><p>应用数据域的更改并将新数据文件发送到小部件的输出通道。</p>
+</li>
+</ol>
+<p>示例</p>
+<p>在下面的工作流程中，来自“文件”小部件的鸢尾花数据被输入到“选择列”小部件中，我们在其中选择仅输出两个属性（即花瓣宽度和花瓣长度）。我们在“数据表”小部件中查看原始数据集和具有选定列的数据集。</p>
+<p><img src="images/SelectColumns-Example1.png" alt="img"></p>
+<p>为了更复杂地使用小部件，我们编写了一个工作流来重新定义心脏病数据集中的分类问题。最初，任务是预测患者的冠状动脉直径是否变窄。我们将问题更改为基于年龄、胸痛和胆固醇水平的性别分类问题，并将直径缩小作为元属性提供信息。</p>
+<p><img src="images/SelectColumns-Example1.png" alt="img"></p>
+<h2 id="Select-Rows-选择行"><a href="#Select-Rows-选择行" class="headerlink" title="Select Rows - 选择行"></a>Select Rows - 选择行</h2><blockquote>
+<p>根据数据特征的条件选择数据实例。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>匹配数据：符合条件的实例</p>
+</li>
+<li><p>Non-Matching Data：不符合条件的实例</p>
+</li>
+<li><p>数据：带有附加列的数据显示是否选择了实例</p>
+</li>
+</ul>
+</blockquote>
+<p>此小部件根据用户定义的条件从输入数据集中选择一个子集。匹配选择规则的实例被放置在输出匹配数据通道中。</p>
+<p>数据选择的标准以联合术语的集合形式呈现（即所选项目是与“条件”中的所有术语相匹配的项目）。</p>
+<p>条件项是通过选择属性、从运算符列表中选择运算符以及在需要时定义要在条件项中使用的值来定义的。运算符对于离散、连续和字符串属性是不同的。</p>
+<p><img src="images/SelectRows-stamped.png" alt="img"></p>
+<ol>
+<li><p>您要应用的条件、它们的运算符和相关值</p>
+</li>
+<li><p>向条件列表添加新条件。</p>
+</li>
+<li><p>一次添加所有可能的变量。</p>
+</li>
+<li><p>一次删除所有列出的变量。</p>
+</li>
+<li><p>输入数据集的信息和符合条件的实例的信息</p>
+</li>
+<li><p>清除输出数据。</p>
+</li>
+<li><p>勾选自动发送框后，所有更改将自动传达给其他小部件。</p>
+</li>
+<li><p>制作报告。</p>
+</li>
+</ol>
+<p>条件组成的任何变化都会更新信息面板（Data Out）。</p>
+<p>如果选择自动发送，则输出会根据条件的组成或其任何条款的任何变化而更新。</p>
+<p>示例</p>
+<p>在下面的工作流程中，我们使用了文件小部件中的 Zoo 数据并将其输入到选择行小部件中。在小部件中，我们选择只输出两种动物类型，即鱼和爬行动物。我们可以检查原始数据集和数据表小部件中包含选定行的数据集。</p>
+<p><img src="images/SelectRows-Example.png" alt="img"></p>
+<p>在下一个示例中，我们使用了泰坦尼克号数据集中的数据，并以类似的方式将其输入到箱形图小部件中。我们首先观察了基于生存的整个数据集。然后，我们在“选择行”小部件中仅选择了头等舱乘客，并将其再次输入到箱线图中。在那里我们可以看到所有头等舱乘客按存活率列出并按性别分组。</p>
+<p><img src="images/SelectRows-Workflow.png" alt="img"></p>
+<h2 id="Transpose-转置"><a href="#Transpose-转置" class="headerlink" title="Transpose - 转置"></a>Transpose - 转置</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>转置数据表。</p>
+<p>输入</p>
+<ul>
+<li>数据-Data：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据-Data：转置的数据集</li>
+</ul>
+</blockquote>
+<p>转置小部件转置数据表。</p>
+<p><img src="images/transpose-stamped.png" alt="img"></p>
+<p><strong>示例</strong></p>
+<p>这是一个简单的工作流程，展示了如何使用 <strong>Transpose</strong>部件。将小部件连接到文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/file.md">File</a>)小部件。 <strong>Transpose</strong> 的输出是一个转置数据表，其中行为列，列为行。您可以在数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)部件中观察到结果。</p>
+<p><img src="images/transpose-example.png" alt="img"></p>
+<h2 id="Merge-Data-合并数据"><a href="#Merge-Data-合并数据" class="headerlink" title="Merge Data - 合并数据"></a>Merge Data - 合并数据</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>根据所选属性的值，合并两个数据集。</p>
+<p>输入</p>
+<ul>
+<li>数据-Data：输入数据集</li>
+<li>附加数据-Extra Data：附加数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据-Data：具有从额外数据特征的数据集</li>
+</ul>
+</blockquote>
+<p>合并数据(<strong>Merge Data</strong>)小部件用于根据所选属性（列）的值水平合并两个数据集。在输入中，需要两个数据集，数据和额外数据。两个数据集中的行与用户选择的属性对的值相匹配。小部件产生一个输出。它对应于输入数据中附加了输入额外数据的属性（列）的实例。</p>
+<p>要根据多个特征进行匹配，请单击加号图标以添加要合并的特征。</p>
+<p>如果选择的属性对不包含唯一值（换句话说，属性具有重复值），小部件将给出警告。相反，一个人可以匹配多个属性。单击加号图标以添加要合并的属性。最终结果必须是每一行的唯一组合。</p>
+<p><img src="images/Merge-Data-stamped.png" alt="img"></p>
+<ol>
+<li>有关主要数据的信息。</li>
+<li>有关要附加的数据的信息。</li>
+<li>合并类型：<ul>
+<li>Append columns from Extra Data 输出数据中的所有行，由额外数据中的列扩充。不匹配的行将被保留，即使额外列中的数据丢失。</li>
+<li>从数据中查找匹配的行输出行，并通过额外数据中的列进行扩充。没有匹配项的行将从输出中删除。</li>
+<li>连接表对称地处理两个数据源。输出类似于第一个选项，只是在末尾附加了来自额外数据的不匹配值。</li>
+</ul>
+</li>
+<li>来自数据输入的属性列表。</li>
+<li>来自额外数据输入的属性列表。</li>
+<li>制作报告。</li>
+</ol>
+<p><strong>合并类型-Merging Types</strong></p>
+<p>（1）从额外数据追加列（左连接）</p>
+<p>来自额外数据的列被添加到数据中。没有匹配行的实例将添加缺失值。</p>
+<p>例如，第一个表可能包含城市名称，第二个表是城市及其坐标的列表。然后将带有坐标的列附加到带有城市名称的数据中。如果城市名称无法匹配，则会出现缺失值。</p>
+<p>在我们的示例中，第一个数据输入包含 6 个城市，但额外数据没有提供布拉迪斯拉发的纬度和经度值，因此字段将为空。</p>
+<p><img src="images/MergeData_Append.png" alt="img"></p>
+<p>（2）查找匹配的行对（内连接）</p>
+<p>只有那些匹配的行才会出现在输出中，并附加额外数据列。没有匹配项的行将被删除。</p>
+<p>在我们的示例中，数据输入中的布拉迪斯拉发没有纬度和经度值，而额外数据中的贝尔格莱德在我们合并的城市列中找不到。因此，两个实例都被删除——只有实例的交集被发送到输出。</p>
+<p><img src="images/MergeData_Intersection.png" alt="img"></p>
+<p>（3）连接表（外连接）</p>
+<p>来自数据和额外数据的行将出现在输出中。在无法匹配行的地方，将出现缺失值。</p>
+<p>在我们的示例中，Bratislava 和 Belgrade 现在都存在。布拉迪斯拉发将缺少纬度和经度值，而贝尔格莱德将缺少人口值。</p>
+<p><img src="images/MergeData_Concatenate.png" alt="img"></p>
+<p>（4）行索引</p>
+<p>数据将按照它们在表中出现的相同顺序合并。来自数据输入的行号 1 将与来自额外数据输入的行号 1 连接。行号由 Orange 根据数据实例的原始顺序分配。</p>
+<p>（5）实例ID</p>
+<p>这是一个更复杂的选项。有时，分析中转换的数据和域不再相同。尽管如此，原始行索引仍然存在于后台（Orange 记得它们）。在这种情况下，可以合并实例 ID。例如，如果您使用 PCA 转换数据，在散点图中将其可视化，选择了一些数据实例，现在您希望看到所选子集的原始信息。将 Scatter Plot 的输出连接到 Merge Data，将原始数据集添加为 Extra Data 并按 Instance ID 合并。</p>
+<p><img src="images/MergeData-InstanceID.png" alt="img"></p>
+<p>（6）合并两个或多个属性</p>
+<p>有时我们的数据实例对于列的组合是唯一的，而不是单个列。要按多个列合并，请按匹配条件旁边的加号添加行匹配条件。要删除它，请按 x。</p>
+<p>在下面的示例中，我们按学生列和班级列合并。</p>
+<p><img src="images/MergeData-multiple.png" alt="img"></p>
+<p>假设我们有两个数据集，其中包含学生姓名和他们所在的班级。第一个数据集包含学生的成绩，第二个数据集包含他们选择的选修课。不幸的是，我们的数据中有两个 Jack，一个来自 A 类，另一个来自 B 类。Jane 也一样。</p>
+<p>为了区分两者，我们可以匹配学生姓名和班级的行。</p>
+<p><img src="images/MergeData-multiple2.png" alt="img"></p>
+<p><strong>示例</strong></p>
+<p>在选定的共同属性的基础上，合并两个数据集的结果是将新的属性附加到原始文件中。在下面的例子中，我们想把只包含事实数据的<strong>zoo.tab</strong>文件和包含图片的<a target="_blank" rel="noopener" href="http://file.biolab.si/datasets/zoo-with-images.tab">zoo-with-images.tab</a>合并。两个文件都有一个共同的字符串属性<em>names</em>。现在，我们创建一个连接这两个文件的工作流。<em>zoo.tab</em> 数据作为连接到合并数据(<strong>Merge Data</strong>)部件的数据(<strong>Data</strong>)输入，而 <em>zoo-with-images.tab</em> 数据被连接到额外数据(<strong>Extra Data</strong>)输入。合并数据(<strong>Merged Data</strong>)小组件的输出然后被连接到数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)小部件。在后者中，显示了合并后的数据通道，其中图像属性被添加到原始数据中。</p>
+<p><img src="images/MergeData-Example.png" alt="img"></p>
+<p>这个案例中，我们想在输出中包括所有的实例，甚至那些没有匹配属性<em>names</em>的位置，这种情况在下面的工作流程中显示。</p>
+<p><img src="images/MergeData-Example2.png" alt="img"></p>
+<p>第三种类型的合并在下一个工作流程中显示。输出由两个输入组成，在没有找到匹配的地方分配了未知值。</p>
+<p><img src="images/MergeData-Example3.png" alt="img"></p>
+<h2 id="Concatenate-串联"><a href="#Concatenate-串联" class="headerlink" title="Concatenate - 串联"></a>Concatenate - 串联</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>串联来自多个来源的数据。</p>
+<p>输入</p>
+<ul>
+<li><p>主要数据-Primary Data：定义属性集的数据集</p>
+</li>
+<li><p>附加数据-Additional Data：附加数据集</p>
+</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据-Data：串联的数据</li>
+</ul>
+</blockquote>
+<p>这个小组件将多个实例集（数据集）连接起来。合并是 “垂直 “的，这意味着，两组10个和5个的实例将产生一个新的15个的实例集。</p>
+<p><img src="images/Concatenate.png" alt="img"></p>
+<ol>
+<li><p>设置属性合并方式：</p>
+<ul>
+<li>输入表中出现的所有变量(<em>all variables that appear in input tables</em>)将从所有输入表中输出列，为每个表中不存在的列分配缺失值</li>
+<li>只有出现在所有表中的变量(<em>only variables that appear in all tables</em>)将会输出所有输入表中列的交集</li>
+</ul>
+</li>
+<li><p>当合并多个相同数据但列名不同的表时，请选中“使用主表中的列名并忽略其他表中的名称(<em>Use column names from the primary table and ignore names in other tables</em>)“。变量的类型和类别（对于分类变量）的名称必须匹配。</p>
+<p>点击”将同名变量视为同一变量，即使它们使用不同公式进行计算”(<em>Treat variables with the same name as the same variable, even if they are computed using different formulae</em>)来考虑”在所有输入表中，同一列具有相同名称”的情况。不选中它不会按列名匹配，而是按列标识匹配。</p>
+</li>
+<li><p>将源数据集的标识添加到输出数据集中。该选项将输出一个附加列，其中包含特征名称和给定类型，在 <em>Place</em> 选项中定义。默认情况下会将源 ID 作为类变量。新列将包含输入表的名称作为值。</p>
+</li>
+<li><p>如果勾选”自动应用(<em>Apply automatically</em>)”，则会自动传达更改。否则，单击”应用(<em>Apply</em>)”。</p>
+</li>
+</ol>
+<p>如果其中一个表作为主表连接到小部件，则生成的表将仅包含来自该表的属性。如果没有主表，则属性可以是在指定为”附加表(<em>Additional Tables</em>)”的表中出现的所有属性的并集，也可以是它们的交集，即所有连接表共有的属性列表。</p>
+<p><strong>示例</strong></p>
+<p>如下所示，该小部件可用于合并来自两个单独文件的数据。假设我们有两个具有相同属性的数据集，一个包含来自第一个实验的实例，另一个包含来自第二个实验的实例，我们希望将两个数据表连接在一起。我们使用 <strong>Concatenate</strong> 小部件按属性合并数据集（在现有属性下附加新行）。</p>
+<p>下面，我们使用了修改后的 <em>Zoo</em> 数据集。在第一个文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/file.md">File</a>)小部件中，我们只加载以字母 A 和 B 开头的动物，在第二个文件中只加载以字母 C 开头的动物。连接后，我们在数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)小部件中观察到新数据，在那里我们看到从 A 到 C 的完整表格。</p>
+<p><img src="images/Concatenate-Example.png" alt="img"></p>
+<h2 id="Select-by-Data-Index-按数据索引选择"><a href="#Select-by-Data-Index-按数据索引选择" class="headerlink" title="Select by Data Index - 按数据索引选择"></a>Select by Data Index - 按数据索引选择</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>根据数据子集中的索引匹配实例。</p>
+<p>输入</p>
+<ul>
+<li><p>数据-Data：参考数据集</p>
+</li>
+<li><p>数据子集-Data Subset：要匹配的子集</p>
+</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>匹配数据-Matching data：来自参考数据集的子集与来自子集数据的索引相匹配</p>
+</li>
+<li><p>不匹配的数据-Unmatched data：参考数据集的子集与子集数据的索引不匹配</p>
+</li>
+<li><p>带注释的数据-Annotated data：参考数据集，带有定义匹配项的附加列</p>
+</li>
+</ul>
+</blockquote>
+<p>**按数据索引选择(Select by Data Index)**部件能够按索引匹配数据。数据集中的每一行都有一个索引和一个子集，这个小部件可以将这些索引与参考数据中的索引相匹配。大多数情况下，它用于从转换后的数据中检索原始数据（例如，从 PCA 空间）。</p>
+<p><img src="images/Select-by-Data-Index-stamped.png" alt="img"></p>
+<ol>
+<li><p>有关参考数据集的信息。此数据用作索引参考。</p>
+</li>
+<li><p>有关数据子集的信息。该数据集的索引用于在参考数据集中查找匹配数据。默认情况下，匹配数据在输出中。</p>
+</li>
+</ol>
+<p><strong>示例</strong></p>
+<p>**按数据索引选择(Select by Data Index)**的典型用途是在转换后检索原始数据。我们将在文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/file.md">File</a>)小部件中加载 <em>iris.tab</em> 数据。然后我们将使用 <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/unsupervised/PCA.md">PCA</a> 转换这些数据。我们可以将转换后的数据投影到散点图(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/scatterplot">Scatter Plot</a>)中，在图中我们只能看到 PCA 成分，而看不到原始特征。</p>
+<p>现在我们选择一个感兴趣的子集（我们也可以选择整个数据集）。如果我们在数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)中观察它，我们可以看到数据被转换了。如果我们希望看到具有原始特征的数据，我们将不得不使用按数据索引选择(<strong>Select by Data Index</strong>)来检索它们。</p>
+<p>将原始数据和散点图(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/scatterplot">Scatter Plot</a>)中的子集连接到”按数据索引选择(<strong>Select by Data Index</strong>)”。小部件会将子集的索引与参考（原始）数据的索引进行匹配，并输出匹配的参考数据。另一个数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)中最终检查确认输出中的数据来自原始数据空间。</p>
+<p><img src="images/Select-by-Data-Index-Example1.png" alt="img"></p>
+<h2 id="Unique-唯一性-去重"><a href="#Unique-唯一性-去重" class="headerlink" title="Unique - 唯一性(去重)"></a>Unique - 唯一性(去重)</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>删除重复的数据实例。</p>
+<p>输入</p>
+<ul>
+<li>数据-Data：数据表</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据-Data：没有重复值的数据表</li>
+</ul>
+</blockquote>
+<p>该小部件删除重复的数据实例。用户可以选择被观测变量的一个子集，并且两个实例被认为是重复的，尽管它们在其他被忽略的变量的值上可能不同。</p>
+<p><img src="images/Unique-stamped.png" alt="img"></p>
+<ol>
+<li>选择比较数据实例时考虑的变量。</li>
+<li>保留的数据实例。选项是使用第一个、最后一个、中间的或随机的实例，或者不保留任何实例，即完全删除重复的实例。</li>
+</ol>
+<p><strong>示例</strong></p>
+<p>数据集 <em>Zoo</em> 包含两只青蛙。此工作流通过删除具有相同名称的实例来仅保留一个。</p>
+<p><img src="images/Unique-Example.png" alt="img"></p>
+<h2 id="Aggregate-Columns-聚合列-统计指标"><a href="#Aggregate-Columns-聚合列-统计指标" class="headerlink" title="Aggregate Columns - 聚合列&#x2F;统计指标"></a>Aggregate Columns - 聚合列&#x2F;统计指标</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>计算所选列的总和、最大值、最小值……。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：扩展数据集</li>
+</ul>
+</blockquote>
+<p>聚合列输出所选列的聚合，例如总和、最小值、最大值等。</p>
+<p><img src="images/AggregateColumns.png" alt="img"></p>
+<ol>
+<li>选定的属性。</li>
+<li>聚合运算符：<ul>
+<li>和 - sum</li>
+<li>乘积 - product</li>
+<li>最小值 - min</li>
+<li>最大值 - max</li>
+<li>平均值 - mean</li>
+<li>方差 - variance</li>
+<li>中位数 - median</li>
+</ul>
+</li>
+<li>设置计算属性的名称。</li>
+<li>如果勾选”自动应用”(<em>Apply automatically</em>)，更改将自动传达。或者，单击”应用”(<em>Apply</em>)。</li>
+</ol>
+<p><strong>示例</strong></p>
+<p>对于此示例，我们将使用文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件中的鸢尾花数据并将其连接到<strong>聚合列</strong>(<strong>Aggregate Columns</strong>)。</p>
+<p>假设我们希望计算 <em>sepal_length</em> 和 <em>sepal_width</em> 属性的总和。我们从列表中选择这两个属性。</p>
+<p><img src="images/AggregateColumns-Example.png" alt="img"></p>
+<h2 id="Group-by-分组"><a href="#Group-by-分组" class="headerlink" title="Group by - 分组"></a>Group by - 分组</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>按选定的变量对数据进行分组，并使用选定的聚合来聚合列。</p>
+<p>输入</p>
+<ul>
+<li>数据-Data：输入数据表</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据-Data：聚合数据</li>
+</ul>
+</blockquote>
+<p><strong>分组</strong>(<strong>Group by</strong>)小部件首先根据<strong>分组</strong>列表中的选定变量识别组。组由所选变量中所有不同的值组合定义。</p>
+<p>在第二步中，小部件计算在小部件右侧的表中为每个组定义的聚合。</p>
+<p><img src="images/Group-by-stamped.png" alt="img"></p>
+<ol>
+<li><p>选择定义组的变量</p>
+</li>
+<li><p>查看变量及其聚合。要更改一个或多个变量的聚合，请在表中选择它们。</p>
+</li>
+<li><p>更改在上面的视图中选择的变量的聚合。</p>
+</li>
+<li><p>勾选自动发送框后，所有更改将自动传达给其他小部件。</p>
+</li>
+<li><p>获取文档，观察输入或输出的一些项目</p>
+</li>
+</ol>
+<p><strong>示例</strong></p>
+<p>我们首先在文件小部件中加载 <strong>heart_disease</strong> 数据集。在<strong>分组</strong>(<strong>Group By</strong>)小部件中，我们设置了定义组的变量——**直径缩小(diameter narrowing)<strong>和</strong>性别(gender)**。每组包括属于两个变量的一个组合的项目（行）。</p>
+<p>在小部件右侧的表格中，我们设置要计算每组<strong>静息 SBP</strong>(<strong>rest SBP</strong>) 变量值的<strong>平均值</strong>和<strong>中位数</strong>、<strong>胆固醇</strong>(<strong>cholesterol</strong>)变量值的<strong>中位数</strong>以及<strong>主要血管着色</strong>(<strong>major vessels colored</strong>)的<strong>平均值</strong>。</p>
+<p>在“数据表(<strong>Data Table</strong>)”小部件中，我们可以看到当直径变窄(<strong>cholesterol</strong>)为 0 时，女性和男性的<strong>静息 SBP</strong> (<strong>rest SBP</strong>)平均值均较低。女性的差异更大。仅女性的静息 SBP 中位数不同，而男性则相同。</p>
+<p>您还可以观察组间主要血管着色的胆固醇中位数水平和平均值之间的差异。</p>
+<p><img src="images/Group-by-example.png" alt="img"></p>
+<h2 id="Pivot-Table-数据透视表"><a href="#Pivot-Table-数据透视表" class="headerlink" title="Pivot Table - 数据透视表"></a>Pivot Table - 数据透视表</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>根据列值重塑数据表。</p>
+<p>输入</p>
+<ul>
+<li>数据-Data：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>数据透视表-Pivot Table：列联矩阵，如小部件所示</p>
+</li>
+<li><p>过滤的数据-Filtered Data：从图中选择的子集</p>
+</li>
+<li><p>分组的数据-Grouped Data：聚合由行值定义的组</p>
+</li>
+</ul>
+</blockquote>
+<p>**数据透视表(Pivot Table)**将一个更广泛的表的数据汇总成一个统计表。统计数据可以包括总和、平均值、计数等。该小部件还允许从表中选择一个子集并按行值分组，这些值必须是离散变量。只有数字变量的数据无法在表中显示。</p>
+<p><img src="images/Pivot-stamped.png" alt="img"></p>
+<ol>
+<li><p>用于行值的离散或数值变量。数字变量被视为整数。</p>
+</li>
+<li><p>用于列值的离散变量。变量值将显示为表中的列。</p>
+</li>
+<li><p>用于聚合的值。聚合值将显示为表格中的单元格。</p>
+</li>
+<li><p>聚合方法：</p>
+<ul>
+<li><p>对于任何变量类型：</p>
+<ul>
+<li>计数-<em>Count</em>：具有给定行和列值的实例数。</li>
+<li>已定义的计数-<em>Count defined</em>:：定义聚合值的实例数。</li>
+</ul>
+</li>
+<li><p>对于数值变量：</p>
+<ul>
+<li><p>求和-<em>Sum</em>：值的总和。</p>
+</li>
+<li><p>平均值-<em>Mean</em>：值的平均值。</p>
+</li>
+<li><p>模式-<em>Mode</em>：子集中最频繁的值。</p>
+</li>
+<li><p>最小值-<em>Min</em>：最小值。</p>
+</li>
+<li><p>最大值-<em>Max</em>：最高值。</p>
+</li>
+<li><p>中位数-<em>Median</em>：中间值。</p>
+</li>
+<li><p>方差-<em>Var</em>：子集的方差。</p>
+</li>
+</ul>
+</li>
+<li><p>对于离散变量：</p>
+<ul>
+<li>多数值-<em>Majority</em>：子集中最频繁的值。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>勾选左侧的框以自动输出任何更改。或者，按”应用(<em>Apply</em> )”。</p>
+</li>
+</ol>
+<p><strong>离散变量 - Discrete variables</strong></p>
+<p><img src="images/Pivot-discrete.png" alt="img"></p>
+<p>仅选择了离散变量的数据透视表示例。我们在这个例子中使用心脏病(<em>heart-disease</em>)数据集。行对应于直径缩小(<em>diameter narrowing</em>)变量的值。我们的列是”性别”(<em>gender</em>)的值，即女性和男性。我们在单元格中使用 <em>thal</em> 作为取值对象。</p>
+<p>我们选择了 <em>Count</em> 和 <em>Majority</em> 作为聚合方法。在数据透视表中，我们可以看到没有直径变窄且为女性的实例数。此类患者有72人。同时，有92名男性患者没有直径变窄。 Thal 值在这里没有任何影响，我们只是计算数据中的出现次数。</p>
+<p>第二行显示高频值(majority)。这意味着大多数没有直径变窄的女性患者的 thal 结果都是正常的。相反，直径变窄的女性患者最常有可逆缺陷。</p>
+<p><strong>数值变量 - Numeric variables</strong></p>
+<p><img src="images/Pivot-continuous.png" alt="img"></p>
+<p>带有数字变量的数据透视表示例。我们在这个例子中使用”心脏病”(<em>heart-disease</em>)数据集。行对应于”直径缩小”(<em>diameter narrowing</em>)变量的值。我们的列是性别(<em>gender</em>)的值，即女性和男性。我们在我们的单元格中使用<em>rest SBP</em>作为取值对象。</p>
+<p>我们选择了 <em>Count</em>、<em>Sum</em> 和 <em>Median</em>  作为聚合方法。在 <em>Count</em>下，我们看到有 72 名女性患者没有直径变窄，与之前的离散值相同。不同之处在于总和和中位数聚合。我们看到没有直径变窄的女性患者的静息收缩压总和为 9269，中值为 130。</p>
+<p><strong>示例 - Example</strong></p>
+<p>我们在这个例子中使用”森林火灾”(<em>Forest Fires</em>)。在数据集(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datasets">Datasets</a>)小部件中加载数据并传递到**数据透视表(Pivot Table)**。”森林火灾”(<em>Forest Fires</em>)数据集按发生的月份和日期报告森林火灾。我们可以通过选择”计数”(<em>Count</em>)作为聚合方法并使用”月”(<em>month</em>)作为行和”日”(<em>day</em>)作为列值来聚合所有发生的森林火灾。由于我们使用的是 <em>Count</em>，因此 <em>Values</em> 变量将不起作用。</p>
+<p>我们可以在 <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/visualize/lineplot.md">Line Plot</a> 中绘制计数。但首先，让我们稍微组织一下数据。使用 <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/editdomain.md">Edit Domain</a>，我们将对行值重新排序，以便月份以正确的顺序显示，即从一月到十二月。要对列执行相同操作，我们将使用<strong>选择列</strong>(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/selectcolumns">Select Columns</a>)和重新排序日期从星期一到星期日。</p>
+<p>终于，我们的数据准备好了。让我们将它传递给 <strong>Line Plot</strong>。我们可以看到，森林火灾发生在八、九月份最为频繁，而周末的发生频率要高于工作日。</p>
+<p><img src="images/Pivot-example.png" alt="img"></p>
+<h2 id="Apply-Domain-应用域"><a href="#Apply-Domain-应用域" class="headerlink" title="Apply Domain - 应用域"></a>Apply Domain - 应用域</h2><blockquote>
+<p>给定一个模板的转换方式并应用到某个数据集上</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+<li>Template Data-模板数据：用于转换数据集的模板</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Transformed Data-转换后的数据: 被转换后的数据</li>
+</ul>
+</blockquote>
+<p>应用域(Apply Domain)将新数据映射到转换后的空间。例如，如果我们使用PCA转换一些数据并希望在同一空间中观察新数据，我们可以使用“应用域”将新数据映射到从原始数据创建的PCA空间。</p>
+<p><img src="images/ApplyDomain.png" alt="img"></p>
+<p>小部件接收数据集和用于转换数据集的模板数据集。</p>
+<p><strong>旁注-Side note</strong></p>
+<p>域转换通过使用模板数据中的信息来工作。例如，对于PCA，组件是不够的。转换需要关于每个列的中心、方差（如果数据是标准化的）以及数据是否以及如何预处理（连续化、插补等）的信息。</p>
+<p><strong>示例-Example</strong></p>
+<p>在本例中，我们将使用<strong>File</strong>小部件中的<strong>iris</strong>数据。为了创建两个独立的数据集，我们将使用<strong>Select Rows</strong>部件并将条件设置为<em>iris is one of iris setosa,iris versicolor</em>。这将输出一个100行的数据集，其中一半属于iris-setosa类，另一半属于iris-versicolor类。</p>
+<p>我们将使用<strong>PCA</strong>部件转换数据，并选择前两个分量，这可以解释96%的方差。现在，我们想对“新”数据应用相同的预处理，即剩余的50个未处理的iris数据。将<strong>Select Rows</strong>部件中未使用的数据发送到<strong>Apply Domain</strong>部件。确保使用<strong>Select Rows</strong>部件的“不匹配数据”输出。然后添加来自PCA的变换数据的输出。</p>
+<p><strong>Apply Domain</strong>部件将对新数据应用预处理器并输出它。要将新数据添加到旧数据，请使用**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/concatenate/">Concatenate</a>部件<strong>。将PCA输出的转换数据用作主数据，将</strong>Apply Domain**部件中的转换数据作为附加数据。</p>
+<p>观察<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/datatable.md">Data Table</a>(数据表)或<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/scatterplot/">Scatter Plot</a>(散点图)中的结果，以查看与旧数据相关的新数据。</p>
+<p><img src="images/ApplyDomain-Example.png" alt="img"></p>
+<h2 id="Preprocess-预处理"><a href="#Preprocess-预处理" class="headerlink" title="Preprocess - 预处理"></a>Preprocess - 预处理</h2><blockquote>
+<p>撰写：FE  校对：MF</p>
+<p>使用选定的方法预处理数据。</p>
+<p>输入</p>
+<ul>
+<li>数据-Data：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>预处理程序-Preprocessor：预处理方法</p>
+</li>
+<li><p>预处理数据-Preprocessed Data：使用选定方法预处理的数据</p>
+</li>
+</ul>
+</blockquote>
+<p>预处理对于获得更好质量的分析结果至关重要。 <strong>Preprocess</strong> 小部件提供了多种预处理方法，这些方法可以组合在一个预处理管道中。一些方法可作为单独的小部件使用，它们提供高级技术和更好的参数调整。</p>
+<p><img src="images/preprocess-stamped.png" alt="img"></p>
+<ol>
+<li><p>预处理器列表。双击您希望使用的预处理器，并通过向上或向下拖动它们来打乱它们的顺序。您还可以通过将它们从左侧菜单拖动到右侧来添加预处理器。</p>
+</li>
+<li><p>预处理管道。</p>
+</li>
+<li><p>勾选此框（”自动发送”<em>Send Automatically</em>）后，小部件将自动传达更改。或者，单击”发送”(<em>Send</em>)。</p>
+</li>
+</ol>
+<p><strong>预处理程序 - Preprocessors</strong></p>
+<p><img src="images/Preprocess1.png" alt="img"></p>
+<ol>
+<li><p>预处理器列表。</p>
+</li>
+<li><p>连续值的离散化：</p>
+<ul>
+<li><p>Fayyad 和 Irani 的熵-MDL 离散化(<a target="_blank" rel="noopener" href="http://sci2s.ugr.es/keel/pdf/algorithm/congreso/fayyad1993.pdf">Entropy-MDL discretization</a>)，它使用期望信息( <a target="_blank" rel="noopener" href="http://kevinmeurer.com/a-simple-guide-to-entropy-based-discretization/">expected information</a> )来确定bin。</p>
+</li>
+<li><p>“等频离散化”(<em>Equal frequency discretization</em>)按频率拆分（每个bin中的实例数量相同）。</p>
+</li>
+<li><p>“等宽离散化”(<em>Equal width discretization</em>)创建等宽的bin（每个bin的跨度相同）。</p>
+</li>
+<li><p>完全”删除数字特征”(<em>Remove numeric features</em>)。</p>
+</li>
+</ul>
+</li>
+<li><p>离散值的连续化：</p>
+<ul>
+<li><p>高频值作为基数(<em>Most frequent as base</em>)将最频繁的离散值视为0，其他的视为1。具有2个以上值的离散属性，最频繁的将被视为基数，并与相应列中的其余值进行对比。</p>
+</li>
+<li><p>“每个值一个特征”(<em>One feature per value</em>)为每个值创建列，将 1 放置在实例具有该值的位置，将 0 放置在实例不具有该值的位置。本质上是一种热编码。</p>
+</li>
+<li><p>“移除非二元特征”(<em>Remove non-binary features</em>)仅保留值为 0 或 1 的分类特征，并将它们转换为连续特征。</p>
+</li>
+<li><p>“删除分类特征”(<em>Remove categorical features</em>)会完全删除分类特征。</p>
+</li>
+<li><p>“视为序数”(<em>Treat as ordinal</em>)采用离散值并将它们视为数字。如果离散值是类别，则每个类别都将分配一个数字，因为它们出现在数据中。</p>
+</li>
+<li><p>“除以值的个数”(<em>Divide by number of values</em>)类似于按序数处理，但最终值将除以值的总数，因此新连续变量的范围将为 [0, 1]。</p>
+</li>
+</ul>
+</li>
+<li><p>补偿缺失值：</p>
+<ul>
+<li><p>“平均值&#x2F;高频值”(<em>Average&#x2F;Most frequent</em>)使用平均值（对于连续）或最频繁（对于离散）值替换缺失值 (NaN)。</p>
+</li>
+<li><p>“随机值替换”(<em>Replace with random value</em>)用每个变量范围内的随机值替换缺失值。</p>
+</li>
+<li><p>“删除具有缺失值的行”(<em>Remove rows with missing values</em>)。</p>
+</li>
+</ul>
+</li>
+<li><p>选择相关特征：</p>
+<ul>
+<li><p>与<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/rank.md">Rank</a>类似，此预处理器仅输出信息量最大的特征。分数可以通过信息增益(information gain)、<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Information_gain_ratio">gain ratio(增益比)</a>, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Gini_coefficient">gini index(基尼指数)</a>, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Relief_(feature_selection)">ReliefF(特征选择)</a>, <a target="_blank" rel="noopener" href="https://www.aaai.org/Papers/ICML/2003/ICML03-111.pdf">fast correlation based filter(基于快速相关性的过滤器)</a>, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/One-way_analysis_of_variance">ANOVA</a>, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Chi-squared_distribution">Chi2</a>, <a target="_blank" rel="noopener" href="http://lkm.fri.uni-lj.si/rmarko/papers/robnik03-mlj.pdf">RReliefF</a>, and <a target="_blank" rel="noopener" href="http://scikit-learn.org/stable/modules/feature_selection.html#feature-selection-using-selectfrommodel">Univariate Linear Regression(单变量线性回归)</a>来确定。</p>
+</li>
+<li><p>“策略”(<em>Strategy</em> )是指输出上应该有多少变量。 <em>Fixed</em> 返回固定数量的得分最高的变量，而 <em>Percentile</em> 返回选定的最高百分比的特征。</p>
+</li>
+</ul>
+</li>
+<li><p>“选择随机特征”(<em>Select random features</em>)输出原始数据中固定数量的特征或百分比。这主要用于高级测试和教育目的。</p>
+<p><img src="images/Preprocess2.png" alt="img"></p>
+</li>
+<li><p>归一化(Normalize)将值调整为通用比例。按平均值或中位数居中或完全忽略居中。与缩放类似，可以按 SD（标准差）、跨度或根本不缩放。</p>
+</li>
+<li><p>随机化实例(Randomize instances)。随机化类洗牌类值并破坏实例和类之间的连接。同样，可以随机化特征或元数据。如果启用可复制改组，则可以使用已保存的工作流程共享和重复随机化结果。这主要用于高级测试和教育目的。</p>
+</li>
+<li><p>移除稀疏特征(<em>Remove sparse features</em>)会保留具有超过一定数量&#x2F;百分比的非零&#x2F;缺失值的特征。其余的被丢弃。</p>
+</li>
+<li><p>主成分分析(Principal component analysis)输出 PCA 转换的结果。类似于 PCA 小部件。</p>
+</li>
+<li><p>CUR矩阵分解(<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/CUR_matrix_approximation">CUR matrix decomposition</a>)是一种降维方法，类似于SVD。</p>
+</li>
+</ol>
+<p><strong>预测建模的预处理 - Preprocessing for predictive modeling</strong></p>
+<p>在构建预测模型时，必须注意的一点是如何进行预处理。在 Orange 中有两种可能的方法，每种方法都略有不同：</p>
+<ol>
+<li><p>将**预处理(Preprocess)**连接到学习器(learner)。这将覆盖学习者的默认预处理管道，并仅应用自定义预处理管道（默认预处理步骤在每个学习者的文档中都有描述）。</p>
+<p><img src="images/Preprocess-Models1.png" alt="img"></p>
+</li>
+<li><p>将**预处理(Preprocess)**连接到测试和评分(<strong>Test and Score</strong>)部件。这会将预处理器应用于交叉验证中的每个批次。然后学习器的预处理器将应用于预处理的子集。</p>
+<p><img src="images/Preprocess-Models2.png" alt="img"></p>
+</li>
+</ol>
+<p>最后，有一个错误的方法。将 Preprocess 直接连接到原始数据并输出预处理后的数据集可能会使模型过拟合。<strong>不要这样做！！！</strong></p>
+<p><img src="images/Preprocess-Models3.png" alt="img"></p>
+<p><strong>示例</strong></p>
+<p>在第一个示例中，我们使用了文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件的下拉菜单中可用的 <em>heart_disease.tab</em> 数据集。然后我们使用 <strong>Preprocess</strong> 来估算缺失值和归一化特征。我们可以观察数据表的变化，并与未处理的数据进行比较。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Preprocess-Example1.png" alt="img"></p>
+<p>在第二个示例中，我们展示了如何使用 <strong>Preprocess</strong> 进行预测建模。</p>
+<p>这次我们使用文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件中的 <em>heart_disease.tab</em> 数据。您可以在下拉菜单中访问数据。这是一个包含 303 名因胸痛就医的患者的数据集。测试完成后，发现一些患者直径变窄(diameter narrowing)，而其他患者则没有（这是我们的类变量）。</p>
+<p>我们的数据集中缺少一些值，因此我们想在评估模型之前补偿(impute)缺失值。我们通过将预处理器(preprocessor)直接传递给**测试和评分(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/evaluate/testandscore">Test and Score</a>)**来做到这一点。在 <strong>Preprocess</strong> 中，我们设置正确的预处理管道（在我们的示例中只有一个具有”补偿缺失值”(<em>Impute missing values</em>)的预处理器），然后将其连接到 <strong>Test and Score</strong> 的 Preprocessor 输入。</p>
+<p>我们还传递数据和学习器（在本例中为逻辑回归<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/model/logisticregression">Logistic Regression</a>）。这是将预处理器传递给交叉验证的正确方法，因为每一折数据都将在训练阶段独立进行预处理。这对于特征选择尤为重要。</p>
+<p><img src="images/Preprocess-Example2.png" alt="img"></p>
+<h2 id="Impute-插值-推断"><a href="#Impute-插值-推断" class="headerlink" title="Impute - 插值&#x2F;推断"></a>Impute - 插值&#x2F;推断</h2><blockquote>
+<p>替换数据中的未知值。</p>
+<p>输入</p>
+<ul>
+<li><p>数据：输入数据集</p>
+</li>
+<li><p>学习器：用于插补的学习算法</p>
+</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：具有估算值的数据集</li>
+</ul>
+</blockquote>
+<p>Orange 的一些算法和可视化无法处理数据中的未知值。这个小部件执行统计学家所说的插值：它用根据数据计算或用户设置的值替换缺失值。默认插补是 (1-NN)。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/images/impute-stamped.png" alt="img"></p>
+<ol>
+<li><p>在最顶部的框默认方法(<em>Default method</em>)中，用户可以为所有属性指定通用插补技术。</p>
+<p>● <strong>Don’t Impute</strong> ：对缺失值不做任何处理。</p>
+<p>● <strong>Average&#x2F;Most-frequent</strong> ：使用平均值（对于连续属性）或最常见的值（对于离散属性）。</p>
+<p>● <strong>As a distinct value</strong>：作为一个独特的值创造新的值来替代缺失的值。</p>
+<p>● <strong>Model-based imputer</strong>：根据其他属性的值构造一个模型来预测缺失值；为每个属性构造一个单独的模型。默认模型是 1-NN 学习器，它从最相似的示例中获取值（这有时称为热卡插补）。该算法可以由用户连接到输入信号 Learner for Imputation 的算法代替。但是请注意，如果数据中存在离散属性和连续属性，则算法需要能够同时处理它们；目前只有 1-NN 学习者可以做到这一点。 （将来，当 Orange 有更多回归器时，Impute 小部件可能会为离散和连续模型提供单独的输入信号。）</p>
+<p>● <strong>Random values</strong>：计算每个属性值的分布，然后通过从中选择随机值来估算。</p>
+<p>● <strong>Remove examples with missing values</strong>：删除包含缺失值的示例。如果选中<em>Impute class values</em>，则此检查也适用于 class 属性。</p>
+</li>
+<li><p>可以为每个属性指定单独的处理，这会覆盖默认处理集。还可以指定用于插补的手动定义值。在截图中，我们决定不估算“<em>normalized-losses</em>”和“<em>make</em>”的值，“<em>aspiration</em>”的缺失值将被随机值替换，而“<em>body-style</em>”和“<em>drive-wheels</em>”的缺失值分别替换为“<em>hatchback</em>”和“<em>fwd</em>”。如果缺少“<em>length</em>”，“<em>width</em>”或“<em>height</em>”的值，则该示例被丢弃。所有其他属性的值使用上面设置的默认方法（基于模型的插值器，在我们的例子中）。</p>
+</li>
+<li><p>各个属性的插值方法与默认方法相同。</p>
+</li>
+<li><p>全部恢复为默认值(<em>Restore All to Default</em>)将各个属性处理重置为默认值。</p>
+</li>
+<li><p>制作报告。</p>
+</li>
+<li><p>如果选中自动应用(<em>Apply automatically</em> )，所有更改都会立即提交。否则，需要勾选应用(<em>Apply</em> needs)以应用任何新设置。</p>
+</li>
+</ol>
+<p><strong>示例 - Example</strong></p>
+<p>为了演示 <strong>Impute</strong> 小部件的工作原理，我们试用了 Iris 数据集并删除了一些数据。我们使用了 <strong>Impute</strong> 小部件并选择了基于模型的 imputer 来估算缺失值。在另一个数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)中，我们看到问号标记如何变成不同的值（“Iris-setosa，“Iris-versicolor”）。</p>
+<p><img src="images/Impute-Example.png" alt="img"></p>
+<h2 id="Continuize-连续化"><a href="#Continuize-连续化" class="headerlink" title="Continuize - 连续化"></a>Continuize - 连续化</h2><blockquote>
+<p>将离散变量（属性）转换为数字（“连续”）虚拟变量。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：转换后的数据集</li>
+</ul>
+</blockquote>
+<p>Continuize 小部件在输入中接收数据集并输出相同的数据集，其中离散变量（包括二进制变量）被连续变量替换。</p>
+<p><img src="images/Continuize-stamped.png" alt="img"></p>
+<ol>
+<li><p>定义非二元分类变量的处理。</p>
+<p>本节中的示例将假设我们有一个离散的属性状态，其值按低、中和高的顺序列出。它们的转换选项是：</p>
+<p>● 第一个值作为基数：将一个 N 值的分类变量转化为 N-1 个数值变量，每个变量作为除基值之外的一个原始值的指标。基值是列表中的第一个值。默认情况下，值按字母顺序排列；它们的顺序可以在 Edit Domain 中更改。</p>
+<p>在上面的例子中，三值变量 status 被转换为两个数值变量，status&#x3D;middle，值为 0 或 1，表示原始变量在特定示例中是否具有值 middle，类似地，status&#x3D;high。</p>
+<p>● Most frequent value as base：和上面类似，只是用最频繁的值作为base。所以，如果上面例子中出现频率最高的值是middle，那么就把middle作为基数，新构造的两个变量分别是status&#x3D;low和status&#x3D;high。</p>
+<p>● 每个值一个属性：此选项为每个原始变量的每个值构造一个数字变量。在上面的例子中，我们会得到变量 status&#x3D;low、status&#x3D;middle 和 status&#x3D;high。</p>
+<p>● 忽略多项式属性：从数据中删除非二元分类变量。</p>
+<p>● 视为序数：将变量转换为枚举原始值的单个数值变量。在上述情况下，新变量的值将为 0（低）、1（中）和 2（高）。再次注意值的顺序可以在 Edit Domain 中设置。</p>
+<p>● 除以值的个数：与上面相同，只是值被归一化到 0-1 范围内。在我们的示例中，新变量的值将是 0、0.5 和 1。</p>
+</li>
+<li><p>定义连续属性的处理。有了让它们保持原样的选项，我们可以按跨度进行归一化，这将减去数据中找到的最低值并除以跨度，因此所有值都将适合 [0, 1]。选项 Normalize by standard deviation 减去平均值并除以标准差。</p>
+</li>
+<li><p>定义类属性（结果、目标）的处理方式。除了保持原样之外，可用选项反映了多项式属性的选项，但将结果拆分为多个结果变量的选项除外。</p>
+</li>
+<li><p>此选项定义新变量的范围。在上面的文本中，我们假设范围从 0 到 1。</p>
+</li>
+<li><p>制作报告。</p>
+</li>
+<li><p>如果勾选自动应用，更改将自动提交。否则，您必须在每次更改后按应用。</p>
+</li>
+</ol>
+<p>示例</p>
+<p>首先，让我们看看 Continuize 小部件的输出是什么。我们将原始数据（心脏病数据集）输入数据表并查看它们的外观。然后我们继续离散值并在另一个数据表中观察它们。</p>
+<p><img src="images/Continuize-Example1.png" alt="img"></p>
+<p>在第二个示例中，我们展示了此小部件的典型用法 - 为了正确绘制数据的线性投影，需要将离散属性转换为连续属性，这就是我们在绘制数据之前将数据放入 Continuize 小部件的原因. “胸痛”属性原本有四个值，转化为三个连续属性；类似的情况发生在性别上，它被转化为一个单一的属性“gender&#x3D;female”。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Continuize-Example2.png" alt="img"></p>
+<h2 id="Discretize-离散化"><a href="#Discretize-离散化" class="headerlink" title="Discretize - 离散化"></a>Discretize - 离散化</h2><blockquote>
+<p>将数字属性转换为分类属性。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：具有离散值的数据集</li>
+</ul>
+</blockquote>
+<p>Discretize 小部件离散化数值变量。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Discretize.png" alt="img"></p>
+<ol>
+<li><p>设置离散化的默认方法。</p>
+</li>
+<li><p>选择变量为每个变量设置特定的离散化方法。将鼠标悬停在变量上会显示间隔。</p>
+</li>
+<li><p>离散化方法</p>
+<p>● Keep numeric 保持变量原样。</p>
+<p>● 删除删除变量。</p>
+<p>● 自然分箱为变量的值范围找到了很好的阈值，例如 10、20、30 或 0.2、0.4、0.6、0.8。我们可以设置所需的垃圾箱数量；实际数量将取决于间隔。</p>
+<p>● 固定宽度使用用户定义的 bin 宽度。垃圾箱的边界将是宽度的倍数。例如，如果宽度为 10 并且变量的值范围为 35 到 68，则生成的 bin 将为 &lt;40、40-50、50-60、&gt;60。此方法不适用于时间变量。如果宽度太大（导致单个区间）或太小（导致超过 100 个区间），则删除变量。</p>
+<p>● 时间间隔类似于固定宽度，但用于时间变量。我们指定宽度和时间单位，例如4个月或3天。 bin 边界将是间隔的倍数；例如对于 4 个月，bins 将始终包括 Jan-Mar、Apr-Jun、Jul-Sep 和 Oct-Dec。</p>
+<p>● 等频将属性拆分为给定数量的间隔，实例数量大致相同。</p>
+<p>● 等宽平均分割最小和最大观察值之间的范围。</p>
+<p>● Entropy-MDL 是由 Fayyad 和 Irani 发明的一种自上而下的离散化，它在切割处递归地分割属性以最大化信息增益，直到增益低于切割的最小描述长度。这种离散化可以产生任意数量的间隔，包括单个间隔，在这种情况下，变量将被丢弃为无用（删除）。</p>
+<p>● 自定义允许输入递增的、以逗号分隔的阈值列表。这不适用于时间变量。</p>
+<p>● 使用默认设置（为特定设置启用而不是默认设置）将方法设置为指定为“默认设置”。</p>
+</li>
+<li><p>CC 按钮将当前选定变量的方法设置为自定义，使用它们的当前阈值。这允许手动编辑自动确定的 bin。</p>
+</li>
+</ol>
+<p>示例</p>
+<p>在下面的模式中，我们采用了心脏病数据集和</p>
+<ol>
+<li><p>将年龄离散化为 10（年）的固定间隔，</p>
+</li>
+<li><p>最大 HR 到大约 6 个箱（最接近的匹配是宽度为 25 的 7 个箱），</p>
+</li>
+<li><p>去除胆固醇，</p>
+</li>
+<li><p>并对其余变量使用 entropy-mdl，这导致通过运动和主要血管着色去除静息 SBP 和 ST 的两个间隔。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Discretize-Example.png" alt="img"></p>
+</li>
+</ol>
+<h2 id="Randomize-随机化"><a href="#Randomize-随机化" class="headerlink" title="Randomize - 随机化"></a>Randomize - 随机化</h2><blockquote>
+<p>打乱输入数据集的类、属性和&#x2F;或元数据。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：随机数据集</li>
+</ul>
+</blockquote>
+<p>Randomize 小部件在输入中接收数据集并输出相同的数据集，其中类、属性或&#x2F;和元数据被打乱。</p>
+<p><img src="images/Randomize-Default.png" alt="img"></p>
+<ol>
+<li><p>选择要洗牌的数据集的列组。</p>
+</li>
+<li><p>选择要洗牌的数据集的比例。</p>
+</li>
+<li><p>产生可复制的输出。</p>
+</li>
+<li><p>如果勾选自动应用，更改将自动提交。否则，您必须在每次更改后按应用。</p>
+</li>
+<li><p>制作报告。</p>
+</li>
+</ol>
+<p>示例</p>
+<p>Randomize 小部件通常紧跟在后面（例如 File 小部件。基本用法显示在以下工作流程中，其中 Iris 数据集的类变量的值被随机打乱。</p>
+<p><img src="images/Randomize-Example1.png" alt="img"></p>
+<p>在下一个示例中，我们将展示改组类值如何影响模型在与上述相同的数据集上的性能。</p>
+<p><img src="images/Randomize-Example2.png" alt="img"></p>
+<h2 id="Purge-Domain-清除域"><a href="#Purge-Domain-清除域" class="headerlink" title="Purge Domain - 清除域"></a>Purge Domain - 清除域</h2><blockquote>
+<p>删除未使用的属性值和无用的属性，对剩余值进行排序。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：过滤后的数据集</li>
+</ul>
+</blockquote>
+<p>名义属性的定义有时包含未出现在数据中的值。即使原始数据中没有发生这种情况，过滤数据、选择示例子集等也可以删除属性具有某些特定值的所有示例。这些值使数据呈现混乱，尤其是各种可视化，应该被删除。</p>
+<p>清除属性后，它可能会变成单值，或者在极端情况下，根本没有值（如果所有示例都未定义该属性的值）。在这种情况下，可以删除该属性。</p>
+<p>一个不同的问题是属性值的顺序：如果数据是从一个文件中读取的，其值的格式没有预先声明，它们将“按出现顺序”排序。有时我们更愿意将它们按字母顺序排序。</p>
+<p><img src="images/PurgeDomain-stamped.png" alt="img"></p>
+<ol>
+<li><p>清除属性。</p>
+</li>
+<li><p>清除类。</p>
+</li>
+<li><p>清除元属性。</p>
+</li>
+<li><p>有关过滤过程的信息。</p>
+</li>
+<li><p>制作报告。</p>
+</li>
+<li><p>如果勾选自动应用，小部件将在每次更改小部件设置时输出数据。</p>
+</li>
+</ol>
+<p>这种净化是由小部件 Purge Domain 完成的。普通属性和类属性分开处理。对于每一个，我们可以决定是否要对值进行排序。接下来，我们可以允许小部件删除少于两个值的属性，或者如果少于两个类则删除类属性。最后，我们可以指示小部件检查哪些属性值实际出现在数据中并删除未使用的值。如果不允许删除属性，则小部件不能删除值，因为没有值的属性是没有意义的。</p>
+<p>新的、简化的属性获得前缀“R”，以区别于原始属性。可以从旧属性计算新属性的值，但反之则不行。这意味着如果你从新属性构造一个分类器，你可以用它来对原始属性描述的例子进行分类。但反之则不然：从旧属性构建分类器并将其用于减少的属性描述的示例是行不通的。幸运的是，后者很少发生。在典型的设置中，人们会探索数据、可视化、过滤、净化……然后在原始数据上测试最终模型。</p>
+<p>示例</p>
+<p>清除域小部件通常会在数据过滤后出现，例如在选择可视化示例的子集时。</p>
+<p>在上面的模式中，我们使用 adult.tab 数据集：我们将其可视化并选择一部分数据，其中仅包含五个原始类别中的四个。为了摆脱空类，我们在进入箱线图小部件之前将数据通过清除域。后者仅显示清除数据输出中的四个类。要查看数据净化的效果，请取消选中删除未使用的类变量值并观察这对箱线图的影响。</p>
+<p><img src="images/PurgeDomain-example.png" alt="img"></p>
+<h2 id="Melt-数据融合"><a href="#Melt-数据融合" class="headerlink" title="Melt - 数据融合"></a>Melt - 数据融合</h2><blockquote>
+<p>将宽数据转换为窄数据(<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wide_and_narrow_data">wide data to narrow</a>)。</p>
+<p>输入</p>
+<ul>
+<li>数据：宽数据表</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：窄数据表</li>
+</ul>
+</blockquote>
+<p>Melt 小部件接收更常见的宽格式数据集并输出（row_id、变量、值）三元组表。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Melt-Default-stamped.png" alt="img"></p>
+<p>1.选择用作 id 的变量。该小部件仅提供没有重复值的列。或者，行号可以用作 id。</p>
+<p>2.选择是否包括非数字变量，以及是否排除零值。</p>
+<p>3.使用变量名称（“item”）和相应的值设置列的名称。</p>
+<p>例子</p>
+<p>在下面的工作流程中，我们使用 Zoo 数据集，我们将所有变量转换为数字，将它们视为序数。除了腿数之外的所有变量都是布尔值（例如动物产卵或不产卵），因此值为 1 将对应于具有特定特征的动物。在数据表中，我们选择所有行（Ctrl-A 或 Cmd-A）并取消选择青蛙的重复描述以避免“名称”列中的重复值。</p>
+<p>我们将它传递给 Melt，在这里我们将名称指定为行 ID，并丢弃零值。结果表中的每一种动物都有多行：每一种动物特征都有一行。</p>
+<p>一个有趣的直接用途是将此数据传递给 Distributions 并查看动物最常见和最不常见的特征。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Melt-Workflow.png" alt="img"></p>
+<p>在下一个示例中，我们展示改组类值如何影响模型在与上述相同的数据集上的性能。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Melt-Distribution.png" alt="img"></p>
+<h2 id="Feature-Constructor-特征构造器"><a href="#Feature-Constructor-特征构造器" class="headerlink" title="Feature Constructor - 特征构造器"></a>Feature Constructor - 特征构造器</h2><blockquote>
+<p>向数据集添加新功能。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：具有附加功能的数据集</li>
+</ul>
+</blockquote>
+<p>特征构造器允许您手动将特征（列）添加到数据集中。新功能可以是对现有功能或多个功能（加法、减法等）的组合的计算。您可以选择它的特征类型（离散、连续或字符串）以及它的参数是什么（名称、值、表达式）。对于连续变量，您只需在 Python 中构造一个表达式。</p>
+<p><img src="images/feature-constructor1-stamped.png" alt="img"></p>
+<ol>
+<li><p>构造变量列表</p>
+</li>
+<li><p>添加或删除变量</p>
+</li>
+<li><p>新功能名称</p>
+</li>
+<li><p>Python 中的表达式</p>
+</li>
+<li><p>选择一个功能</p>
+</li>
+<li><p>选择功能</p>
+</li>
+<li><p>制作报告</p>
+</li>
+<li><p>按发送以传达更改</p>
+</li>
+</ol>
+<p>然而，对于离散变量，还有更多工作要做。首先为新功能添加或删除所需的值。然后选择基值和表达式。在下面的示例中，我们构造了一个带有“if lower than”的表达式并定义了三个条件；如果原始值低于 6，程序将归因于 0（我们将其重命名为较低），如果原始值低于 7，则归因于 1（中），所有其他值归因于 2（更高）。请注意，我们使用下划线作为特征名称（例如 petal_length）。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/images/feature-constructor2-stamped.png" alt="img"></p>
+<ol>
+<li><p>变量定义列表</p>
+</li>
+<li><p>添加或删除变量</p>
+</li>
+<li><p>新功能名称</p>
+</li>
+<li><p>Python 中的表达式</p>
+</li>
+<li><p>选择一个功能</p>
+</li>
+<li><p>选择功能</p>
+</li>
+<li><p>赋值</p>
+</li>
+<li><p>制作报告</p>
+</li>
+<li><p>按发送以传达更改</p>
+</li>
+</ol>
+<p>示例</p>
+<p>使用特征构造器，您可以轻松调整现有特征或将现有特征组合成新特征。下面，我们向泰坦尼克号数据集添加了一个新的离散特征。我们创建了一个名为“财务状况”的新属性，如果此人属于第一类（status &#x3D; first），则将其值设置为富有，而对于其他人则不富有。我们可以看到带有数据表小部件的新数据集。</p>
+<p><img src="images/FeatureConstructor-Example.png" alt="img"></p>
+<p>提示</p>
+<p>如果您不熟悉 Python 数学语言，这里有一个快速介绍。</p>
+<ul>
+<li>+, - 加减</li>
+<li>*乘以</li>
+<li>&#x2F; 划分</li>
+<li>% 除并返回余数</li>
+<li>** 对于指数（平方根乘以 0.5）</li>
+<li>&#x2F;&#x2F; 用于楼层划分</li>
+<li>&lt;、&gt;、&lt;&#x3D;、&gt;&#x3D; 小于、大于、小于或等于、大于或等于</li>
+<li>&#x3D;&#x3D;等于</li>
+<li>!&#x3D; 不等于</li>
+</ul>
+<p>如示例所示： (value) if (feature name) &lt; (value), else (value) if (feature name) &lt; (value), else (value)</p>
+<p>[如果特征小于指定值，则使用值 1，如果特征小于指定值 2，则使用值 2，否则使用值 3。]</p>
+<p>在[这里](<a target="_blank" rel="noopener" href="http://www.tutorialspoint.com/python/python_basic_operators.htm">Python - Basic Operators (tutorialspoint.com)</a>)查看更多。</p>
+<h2 id="Create-Class-创建类"><a href="#Create-Class-创建类" class="headerlink" title="Create Class - 创建类"></a>Create Class - 创建类</h2><blockquote>
+<p>从字符串属性创建类属性。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：具有新类变量的数据集</li>
+</ul>
+</blockquote>
+<p>Create Class 从现有的离散属性或字符串属性创建新的类属性。该小部件匹配所选属性的字符串值，并为匹配实例构造一个新的用户定义值。</p>
+<p><img src="images/CreateClass-stamped.png" alt="img"></p>
+<ol>
+<li>构造新类的属性。</li>
+<li>匹配：<ul>
+<li>名称：新类值的名称</li>
+<li>子字符串：正则表达式定义的子字符串，将匹配上述定义属性的值</li>
+<li>instances：匹配子串的实例数</li>
+<li>按“+”添加新的类别值</li>
+</ul>
+</li>
+<li>新类列的名称。</li>
+<li>Match only at the beginning 将从字符串的开头开始匹配。区分大小写也会按大小写匹配。</li>
+<li>制作报告。</li>
+<li>按应用提交结果。</li>
+</ol>
+<p>例子</p>
+<p>这是一个使用 auto-mpg 数据集的简单示例。将数据传递给创建类。选择 car_name 作为创建新类的列。在这里，我们希望创造与汽车品牌相匹配的新价值。首先，我们键入 ford 作为匹配字符串的新值。然后我们定义将匹配数据实例的子字符串。这意味着所有在其 car_name 中包含 ford 的实例现在将在新类列中具有值 ford。接下来，我们为本田和菲亚特定义相同的。该小部件将告诉我们有多少实例尚未匹配（剩余实例）。我们将它们命名为其他，但您可以通过添加带有“+”的条件来继续创建新值。</p>
+<p>我们将新的类列命名为 car_brand 并在字符串的开头进行匹配。</p>
+<p><img src="images/CreateClass-example.png" alt="img"></p>
+<p>最后，我们可以观察数据表中的新列或使用该值作为散点图中的颜色。</p>
+<h2 id="Create-Instance-创建实例"><a href="#Create-Instance-创建实例" class="headerlink" title="Create Instance -创建实例"></a>Create Instance -创建实例</h2><blockquote>
+<p>从示例数据集交互式创建实例。</p>
+<p>输入</p>
+<ul>
+<li><p>数据：输入数据集</p>
+</li>
+<li><p>参考：参考数据集</p>
+</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>数据：输入数据集附加了创建的实例</li>
+</ul>
+</blockquote>
+<p>Create Instance 小部件根据输入数据创建一个新实例。该小部件在两列表中显示输入数据集的所有变量。 Variable 列表示变量的名称，同时 Value 列可以设置变量的值。每个值最初设置为变量的中值。这些值可以通过单击相应的按钮手动设置为中值、平均值、随机或输入。为了更轻松地搜索变量，该表附有过滤器。单击上述按钮之一时，仅考虑过滤后的变量。还可以通过右键单击一行并在上下文菜单中选择一个选项来设置值。</p>
+<p><img src="images/CreateInstance-stamped.png" alt="img"></p>
+<ol>
+<li><p>按变量名过滤表。</p>
+</li>
+<li><p>该列表示变量的名称和类型。可以通过单击列标题对表格进行排序。</p>
+</li>
+<li><p>提供用于值编辑的控件。</p>
+</li>
+<li><p>将筛选变量的值设置为：</p>
+<ul>
+<li><p>中位数：输入数据集中变量的中值</p>
+</li>
+<li><p>平均值：输入数据集中变量的平均值</p>
+</li>
+<li><p>随机：输入数据集中变量范围内的随机值</p>
+</li>
+<li><p>输入：参考数据集中变量的中值</p>
+</li>
+</ul>
+</li>
+<li><p>如果 Append this instance to input data 被勾选，创建的实例将附加到输入数据集。否则，单个实例将出现在输出中。为了区分创建的数据和原始数据，添加了 Source ID 变量。</p>
+</li>
+<li><p>如果勾选自动应用，更改将自动提交。否则，您必须在每次更改后按应用。<br>制作报告。</p>
+</li>
+<li><p>有关输入和参考数据集的信息。</p>
+</li>
+<li><p>关于输出数据集的信息。</p>
+</li>
+</ol>
+<p>例子</p>
+<p>Create Instance 通常用于检查模型在某些任意数据上的性能。基本用法显示在以下工作流中，其中（房屋）数据集用于拟合线性回归模型，然后用于预测数据的目标值，由创建实例小部件创建。在 File 和 Create Instance 之间插入一个 Rank 小部件可以输出（并因此做出预测）最重要的特征。插入“选择列”小部件以省略实际目标值。</p>
+<p><img src="images/CreateInstance-example.png" alt="img"></p>
+<p>下一个示例显示如何检查创建的实例是否是某种异常值。创建的实例被提供给 PCA，然后在散点图中检查其第一个和第二个组件。创建的实例在图中显示为红色，如果它看起来远离原始数据（蓝色），则可以将其视为异常值。</p>
+<p><img src="images/CreateInstance-example2.png" alt="img"></p>
+<h2 id="Python-Script-Python脚本"><a href="#Python-Script-Python脚本" class="headerlink" title="Python Script - Python脚本"></a>Python Script - Python脚本</h2><blockquote>
+<p>通过 Python 脚本扩展功能。</p>
+<p>输入：</p>
+<ul>
+<li><p>数据（Orange.data.Table）：绑定到in_data变量的输入数据集</p>
+</li>
+<li><p>学习者（Orange.classification.Learner）：输入学习者绑定到 in_learner 变量</p>
+</li>
+<li><p>分类器（Orange.classification.Learner）：输入分类器绑定到in_classifier变量</p>
+</li>
+<li><p>对象：绑定到 in_object 变量的输入 Python 对象</p>
+</li>
+</ul>
+<p>输出：</p>
+<ul>
+<li><p>数据（Orange.data.Table）：从 out_data 变量中检索到的数据集</p>
+</li>
+<li><p>Learner (Orange.classification.Learner)：从 out_learner 变量中检索到的学习者</p>
+</li>
+<li><p>分类器 (Orange.classification.Learner)：从 out_classifier 变量中检索的分类器</p>
+</li>
+<li><p>对象：从 out_object 变量中检索到的 Python 对象</p>
+</li>
+</ul>
+</blockquote>
+<p>当现有小部件中未实现合适的功能时，Python 脚本小部件可用于在输入中运行 python 脚本。该脚本在其本地命名空间中具有 in_data、in_distance、in_learner、in_classifier 和 in_object 变量（来自输入信号）。如果信号未连接或尚未接收到任何数据，则这些变量包含 None。对于多个输入连接到小部件的情况，可以改用列表 in_datas、in_distances、in_learners、in_classifiers 和 in_objects。<br>脚本执行后，脚本本地命名空间中的变量将被提取并用作小部件的输出。该小部件可以进一步连接到其他小部件以可视化输出。<br>例如，以下脚本将简单地传递它接收到的所有信号：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">out_data = in_data</span><br><span class="line">out_distance = in_distance</span><br><span class="line">out_learner = in_learner</span><br><span class="line">out_classifier = in_classifier</span><br><span class="line">out_object = in_object</span><br></pre></td></tr></table></figure>
+
+<p>注意：您不应就地修改输入对象。</p>
+<ol>
+<li><p>信息框包含 Orange Python 脚本的基本运算符的名称。</p>
+</li>
+<li><p>库控件可用于管理多个脚本。按“+”将添加一个新条目并在 Python 脚本编辑器中将其打开。当脚本被修改时，它在库中的条目将更改以指示它有未保存的更改。按更新将保存脚本（键盘快捷键“Ctrl+S”）。可以通过选择脚本并按“-”按钮来删除脚本。</p>
+</li>
+<li><p>在“运行”框中按“执行”执行脚本（键盘快捷键“Ctrl+R”）。任何脚本输出（来自print）都会被捕获并显示在脚本下方的控制台中。</p>
+</li>
+<li><p>左侧的 Python 脚本编辑器可用于编辑脚本（它支持一些基本的语法高亮显示）。</p>
+</li>
+<li><p>控制台显示脚本的输出。</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Orange.data import Domain, Table</span><br><span class="line">domain = Domain([attr for attr in in_data.domain.attributes</span><br><span class="line">                 if attr.is_continuous or len(attr.values) &lt;= 5],</span><br><span class="line">                in_data.domain.class_vars)</span><br><span class="line">out_data = Table(domain, in_data)</span><br></pre></td></tr></table></figure>
+
+<p><img src="images/PythonScript-filtering.png" alt="img"></p>
+<p>第二个示例显示如何在几行代码中舍入所有值。这次我们使用 wine.tab 并将所有值四舍五入为整数。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">out_data = in_data.copy()</span><br><span class="line">#copy, otherwise input data will be overwritten</span><br><span class="line">np.round(out_data.X, 0, out_data.X)</span><br></pre></td></tr></table></figure>
+
+<p><img src="images/PythonScript-round.png" alt="img"></p>
+<p>第三个示例向数据中引入了一些高斯噪声。我们再次复制输入数据，然后使用双 for 循环遍历所有值并添加随机噪声。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import random</span><br><span class="line">from Orange.data import Domain, Table</span><br><span class="line">new_data = in_data.copy()</span><br><span class="line">for inst in new_data:</span><br><span class="line">  for f in inst.domain.attributes:</span><br><span class="line">    inst[f] += random.gauss(0, 0.02)</span><br><span class="line">out_data = new_data</span><br></pre></td></tr></table></figure>
+
+<p><img src="images/PythonScript-gauss.png" alt="img"></p>
+<p>最后一个示例使用 Orange3-Text 插件。 Python 脚本对于文本挖掘中的自定义预处理、从字符串中提取新特征或利用高级 nltk 或 gensim 函数非常有用。下面，我们简单地通过用空格分割来自 deerwester.tab 的输入数据来标记它们。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">print(&#x27;Running Preprocessing ...&#x27;)</span><br><span class="line">tokens = [doc.split(&#x27; &#x27;) for doc in in_data.documents]</span><br><span class="line">print(&#x27;Tokens:&#x27;, tokens)</span><br><span class="line">out_object = in_data</span><br><span class="line">out_object.store_tokens(tokens)</span><br></pre></td></tr></table></figure>
+
+<p>您可以添加许多其他预处理步骤以进一步调整输出。 Python 脚本的输出可以与接受脚本生成的输出类型的任何小部件一起使用。在这种情况下，连接是绿色的，表示词云小部件的输入类型正确。</p>
+<p><img src="images/PythonScript-Example3.png" alt="img"></p>
+<h1 id="Visualize-可视化"><a href="#Visualize-可视化" class="headerlink" title="Visualize - 可视化"></a><strong>Visualize - 可视化</strong></h1><h2 id="Tree-Viewer-树查看器"><a href="#Tree-Viewer-树查看器" class="headerlink" title="Tree Viewer - 树查看器"></a><strong>Tree Viewer - 树查看器</strong></h2><blockquote>
+<p>分类树和回归树的可视化。</p>
+<p>输入</p>
+<ul>
+<li>树：决策树</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>所选数据：从树节点中选择的实例</p>
+</li>
+<li><p>数据：带有附加列的数据显示是否选择了一个点</p>
+</li>
+</ul>
+</blockquote>
+<p>这是一个多功能小部件，具有分类和回归树的二维可视化。用户可以选择一个节点，指示小部件输出与该节点关联的数据，从而实现探索性数据分析。</p>
+<p><img src="images/TreeViewer-stamped.png" alt="img"></p>
+<ol>
+<li><p>输入信息。</p>
+</li>
+<li><p>显示选项：</p>
+<ul>
+<li>放大和缩小</li>
+<li>选择树的宽度。将鼠标悬停在节点上时，节点会显示信息气泡。</li>
+<li>选择树的深度。</li>
+<li>选择边缘宽度。树图中节点之间的边是根据选定的边宽绘制的。<ul>
+<li>如果选择“固定”，则所有边的宽度都将相等。</li>
+<li>选择Relative to root时，边的宽度将对应对应节点中的实例占训练数据中所有实例的比例。在这种选择下，边向树的底部遍历时，边会越来越细。</li>
+<li>Relative to parent 使边缘宽度对应于节点中的实例相对于其父节点中的实例的比例。</li>
+</ul>
+</li>
+<li>定义目标类，您可以根据数据中的类进行更改。</li>
+</ul>
+</li>
+<li><p>按保存图像将创建的树图作为 .svg 或 .png 文件保存到您的计算机。</p>
+</li>
+<li><p>制作报告。</p>
+</li>
+</ol>
+<p>例子</p>
+<p>下面是一个简单的分类模式，我们已经在其中读取数据、构建决策树并在我们的树查看器中查看它。如果查看器和树都打开，则树归纳算法的任何重新运行都会立即影响可视化。因此，您可以使用这种组合来探索归纳算法的参数如何影响结果树的结构。</p>
+<p><img src="images/TreeViewer-classification.png" alt="img"></p>
+<p>点击任意一个节点都会输出相关的数据实例。这在下面的模式中进行了探讨，该模式显示了数据表和散点图中的子集。确保树数据作为数据子集传递；这可以通过首先将散点图连接到文件小部件，然后将其连接到树查看器小部件来完成。所选数据将显示为粗体点。<br>Tree Viewer 还可以导出标记数据。将数据表连接到树查看器并将小部件之间的链接设置为数据而不是选定数据。这会将整个数据发送到数据表，并带有一个附加的元列标记选定的数据实例（对选定的是，对其余的是否）。</p>
+<p><img src="images/TreeViewer-selection.png" alt="img"></p>
+<p>最后，Tree Viewer 也可用于可视化回归树。使用 housing.tab 数据集将随机森林连接到文件小部件。然后将毕达哥拉斯森林连接到随机森林。在 Pythagorean Forest 中选择您希望进一步分析的回归树并将其传递给 Tree Viewer。小部件将显示构造的树。对于可视化更大的树，尤其是对于回归，毕达哥拉斯树可能是更好的选择。</p>
+<p><img src="images/TreeViewer-regression.png" alt="img"></p>
+<h2 id="Box-Plot-箱型图"><a href="#Box-Plot-箱型图" class="headerlink" title="Box Plot - 箱型图"></a><strong>Box Plot - 箱型图</strong></h2><blockquote>
+<p>显示属性值的分布。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>选中数据：从图中选择的实例</p>
+</li>
+<li><p>数据：带有附加列的数据显示是否选择了一个点</p>
+</li>
+</ul>
+</blockquote>
+<p>箱形图小部件显示属性值的分布。使用此小部件检查任何新数据以快速发现任何异常情况是一种很好的做法，例如重复值（例如，灰色和灰色）、异常值等。可以选择条形 - 例如，分类数据的值或数字数据的分位数范围。</p>
+<p><img src="images/BoxPlot-Continuous.png" alt="img"></p>
+<ol>
+<li><p>选择你要绘制的变量。勾选按与子组的相关性排序，以通过Chi2或方差分析对所选子组的变量进行排序。</p>
+</li>
+<li><p>选择子组，查看按离散子组显示的箱形图。勾选 “按变量相关性排序”，在所选变量上按Chi2或ANOVA排序子组。</p>
+</li>
+<li><p>当实例按子组分组时，你可以改变显示模式。注释框将显示终值、平均值和中位数，而比较中位数和比较平均值自然会在子组之间比较选定的值。</p>
+<p><img src="images/BoxPlot-Continuous-small.png" alt="continuous"></p>
+</li>
+<li><p>平均值（深蓝色的垂直线）。蓝色细线代表标准差。</p>
+</li>
+<li><p>第一（25%）和第三（75%）四分位数的数值。蓝色高亮区域代表第一和第三四分位数之间的数值。</p>
+</li>
+<li><p>中位数（黄色垂直线）。</p>
+</li>
+</ol>
+<p>对于离散的属性，条形图表示具有每个特定属性值的实例的数量。该图显示了动物园数据集中不同动物类型的数量：有41种哺乳动物，13种鱼，20种鸟，等等。</p>
+<p>显示的是：</p>
+<ul>
+<li><p>拉伸条： 显示数据实例的相对值（比例）。未勾选的方框显示绝对值。</p>
+</li>
+<li><p>显示方框标签： 在每个条形图上方显示离散值。</p>
+</li>
+<li><p>按子组频率排序： 按子组的频率降序排列。</p>
+</li>
+</ul>
+<p><img src="images/BoxPlot-Discrete.png" alt="img"></p>
+<p>例子</p>
+<p>箱形图小部件最常用于在文件小部件之后立即观察数据集的统计属性。在第一个示例中，我们使用心脏病数据来检查我们的变量。</p>
+<p><img src="images/BoxPlot-Example1.png" alt="img"></p>
+<p>箱形图对于查找特定数据集的属性也很有用，例如，在另一个小部件中手动定义的一组实例（例如散点图或属于某个集群或分类树节点的实例。现在让我们使用动物园数据并创建具有距离和层次聚类的典型聚类工作流程。</p>
+<p>现在定义集群选择的阈值（单击顶部的标尺）。将箱形图连接到层次聚类，勾选按相关性排序，然后选择聚类作为子组。这将根据属性定义所选子组的程度对属性进行排序，在我们的例子中是一个集群。看起来我们的集群确实与动物类型非常吻合！</p>
+<p><img src="images/BoxPlot-Example2.png" alt="img"></p>
+<h2 id="Violin-Plot-小提琴图"><a href="#Violin-Plot-小提琴图" class="headerlink" title="**Violin Plot -小提琴图 **"></a>**Violin Plot -小提琴图 **</h2><blockquote>
+<p>可视化小提琴图中特征值的分布。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>选中数据：从图中选择的实例</p>
+</li>
+<li><p>数据：带有附加列的数据显示是否选择了一个点</p>
+</li>
+</ul>
+</blockquote>
+<p>Violin Plot 小部件与 Box Plot 起着类似的作用。它显示了定量数据在分类变量的多个级别上的分布，以便可以比较这些分布。与箱形图不同，其中所有绘图组件都对应于实际数据点，小提琴图具有基础分布的核密度估计。</p>
+<p><img src="images/ViolinPlot-stamped.png" alt="img"></p>
+<ol>
+<li><p>选择要绘制的变量。勾选 Order by relevance to subgroups 以在所选子组上按 Chi2 或 ANOVA 对变量进行排序。</p>
+</li>
+<li><p>选择子组以查看由离散子组显示的小提琴图。勾选按与变量的相关性排序，以在所选变量上按 Chi2 或 ANOVA 对子组排序。</p>
+</li>
+<li><p>箱线图：勾选以显示底层箱线图。</p>
+<p><img src="images/ViolinPlot-boxplot.png" alt="img"></p>
+<p>带状图：勾选以显示由点表示的基础数据。</p>
+<p>地毯图：勾选以显示由线条表示的基础数据。</p>
+<p>订购子组：勾选以按中位数（升序）订购小提琴。</p>
+<p>方向：确定小提琴的方向。</p>
+</li>
+<li><p>内核：选择用于估计密度的内核。可能的内核是：Normal、Epanechnikov 和 Linear。</p>
+<p>缩放：选择用于缩放每个小提琴宽度的方法。如果选择区域，则每把小提琴将具有相同的区域。如果选择计数，则小提琴的宽度将根据该箱中的观察数量进行缩放。如果选择了宽度，每把小提琴将具有相同的宽度。</p>
+</li>
+</ol>
+<p>例子</p>
+<p>Violin Plot 小部件最常用于在 File 小部件之后立即观察数据集的统计属性。在第一个示例中，我们使用心脏病数据来检查我们的变量。</p>
+<p><img src="images/ViolinPlot-example1.png" alt="img"></p>
+<p>小提琴图也可用于离群值检测。在下一个示例中，我们通过仅选择落在 Q1 − 1.5 和 Q3 + 1.5 IQR 内的实例来消除异常值。</p>
+<p><img src="images/ViolinPlot-example2.png" alt="img"></p>
+<h2 id="Distributions-分布图"><a href="#Distributions-分布图" class="headerlink" title="**Distributions -分布图 **"></a>**Distributions -分布图 **</h2><blockquote>
+<p>显示单个属性的值分布。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>选中数据：从图中选择的实例</li>
+<li>数据：带有附加列的数据显示是否选择了实例</li>
+<li>直方图数据：直方图中的 bin 和实例计数</li>
+</ul>
+</blockquote>
+<p>Distributions 小部件显示离散或连续属性的值分布。如果数据包含类变量，则分布可能以类为条件。</p>
+<p>该图显示了每个属性值在数据中出现的次数（例如，在多少实例中）。如果数据包含类变量，将显示每个属性值的类分布（如下面的快照所示）。为了创建此图，我们使用了 Zoo 数据集。</p>
+<p><img src="images/Distributions-Discrete.png" alt="img"></p>
+<ol>
+<li>用于显示的变量列表。按频率排序类别按频率显示值。</li>
+<li>使用滑块设置 Bin 宽度。精密刻度设置为合理的间隔。拟合分布将选定的分布拟合到图中。选项包括 Normal、Beta、Gamma、Rayleigh、Pareto、Exponential、Kernel density。</li>
+<li>列：<ul>
+<li>拆分显示特定类实例的值分布。</li>
+<li>堆叠列显示每个 bin 一列，按类别值的比例着色。</li>
+<li>显示概率显示所选变量的类别值的概率。</li>
+<li>显示累积分布累积叠加频率。</li>
+</ul>
+</li>
+<li>如果勾选自动应用，则会自动传达更改。或者，单击应用。</li>
+</ol>
+<p>对于连续属性，属性值也显示为直方图。可以将各种分布拟合到数据，例如，高斯核密度估计。隐藏条隐藏直方图条并仅显示分布（分布的旧行为）。</p>
+<p>对于这个例子，我们使用了 Iris 数据集。</p>
+<p><img src="images/Distributions-Continuous.png" alt="img"></p>
+<p>在无类域中，条形显示为蓝色。我们使用了 Housing 数据集。</p>
+<p><img src="images/Distributions-NoClass.png" alt="img"></p>
+<h2 id="Scatter-Plot-散点图"><a href="#Scatter-Plot-散点图" class="headerlink" title="Scatter Plot - 散点图"></a><strong>Scatter Plot - 散点图</strong></h2><blockquote>
+<p>具有探索性分析和智能数据可视化增强功能的散点图可视化。</p>
+<p>输入</p>
+<ul>
+<li><p>数据：输入数据集</p>
+</li>
+<li><p>数据子集：实例的子集</p>
+</li>
+<li><p>特性：属性列表</p>
+</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>Selected Data：从图中选择的实例</p>
+</li>
+<li><p>数据：带有附加列的数据显示是否选择了一个点</p>
+</li>
+</ul>
+</blockquote>
+<p>散点图小部件提供二维散点图可视化。数据显示为点的集合，每个点具有确定水平轴位置的 x 轴属性值和确定垂直轴位置的 y 轴属性值。可以在小部件的左侧调整图形的各种属性，例如点的颜色、大小和形状、轴标题、最大点大小和抖动。下面的快照显示了 Iris 数据集的散点图以及类属性的颜色匹配。</p>
+<p><img src="images/Scatterplot-Iris-stamped.png" alt="img"></p>
+<ol>
+<li><p>选择x和y属性。用 “查找信息预测 “优化你的预测。该功能通过平均分类精度对属性对进行评分，并返回得分最高的属性对，同时进行可视化更新。</p>
+</li>
+<li><p>属性。设置显示的点的颜色（你会得到分类值的颜色和数字的蓝绿黄点）。设置标签、形状和大小以区分各点。只标记选定的点允许你选择个别数据实例并只标记这些实例。</p>
+</li>
+<li><p>为所有数据点设置符号大小和不透明度。设置抖动以防止点的重叠。抖动将只在分类值周围随机散射点。如果抖动数值被选中，点也会分散在其实际数值周围。</p>
+<p>● 显示颜色区域按类别为图表着色（请参见下面的屏幕截图）。</p>
+<p>● 显示图例在右侧显示图例。单击并拖动图例以移动它。</p>
+<p>● 显示网格线显示绘图后面的网格。</p>
+<p>● 如果光标放在一个点上，则在鼠标悬停时显示所有数据会启用信息气泡。</p>
+<p>● Show regression line 绘制一对数字属性的回归线。如果选择分类变量为图着色，则将显示每个类值的单独回归线。报告的 r 值对应于线性最小二乘回归的 r 值，等于 Pearson 相关系数。</p>
+<p>● 将变量视为独立拟合回归线到一组点（最小化点的距离），而不是将 y 拟合为 x 的函数（最小化垂直距离）。</p>
+</li>
+<li><p>选择、缩放、平移和缩放以适合是探索图形的选项。手动选择数据实例用作角度&#x2F;方形选择工具。双击移动投影。滚动或缩小以进行缩放。</p>
+</li>
+<li><p>如果勾选自动发送，则会自动传达更改。或者，按发送。</p>
+</li>
+</ol>
+<p>如果勾选了显示颜色区域和显示回归线框，则以下是散点图小部件的示例。</p>
+<p><img src="images/Scatterplot-ClassDensity.png" alt="img"></p>
+<p>智能数据可视化</p>
+<p>如果数据集有很多属性，则不可能手动扫描所有对以找到有趣或有用的散点图。 Orange 通过小部件中的“查找信息预测”选项实现智能数据可视化。</p>
+<p>如果在“颜色”部分中选择了分类变量，则分数计算如下。对于每个数据实例，该方法在投影的 2D 空间中找到 10 个最近的邻居，即在属性对的组合上。然后检查它们中有多少具有相同的颜色。投影的总分就是同色邻居的平均数。</p>
+<p>数字颜色的计算是类似的，除了确定系数用于测量投影的局部均匀性。</p>
+<p>要使用此方法，请转到小部件中的 Find Informative Projections 选项，打开子窗口并按 Start Evaluation。该功能将按平均分类准确度得分返回属性对列表。</p>
+<p>下面是一个演示排名实用程序的示例。第一个散点图投影设置为默认的萼片宽度到萼片长度图（为简单起见，我们使用 Iris 数据集）。运行 Find Informative Projections 优化后，散点图转换为更好的花瓣宽度到花瓣长度图的投影。</p>
+<p><img src="images/ScatterPlotExample-Ranking.png" alt="img"></p>
+<p>选择</p>
+<p>选择可用于在数据中手动定义子组。选择数据实例时使用 Shift 修饰符将它们放入新组中。 Shift + Ctrl（或 MacOs 上的 Shift + Cmd）将实例附加到最后一个组。</p>
+<p>信号数据输出一个数据表，其中包含一个包含组索引的附加列。</p>
+<p><img src="images/ScatterPlot-selection.png" alt="img"></p>
+<p>探索性数据分析</p>
+<p>与其他 Orange 小部件一样，散点图支持放大和缩小部分绘图以及手动选择数据实例。这些功能位于小部件的左下角。</p>
+<p>默认工具是选择，它选择所选矩形区域内的数据实例。 Pan 使您能够在窗格周围移动散点图。借助 Zoom，您可以通过鼠标滚动来放大和缩小窗格，而 Reset zoom 可将可视化重置为最佳大小。下面显示了一个简单模式的示例，我们从矩形区域中选择数据实例并将它们发送到数据表小部件。请注意，散点图并未显示所有 52 个数据实例，因为一些数据实例重叠（它们使用的两个属性具有相同的值）。</p>
+<p><img src="images/ScatterPlotExample-Explorative.png" alt="img"></p>
+<p>示例</p>
+<p>散点图可以与任何输出选定数据实例列表的小部件结合使用。在下面的示例中，我们结合了树和散点图来显示从选定的决策树节点中获取的实例（单击树的任何节点会将一组选定的数据实例发送到散点图，并用填充符号标记选定的实例）。</p>
+<p><img src="images/ScatterPlotExample-Classification.png" alt="img"></p>
+<p>参考</p>
+<p>Gregor Leban and Blaz Zupan and Gaj Vidmar and Ivan Bratko (2006) VizRank: Data Visualization Guided by Machine Learning. Data Mining and Knowledge Discovery, 13 (2). pp. 119-136. 在这里可用。</p>
+<h2 id="Line-Plot-线形图"><a href="#Line-Plot-线形图" class="headerlink" title="Line Plot - 线形图"></a><strong>Line Plot - 线形图</strong></h2><blockquote>
+<p>数据概况的可视化（如时间序列）。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+<li>数据子集：实例的子集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>选定的数据：从图中选定的实例</li>
+<li>数据：带有附加列的数据，显示一个点是否被选中。</li>
+</ul>
+</blockquote>
+<p>线形图一种将数据显示为一系列的点，由直线段连接的图。它只适用于数字数据，而分类数据可用于对数据点进行分组。</p>
+<p><img src="images/LinePlot-stamped.png" alt="img"></p>
+<ol>
+<li><p>有关输入数据的信息。</p>
+</li>
+<li><p>选择您要显示的内容：</p>
+<ul>
+<li>线条显示图中的单个数据实例。</li>
+<li>范围显示第 10 个和第 90 个百分位之间的数据点范围。</li>
+<li>平均值添加平均值线。如果选择分组依据，则将显示每个组值的平均值。</li>
+<li>误差条显示每个属性的标准偏差。</li>
+</ul>
+</li>
+<li><p>选择用于数据实例分组的分类属性。使用 None 显示未分组的数据。</p>
+</li>
+<li><p>选择、缩放、平移和缩放以适合是探索图形的选项。手动选择数据实例作为线选择，这意味着所选线图下的数据将在输出中发送。滚动或缩小以进行缩放。当悬停在单个轴上时，滚动将仅缩放悬停的轴（垂直或水平缩放）。</p>
+</li>
+<li><p>如果勾选自动发送，更改会自动传达。或者，单击发送。</p>
+</li>
+</ol>
+<p>例子</p>
+<p>线图是一个标准的可视化小部件，它显示数据配置文件，通常是有序的数字数据。在这个简单的示例中，我们将在折线图中显示鸢尾花数据，并按 iris 属性分组。该图显示了花瓣长度如何很好地区分类值。</p>
+<p>如果我们在散点图中观察到这一点，我们可以确认确实如此。花瓣长度是一个有趣的类分离属性，尤其是在用花瓣宽度增强时，在线图中也很好地分离了它。</p>
+<p><img src="images/LinePlot-Example.png" alt="img"></p>
+<h2 id="Bar-Plot-条形图"><a href="#Bar-Plot-条形图" class="headerlink" title="Bar Plot - 条形图"></a><strong>Bar Plot - 条形图</strong></h2><blockquote>
+<p>可视化离散类别之间的比较。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+<li>数据子集：实例的子集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>选中的数据：从图中选择的实例</li>
+<li>数据：带有附加列的数据显示是否选择了一个点</li>
+</ul>
+</blockquote>
+<p>条形图小部件可视化数字变量并通过分类变量比较它们。该小部件对于观察异常值、组内分布和比较类别很有用。</p>
+<p><img src="images/Bar-Plot-stamped.png" alt="img"></p>
+<ol>
+<li>图的参数。值是要绘制的数值变量。 Group by 是对数据进行分组的变量。注释是图下方的分类标签。颜色是分类变量，其值用于为条形着色。</li>
+<li>选择、缩放、平移和缩放以适合是探索图形的选项。手动选择数据实例用作角度&#x2F;方形选择工具。双击移动投影。滚动或缩小以进行缩放。</li>
+<li>如果勾选自动发送，则会自动传达更改。或者，按发送。</li>
+<li>访问帮助、保存图像、生成报告或调整视觉设置。右边显示了输入和输出的信息。</li>
+</ol>
+<p>例子</p>
+<p>条形图小部件最常在文件小部件之后立即用于比较分类值。在这个例子中，我们使用心脏病数据来检查我们的变量。</p>
+<p><img src="images/Bar-Plot-Example.png" alt="img"></p>
+<p>首先，我们从我们的数据集中观察了患者的胆固醇值。我们根据直径缩小对他们进行分组，这定义了患有心脏病的患者 (1) 和没有心脏病的患者 (0)。我们使用相同的变量为条形着色。</p>
+<p>然后，我们使用 Select Rows 选择了 60 岁以上的患者。我们将子集发送到条形图以在小部件中突出显示这些患者。胆固醇水平高的大异常值显然超过 60 岁。</p>
+<h2 id="Heat-Map-热图"><a href="#Heat-Map-热图" class="headerlink" title="Heat Map - 热图"></a><strong>Heat Map - 热图</strong></h2><blockquote>
+<p>为一对属性绘制热图。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>选定的数据：从图中选定的实例</li>
+<li>数据：带有附加列的数据，显示一个点是否被选中。</li>
+</ul>
+</blockquote>
+<p>热图是一种图形方法，用于可视化双向矩阵中的属性值。它只适用于含有数字变量的数据集。这些值根据选定的调色板用颜色表示。通过在x轴和y轴上结合类别变量和属性，我们可以看到属性值最强的地方和最弱的地方，从而使我们能够找到每个类别的典型特征。</p>
+<p>这个小组件可以通过点击和拖动来选择行。我们可以用Ctrl++（Cmd++）放大，用Ctrl+-（Cmd+-）缩小。Ctrl+0 (Cmd+0)将缩放重置为扩展版本，而Ctrl+9 (Cmd+9)将其重置为默认版本。</p>
+<p><img src="images/HeatMap.png" alt="img"></p>
+<ol>
+<li>色调表。从线性、发散、色盲友好或其他调色板中选择。低和高是调色板的阈值（低为低值的属性，高为高值的属性）。选择分歧调色板中的一个，它有两个极端的颜色，在中点有一个中性（黑色或白色）的颜色，可以选择设置一个有意义的中点值（默认为0）。</li>
+<li>合并行数。如果可视化中的行数太多，可以用k-means算法将它们合并到N个选定的聚类中（默认为50）。</li>
+<li>聚类的列和行：<ul>
+<li>无（列出在数据集中发现的属性和行）</li>
+<li>聚类（通过欧氏距离的层次聚类和平均联系的相似性对数据进行聚类）</li>
+<li>有序叶子的聚类（与聚类相同，但它另外使相邻元素的相似度之和最大化）</li>
+</ul>
+</li>
+<li>通过一个分类变量来分割行或列。如果数据包含一个类别变量，行将被自动按类别分割。</li>
+<li>在注释和图例中设置绘图的显示内容。<ul>
+<li>如果 “显示图例 “被选中，地图上方将显示一个彩色图表。</li>
+<li>如果勾选了带平均数的条纹，左边将显示一条带属性平均数的新线。行注释为右侧的每个实例添加注释。颜色是用所选分类变量的相应值为实例着色。列注释为选定位置的每个变量添加注释（默认为顶部）。颜色是用所选列注释的相应值为各列着色。</li>
+</ul>
+</li>
+<li>如果保持长宽比被勾选，每个值将以正方形显示（与地图成正比）。</li>
+<li>如果勾选了 “自动发送”，则变化会自动传达。或者，点击发送。</li>
+</ol>
+<p>高级可视化</p>
+<p>热力图可以实现一些整洁的绘图增强功能。这些选项是对行和&#x2F;或列进行聚类，以便更好地组织数据，对行和列进行注释，以及按分类变量分割数据。</p>
+<p>行和列的聚类是独立进行的。行聚类是通过欧氏距离计算的，而列聚类则使用皮尔逊相关系数。层次聚类是基于Ward联系法。用最优叶子排序的聚类方法对树状图中的左右分支进行重新排序，使相邻叶子之间的距离之和最小（Bar-Joseph等，2001）。</p>
+<p><img src="images/HeatMap-advanced.png" alt="img"></p>
+<p>例子</p>
+<p>基因表达</p>
+<p>下面的热图显示了 brown-selected 数据集的属性值 (Brown et al. 2000)。热图特别适合显示基因表达，棕色选择的数据集包含不同条件下的酵母基因表达。<br>热图以蓝色显示低表达，以黄色和白色显示高表达。为了更好地组织，我们向列添加了聚类（优化排序），这会将具有相似配置文件的列放在一起。通过这种方式，我们可以在右下角看到导致核糖体基因低表达的条件。</p>
+<p>此外，右侧的行颜色增强了绘图，显示了行属于哪个类。</p>
+<p><img src="images/HeatMap-Example1.png" alt="img"></p>
+<p>情绪分析</p>
+<p>热图非常适合可视化任何类型的可比较数字变量，例如文档集合中的情绪。我们将从语料库小部件中获取书籍摘录语料库，并将其传递给情感分析小部件，该小部件计算每个文档的情感分数。情绪分析的输出是四列，正面、负面和中性情绪分数，以及将以前的分数聚合成一个数字的复合分数。正复合值（白色）代表正文档，而负复合值（蓝色）代表负文档。</p>
+<p>我们使用行聚类将相似的行更靠近地放置在一起，从而产生明确的负组和正组。现在我们可以选择负面的儿童读物并探索它们是哪些。</p>
+<p><img src="images/HeatMap-Example2.png" alt="img"></p>
+<p>参考文献</p>
+<p>Bar-Joseph, Z., Gifford, D.K., Jaakkola, T.S. (2001) Fast optimal leaf ordering for hierarchical clustering, Bioinformatics, 17, 22-29.</p>
+<p>Brown, M.P., Grundy, W.N., Lin, D., Cristianini, N., Sugnet, C., Furey, T.S., Ares, M., Haussler, D. (2000) Knowledge-based analysis of microarray gene expression data by using support vector machines, Proceedings of the National Academy of Sciences, 1, 262-267.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h1 id="Model-模型"><a href="#Model-模型" class="headerlink" title="Model - 模型"></a><strong>Model - 模型</strong></h1><h2 id="Tree-决策树"><a href="#Tree-决策树" class="headerlink" title="Tree - 决策树"></a>Tree - 决策树</h2><blockquote>
+<p>具有前向修剪的树算法。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+<li>预处理器：预处理方法</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>学习者：决策树学习算法</li>
+<li>模型：训练好的模型</li>
+</ul>
+</blockquote>
+<p>树是一种简单的算法，它将数据按类的纯度（分类的信息增益和数字目标变量的MSE）分割成节点。它是随机森林的前驱。Orange的树是内部设计的，可以处理分类和数字数据集。</p>
+<p>它也可以用于分类和回归任务。</p>
+<p><img src="images/Tree-stamped.png" alt="img"></p>
+<ol>
+<li>学习者可以被赋予一个名称，它将在其他部件中出现。默认名称是 “树”。</li>
+<li>树的参数：<ul>
+<li>诱导二叉树：建立一棵二叉树（分割成两个子节点）</li>
+<li>Min. number of instances in leaves: 如果选中，算法将永远不会构建一个将少于指定数量的训练实例放入任何分支的分割。</li>
+<li>Do not split subsets smaller than: 禁止算法分割少于给定实例数的节点。</li>
+<li>限制最大树的深度：将分类树的深度限制在指定的节点层数上。</li>
+</ul>
+</li>
+<li>Stop when majority reaches [%]: 在达到指定的多数阈值后停止分割节点。</li>
+<li>生成报告。在改变设置后，你需要点击应用，这将把新的学习者放在输出上，如果训练的例子是给定的，也会构建一个新的分类器并输出。或者，勾选左边的方框，变化将被自动传达。</li>
+</ol>
+<p>预处理</p>
+<p>树不使用任何预处理。</p>
+<p>实例</p>
+<p>这个小组件有两个典型的用途。首先，你可能想诱导一个模型并检查它在树状视图中的样子。</p>
+<p><img src="images/Tree-classification-visualize.png" alt="img"></p>
+<p>第二个模式训练模型并根据逻辑回归评估其性能。</p>
+<p><img src="images/Tree-classification-model.png" alt="img"></p>
+<p>我们在两个示例中都使用了 iris 数据集。然而，Tree 也适用于回归任务。使用住房数据集并将其传递给 Tree。从 Tree Viewer 中选择的树节点显示在散点图中，我们可以看到所选示例表现出相同的特征。</p>
+<p><img src="images/Tree-regression-subset.png" alt="img"></p>
+<h2 id="SVM-支持向量机"><a href="#SVM-支持向量机" class="headerlink" title="SVM - 支持向量机"></a>SVM - 支持向量机</h2><blockquote>
+<p>支持向量机将输入映射到更高维的特征空间。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+<li>预处理器：预处理方法</li>
+</ul>
+<p>输出</p>
+<ul>
+<li>学习者：线性回归学习算法</li>
+<li>模型：训练好的模型</li>
+<li>支持向量：用作支持向量的实例</li>
+</ul>
+</blockquote>
+<p>支持向量机（SVM）是一种机器学习技术，它用一个超平面来分离属性空间，从而使不同类或类值的实例之间的余量最大化。该技术经常产生极高的预测性能结果。Orange嵌入了来自LIBSVM包的一个流行的SVM实现。这个小部件是它的图形用户界面。</p>
+<p>对于回归任务，SVM在高维特征空间中使用ε-不敏感的损失进行线性回归。它的估计精度取决于C、ε和核参数的良好设置。该小组件在SVM回归的基础上输出类别预测。</p>
+<p>这个小工具对分类和回归任务都有效。</p>
+<p><img src="images/SVM-stamped.png" alt="img"></p>
+<ol>
+<li>学习者可以被赋予一个名字，它将以这个名字出现在其他小工具中。默认名称是 “SVM”。</li>
+<li>带有测试误差设置的SVM类型。SVM和ν-SVM是基于误差函数的不同最小化。在右边，你可以设置测试误差的界限：<ul>
+<li>SVM：<ul>
+<li>成本：损失的惩罚项，适用于分类和回归任务。</li>
+<li>ε：epsilon-SVR模型的参数，适用于回归任务。定义了与真实值的距离，在这个距离内，预测值不会有任何惩罚。</li>
+</ul>
+</li>
+<li>ν-SVM：<ul>
+<li>成本：损失的惩罚项，仅适用于回归任务</li>
+<li>ν：ν-SVR模型的一个参数，适用于分类和回归任务。训练误差部分的上限和支持向量部分的下限。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>核是一个将属性空间转换为新的特征空间以适应最大边际超平面的函数，因此允许算法用线性、多项式、RBF和Sigmoid核创建模型。指定核的函数在选择后呈现，所涉及的常数为：<ul>
+<li>g为核函数中的gamma常数（推荐值为1&#x2F;k，其中k为属性的数量，但由于可能没有给小工具的训练集，默认为0，用户必须手动设置这个选项），</li>
+<li>c为核函数中的常数c0（默认为0），以及</li>
+<li>d为内核的程度（默认为3）。</li>
+</ul>
+</li>
+<li>在Numerical Tolerance（数值公差）中设置允许的预期值偏差。勾选Iteration Limit旁边的方框，设置允许的最大迭代次数。</li>
+<li>制作一份报告。</li>
+<li>点击 “应用 “来提交更改。如果你在 “应用 “按钮左边的方框里打勾，变化将被自动传达。</li>
+</ol>
+<p><strong>预处理</strong></p>
+<p>当没有给出其他预处理程序时，SVM使用默认预处理。它按以下顺序执行：</p>
+<ul>
+<li><p>删除具有未知目标值的实例</p>
+</li>
+<li><p>将分类变量连续化（采用一次编码）。</p>
+</li>
+<li><p>删除空列</p>
+</li>
+<li><p>用平均值代替缺失值</p>
+</li>
+</ul>
+<p>对于分类，SVM还对密集数据进行归一化处理，对稀疏数据进行缩放。</p>
+<p>要删除默认的预处理，请将一个空的预处理部件连接到学习者身上。</p>
+<p><strong>例子</strong></p>
+<p>在第一个（回归）例子中，我们使用了住房数据集，并用数据采样器将数据分成两个数据子集（数据样本和剩余数据）。样本被送到SVM，SVM产生了一个模型，然后在预测中使用该模型来预测剩余数据的值。如果数据已经在两个独立的文件中，也可以使用类似的模式；在这种情况下，将使用两个文件部件，而不是文件-数据采样器的组合。</p>
+<p><img src="images/SVM-Predictions.png" alt="img"></p>
+<p>第二个例子展示了如何将SVM与Scatter Plot结合使用。下面的工作流程在虹膜数据上训练一个SVM模型，并输出支持向量，即那些在学习阶段被用作支持向量的数据实例。我们可以在散点图的可视化中观察到哪些是这些数据实例。请注意，为了使工作流程正常工作，你必须设置部件之间的链接，如下图所示。</p>
+<p><img src="images/SVM-support-vectors.png" alt="img"></p>
+<p><strong>参考文献</strong></p>
+<p>StatSoft上的SVM介绍。</p>
+<h2 id="Naive-Bayes-贝叶斯算法"><a href="#Naive-Bayes-贝叶斯算法" class="headerlink" title="Naive Bayes - 贝叶斯算法"></a>Naive Bayes - 贝叶斯算法</h2><blockquote>
+<p>基于贝叶斯定理并假设特征独立的快速简单的概率分类器。</p>
+<p>输入</p>
+<ul>
+<li><p>数据：输入数据集</p>
+</li>
+<li><p>预处理器：预处理方法</p>
+</li>
+</ul>
+<p>输出</p>
+<ul>
+<li><p>学习者：朴素贝叶斯学习算法</p>
+</li>
+<li><p>模型：训练好的模型</p>
+</li>
+</ul>
+</blockquote>
+<p>朴素贝叶斯从数据中学习朴素贝叶斯模型。它仅适用于分类任务。</p>
+<p><img src="images/NaiveBayes-stamped.png" alt="img"></p>
+<p>此小部件有两个选项：它将在其他小部件中显示的名称和生成报告。默认名称是朴素贝叶斯。当您更改它时，您需要按应用。</p>
+<p>预处理</p>
+<p>当没有给出其他预处理器时，朴素贝叶斯使用默认预处理。它按以下顺序执行它们：</p>
+<ul>
+<li>删除空列</li>
+<li>以相同的频率将数值离散化为 4 个 bin</li>
+</ul>
+<p>要删除默认预处理，请将一个空的 Preprocess 小部件连接到学习者。</p>
+<p>例子</p>
+<p>在这里，我们介绍了此小部件的两种用途。首先，我们将朴素贝叶斯的结果与另一个模型随机森林进行比较。我们将虹膜数据从文件连接到测试和评分。我们还将朴素贝叶斯和随机森林连接到 Test &amp; Score 并观察它们的预测分数。</p>
+<p><img src="images/NaiveBayes-classification.png" alt="img"></p>
+<p>第二个模式显示了使用朴素贝叶斯做出的预测的质量。我们为 Test &amp; Score 小部件提供一个朴素贝叶斯学习器，然后将数据发送到混淆矩阵。我们还将散点图与文件连接起来。然后我们在混淆矩阵中选择错误分类的实例，并将它们提供给散点图。散点图中的粗点是朴素贝叶斯错误分类的实例。</p>
+<p><img src="images/NaiveBayes-visualize.png" alt="img"></p>
+<h1 id="Evaluate-评估"><a href="#Evaluate-评估" class="headerlink" title="Evaluate - 评估"></a>Evaluate - 评估</h1><h2 id="Test-and-Score-测试和评分"><a href="#Test-and-Score-测试和评分" class="headerlink" title="Test and Score - 测试和评分"></a>Test and Score - 测试和评分</h2><blockquote>
+<p>在数据上测试学习算法。</p>
+<p>输入</p>
+<ul>
+<li>数据：输入数据集</li>
+<li>测试数据：用于测试的单独数据</li>
+</ul>
+<p>学习者：学习算法</p>
+<p>输出</p>
+<ul>
+<li>评估结果：测试分类算法的结果</li>
+</ul>
+</blockquote>
+<p>该小部件测试学习算法。可以使用不同的采样方案，包括使用单独的测试数据。这个小部件做了两件事。首先，它显示了一个表格，其中包含不同的分类器性能指标，例如分类精度和曲线下面积。其次，它输出评估结果，可以被其他小部件用于分析分类器的性能，例如 ROC Analysis 或 Confusion Matrix。</p>
+<p>学习者信号有一个不常见的特性：它可以连接到多个小部件，以使用相同的过程测试多个学习者。</p>
+<p><img src="images/TestAndScore-stamped.png" alt="img"></p>
+<ol>
+<li><p>该小部件支持各种采样方法。</p>
+<ul>
+<li>交叉验证将数据分成给定数量的折叠（通常为 5 或 10）。通过一次从一个折叠中取出示例来测试该算法；该模型是从其他折叠中导出的，并且对来自保留折叠的示例进行了分类。对所有折叠重复此操作。</li>
+<li>按特征进行交叉验证执行交叉验证，但折叠由从元特征中选择的分类特征定义。</li>
+<li>Random sampling将数据按给定的比例（如70:30）随机分成训练集和测试集；整个过程重复指定的次数。</li>
+<li>留一法类似，但它一次保留一个实例，从所有其他实例中归纳模型，然后对保留的实例进行分类。这种方法显然非常稳定、可靠……而且非常慢。</li>
+<li>训练数据测试使用整个数据集进行训练，然后进行测试。这种方法实际上总是给出错误的结果。</li>
+<li>测试数据测试：以上方法仅使用来自Data信号的数据。要输入另一个带有测试示例的数据集（例如来自另一个文件或在另一个小部件中选择的一些数据），我们在通信通道中选择“分离测试数据”信号并选择“测试测试数据”。</li>
+</ul>
+</li>
+<li><p>对于分类，可以在小部件的底部选择目标类。当 Target class 是 (Average over classes) 时，方法返回所有类的加权平均值的分数。例如，对于具有 3 个类别的分类器，计算类别 1 作为目标类别、类别 2 作为目标类别和类别 3 作为目标类别的分数。这些分数根据班级规模的权重进行平均，以检索最终分数。</p>
+</li>
+<li><p>该小部件将计算许多性能统计数据。默认显示一些。要查看其他统计信息，请右键单击标题并选择所需的统计信息。</p>
+<ul>
+<li><p>分类</p>
+<p><img src="images/TestAndScore-Classification.png" alt="img"></p>
+<ul>
+<li>ROC 下的面积是接受者操作曲线下的面积。</li>
+<li>分类准确率是正确分类的例子的比例。</li>
+<li>F-1 是精度和召回率的加权调和平均值（见下文）。</li>
+<li>精度是分类为阳性的实例中真阳性的比例，例如正确识别为 Iris virginica 的 Iris virginica 的比例。</li>
+<li>召回率是数据中所有阳性实例中真阳性的比例，例如所有被诊断为患病的人中患病的人数。</li>
+<li>特异性是所有负例中真负例的比例，例如在所有被诊断为非患病者中，非患病者的数量。</li>
+<li>LogLoss 或交叉熵损失根据预测与实际标签的差异程度来考虑预测的不确定性。</li>
+<li>训练时间 - 用于训练模型的累计时间（以秒为单位）。</li>
+<li>测试时间 - 用于测试模型的累计时间（以秒为单位）。</li>
+</ul>
+</li>
+<li><p>回归</p>
+<p><img src="images/TestAndScore-Regression.png" alt="img"></p>
+<ul>
+<li>MSE 测量误差或偏差的平方的平均值（估计值与估计值之间的差异）。</li>
+<li>RMSE 是一组数字的平方的算术平均值的平方根（衡量估计量与数据拟合的不完美程度）</li>
+<li>MAE 用于衡量预测或预测与最终结果的接近程度。</li>
+<li>R2 被解释为因变量中可从自变量预测的方差的比例。</li>
+<li>CVRMSE 是由实际值的平均值归一化的 RMSE。</li>
+<li>训练时间 - 用于训练模型的累计时间（以秒为单位）。</li>
+<li>测试时间 - 用于测试模型的累计时间（以秒为单位）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>选择模型成对比较的分数和实际等效区域 (ROPE)，其中差异被认为可以忽略不计。</p>
+</li>
+<li><p>使用所选分数对模型进行成对比较（仅适用于交叉验证）。表中的数字给出了行对应的模型比列对应的模型得分更高的概率。更高的分数意味着什么取决于指标：更高的分数可能意味着模型更好（例如，CA 或 AUC）或相反（例如，RMSE）。如果启用了可忽略的差异，则下面较小的数字显示该对之间的差异可忽略的概率。该检验基于 t 检验的贝叶斯解释（较短的介绍）。</p>
+</li>
+<li><p>获得帮助并生成报告。</p>
+</li>
+</ol>
+<p>预测建模的预处理</p>
+<p>在构建预测模型时，必须注意如何预处理数据。在 Orange 中有两种可能的方法，每种方法都略有不同：</p>
+<ol>
+<li><p>将 Preprocess 连接到学习者。这将覆盖学习者的默认预处理管道，并仅应用自定义预处理管道（默认预处理步骤在每个学习者的文档中都有描述）。该过程可能会导致学习者出现错误。</p>
+<p><img src="images/Preprocess-Models1.png" alt="img"></p>
+</li>
+<li><p>将预处理连接到测试和评分。这会将预处理器应用于交叉验证中的每个批次。然后学习器的预处理器将应用于预处理的子集。</p>
+<p><img src="images/Preprocess-Models2.png" alt="img"></p>
+</li>
+</ol>
+<p>最后，有一个错误的方法来做到这一点。将 Preprocess 直接连接到原始数据并输出预处理后的数据集可能会使模型过拟合。不要这样做。</p>
+<p><img src="images/Preprocess-Models3.png" alt="img"></p>
+<p>例子</p>
+<p>在小部件的典型使用中，我们给它一个数据集和一些学习算法，然后我们在 Test &amp; Score 小部件和 ROC 中的表格中观察它们的性能。数据通常在测试前进行预处理；在这种情况下，我们在泰坦尼克号数据集上进行了一些手动特征选择（选择列小部件），我们只想知道幸存者的性别和状态，而忽略年龄。</p>
+<p>在底部的表格中，我们对模型进行了成对比较。我们选择比较是基于 ROC 曲线统计下的面积。表中的数字给出了行对应的模型优于列对应的模型的概率。例如，我们可以看到树优于 SVM 的概率几乎为 1，而树优于朴素贝叶斯的概率为 0.001。表中较小的数字是基于可忽略的阈值 0.1，该对之间的差异可忽略的概率。</p>
+<p><img src="images/TestAndScore-Example.png" alt="img"></p>
+<p>混淆矩阵小部件的文档中介绍了使用此小部件的另一个示例。</p>
+<h2 id="Predictions-预测"><a href="#Predictions-预测" class="headerlink" title="Predictions - 预测"></a>Predictions - 预测</h2><blockquote>
+<p>显示模型对数据的预测。</p>
+<p>输入</p>
+<p>数据：输入数据集</p>
+<p>预测器：用于数据的预测器</p>
+<p>输出</p>
+<p>预测：添加预测的数据</p>
+<p>评估结果：测试分类算法的结果</p>
+</blockquote>
+<p>小部件接收一个数据集和一个或多个预测变量（预测模型，而不是学习算法 - 请参见下面的示例）。它输出数据和预测。</p>
+<p><img src="images/Predictions-stamped.png" alt="img"></p>
+<ol>
+<li>有关输入的信息，即要预测的实例数、预测变量数和任务（分类或回归）。如果您已按属性对数据表进行排序并且希望查看原始视图，请按恢复原始顺序。</li>
+<li>您可以选择分类选项。如果勾选预测类，视图将提供有关预测类的信息。如果勾选了预测概率，该视图将提供有关分类器预测概率的信息。您还可以选择视图中显示的预测类。选项 Draw distribution bars 提供了概率的可视化。</li>
+<li>通过勾选 Show full dataset，您可以查看整个数据表（否则只会显示类变量）。</li>
+<li>选择所需的输出。</li>
+<li>预测。</li>
+</ol>
+<p>该小部件显示预测模型的概率和最终决策。小部件的输出是另一个数据集，其中预测被附加为新的元属性。您可以选择要输出的特征（原始数据、预测、概率）。结果可以在数据表中观察到。如果预测数据包含真实类别值，则预测结果也可以在混淆矩阵中观察到。</p>
+<p>例子</p>
+<p>在第一个示例中，我们将使用 Attrition - 来自数据集小部件的训练数据。这是关于员工流失的数据。换句话说，我们想知道某个员工是否会辞职。我们将使用 Tree 小部件构建一个预测模型，并在 Predictions 中观察概率。</p>
+<p>对于预测，我们既需要训练数据，我们已经将其加载到第一个数据集小部件中，又需要要预测的数据，我们将在另一个数据集小部件中加载这些数据。这次我们将使用 Attrition - Predict 数据。将第二个数据集连接到 Predictions。现在我们可以看到来自第二个数据集的三个数据实例的预测。</p>
+<p>树模型预测没有员工会离开公司。您可以尝试其他模型，看看预测是否改变。或者先在“测试与评分”小部件中测试预测分数。</p>
+<p><img src="images/Predictions-Example1.png" alt="img"></p>
+<p>在第二个示例中，我们将了解如何正确使用 Preprocess with Predictions 或 Test &amp; Score。</p>
+<p>这次我们使用文件小部件中的 heart disease.tab 数据。您可以通过下拉菜单访问数据。这是一个包含 303 名因胸痛就医的患者的数据集。测试完成后，发现一些患者直径变窄，而其他患者则没有（这是我们的类变量）。</p>
+<p>心脏病数据有一些缺失值，我们希望对此进行说明。首先，我们将使用 Data Sampler 将数据集拆分为训练数据和测试数据。</p>
+<p>然后我们将数据样本发送到预处理。我们将使用 Ipute Missing Values，但您可以对数据尝试任意组合的预处理器。我们会将预处理后的数据发送到逻辑回归，将构建的模型发送到预测。</p>
+<p>最后，Predictions 还需要用于预测的数据。我们将使用数据采样器的输出进行预测，但这次不是数据样本，而是剩余数据，这是未用于训练模型的数据。</p>
+<p>请注意我们如何在不应用任何预处理的情况下将剩余数据直接发送到 Predictions。这是因为 Orange 在内部处理新数据的预处理，以防止模型构建中出现任何错误。用于训练数据的预处理器将用于预测。相同的过程适用于测试和评分。</p>
+<p><img src="images/Predictions-Example2.png" alt="img"></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>1c39b4a64955e29d40df94407ebe5310f078fa28<br>10da846a4a4d23c5a22770ded2c65a92639740de</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="Spectroscopy-光谱学"><a href="#Spectroscopy-光谱学" class="headerlink" title="Spectroscopy - 光谱学"></a>Spectroscopy - 光谱学</h1><h2 id="Spectra-光谱-谱图"><a href="#Spectra-光谱-谱图" class="headerlink" title="Spectra - 光谱 - 谱图"></a><a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/spectroscopy/spectra/">Spectra - 光谱 - 谱图</a></h2><blockquote>
+<p>直观地探索一系列没有空间信息的光谱。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+<li>Data Subset-数据子集：数据的子集</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Selection-选择: 被选择的谱</li>
+</ul>
+</blockquote>
+<p>光谱部件(<strong>Spectra</strong>)允许对多个光谱进行可视化探索。要输出一些光谱，请单击选择它们。对于多重选择，请按住修改键（Ctrl或Cmd）或使用行选择（请参见”绘图选项菜单-<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/#PlotOptions">plot options menu</a>“）。选定的光谱将显示为虚线。</p>
+<p><img src="1.orange_widget.assets/Spectra-stamped.png" alt="img"></p>
+<ol>
+<li>打开”绘图选项菜单-<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/#PlotOptions">plot options menu</a>“</li>
+<li>一个光谱</li>
+<li>光标的X和Y位置</li>
+<li>图例（仅当光谱为彩色时出现）</li>
+</ol>
+<p><strong>导航 - Navigation</strong></p>
+<ul>
+<li>单击+拖动：移动绘图</li>
+<li>右键单击：缩放以适合</li>
+<li>右键单击+拖动：通过鼠标移动进行缩放</li>
+<li>滚动：缩放X轴</li>
+<li>滚动+修饰：缩放Y轴</li>
+</ul>
+<p><strong>绘图选项 - Plot options</strong></p>
+<ul>
+<li>重新采样曲线-Resample curves（R）：重新采样显示的子集（仅显示子集以提高性能）</li>
+<li>重采样重置-Resampling reset（Mod+R）：重采样到默认视图</li>
+<li>放大-Zoom in（Z）：缩放到一个区域（稍后选定）</li>
+<li>缩放到适合-Zoom to fit（Backspace）：返回原始绘图</li>
+<li>重新缩放Y以适应-Rescale Y to fit（D）：重新缩放Y轴以适应屏幕（放大时有用）</li>
+<li>显示平均值-Show averages（A）：显示平均值和标准偏差（每组）</li>
+<li>显示网格-Show grid（G）：显示网格以更好地检查绘图</li>
+<li>反转X-Invert X（X）：反转X轴的顺序</li>
+<li>添加峰值标签-Add Peak Label（P）：添加带有标签的可调整垂直线。单击鼠标右键删除线条。</li>
+<li>选择(线)-Select (line)（S）：选择接触直线的光谱（用鼠标绘制直线）</li>
+<li>保存图形-Save graph（Mod+S）：将可视化结果导出为图像</li>
+<li>定义视图范围-Define view range：定义要显示的特定范围</li>
+<li>着色方式-Color by：着色的分类特征</li>
+<li>标题、X轴、Y轴-Title, X-axis, Y-axis：注释绘图</li>
+</ul>
+<p><strong>示例</strong></p>
+<p>光谱部件(<strong>Spectra</strong>)用于可视化光谱数据。X轴通常显示波数，而Y轴显示吸收率。我们将从数据集部件(<strong>Datasets</strong> )中绘制肝脏光谱数据(<em>Liver spectroscopy</em>)作为示例。</p>
+<p>我们使用了“颜色-<em>Color</em>”选项来显示每个光谱的类型。或者您也可以按“C”，绘图将显示颜色。颜色由数据定义；要更改颜色，请使用”颜色部件(Color)”。</p>
+<p>现在，假设我对这些光谱感兴趣，它们在1027波数附近与其他光谱完全分离。我将按“S”并拖动一条线。这将选择我拖动的线下的光谱。</p>
+<p>我可以在另一个光谱部件(Spectra)中观察选择，或将其用于进一步分析。</p>
+<p><img src="1.orange_widget.assets/Spectra-Example1.png" alt="img"></p>
+<h2 id="HyperSpectra-超光谱-平面光谱"><a href="#HyperSpectra-超光谱-平面光谱" class="headerlink" title="HyperSpectra - 超光谱 - 平面光谱"></a><a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/spectroscopy/hyperspectra/">HyperSpectra - 超光谱 - 平面光谱</a></h2><blockquote>
+<p>绘制二维平面光谱地图。</p>
+<p><strong>输入：</strong></p>
+<ul>
+<li>Data-数据-：输入数据</li>
+</ul>
+<p><strong>输出：</strong></p>
+<ul>
+<li>Selection-选择：来自选择区域的光谱</li>
+<li>Data-数据-：包含是否选择了光谱的信息的数据集</li>
+</ul>
+</blockquote>
+<p>HyperSpectra部件绘制从.map文件读取的超光谱。要将此部件用于红外光谱数据，您需要使用<strong>Reshape Map</strong>部件对其进行变换。</p>
+<p>在顶部，<strong>HyperSpectra</strong>部件显示了光谱切片的2D图。在底部，显示了光谱图，红线表示我们在顶部观察到的波数切片。</p>
+<p><img src="1.orange_widget.assets/HyperSpectra-stamped.png" alt="img"></p>
+<ol>
+<li>Image values-图像值：定义光谱的变换（通常是积分）或使用特征作为绘图值。前一种转换可以是从0开始的积分、从基线开始的积分，从0开始峰值，从基线开始峰值，最近值，从0到最大值的X值或从基线开始最大值的X-值。</li>
+<li>光谱切片的高光谱图。<ul>
+<li>放大（Z）：放大到从高光谱图中选择的区域</li>
+<li>缩放到适合（backspace）：返回原始绘图<br>选择（方形）（S）：单击所需选择区域的左上角和右下角，从绘图中选择一个区域</li>
+<li>选择（多边形）（P）：通过外接多边形来选择区域</li>
+<li>保存图形（Mod+S）：将可视化保存为.png、.svg或.pdf文件</li>
+<li>轴x：定义x轴的属性</li>
+<li>y轴：定义y轴的属性</li>
+<li>颜色：选择绘图的颜色</li>
+</ul>
+</li>
+<li>所选图像区域的光谱图。它的行为类似于<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/spectroscopy/spectra/">Spectra</a>部件。</li>
+<li>所选集成方法的区域选择器。</li>
+<li>分割图像和光谱视图：移动它以增加图像大小。</li>
+</ol>
+<h2 id="Interpolate-插值"><a href="#Interpolate-插值" class="headerlink" title="Interpolate - 插值"></a>Interpolate - 插值</h2><blockquote>
+<p>光谱插值</p>
+<p><strong>输入：</strong></p>
+<ul>
+<li>Data-数据：输入数据</li>
+<li>Points-点：参考数据集</li>
+</ul>
+<p><strong>输出：</strong></p>
+<ul>
+<li>Interpolated Data-插值数据：对齐数据集</li>
+</ul>
+</blockquote>
+<p>插值部件(<strong>Interpolate</strong>)使您能够将数据集与不同的波数对齐。它具有自动插值功能，或者对齐您所提供的参考数据集。</p>
+<p><img src="1.orange_widget.assets/Interpolate-stamped.png" alt="img"></p>
+<ol>
+<li>Enable automatic interpolation-启用自动插值：创建一个新域，从而启用测试数据值的插值。</li>
+<li>Linear interva-线性间隔：<ul>
+<li>Min：最小截止值</li>
+<li>Max：最大截止值</li>
+<li>Delta：截止值之间的差异</li>
+</ul>
+</li>
+<li>Reference data-参考数据：数据与参考数据对齐。</li>
+</ol>
+<p><strong>示例</strong></p>
+<p>第一个示例显示了如何使用插值部件(<strong>Interpolate</strong>)来对齐光谱数据的训练和测试数据集。我们将使用<a target="_blank" rel="noopener" href="http://file.biolab.si/spectral_data/collagen-interpolate-train.tab">collagen-interpolate-train.tab</a>来训练我们的模型。让我们用<strong>File</strong>部件加载数据。然后将其连接到测试和分数部件(<strong>Test &amp; Score</strong>)，并添加一个学习模型，如逻辑回归(<strong>Logistic Regression</strong>)。测试和分数部件(<strong>Test &amp; Score</strong>)中的分数看起来很棒。</p>
+<p>现在我们想在一个单独的数据集上进行测试，该数据集具有不同的波数。我们将使用<a target="_blank" rel="noopener" href="http://file.biolab.si/spectral_data/collagen-interpolate-test.tab">collagen-interpolate-test.tab</a>进行测试。如果我们将这些数据直接连接到测试和分数部件(<strong>Test &amp; Score</strong>)，并选择测试数据上的测试选项，我们的结果将非常糟糕。发生了什么？</p>
+<p>嗯，Orange在两个数据集之间找不到任何相似之处，因为波数不同。这就是为什么我们需要首先进行插值，以将两个数据集对齐到相同的比例。我将在<strong>File-Test</strong>和<strong>Test&amp;Score</strong>之间插入<strong>Interpolate</strong>部件。我还将提供<strong>File-Train</strong>作为参考数据集，并在<strong>Interpolate</strong>中选择它作为选项。现在，测试和分数的结果要好得多。</p>
+<p>第二个用例更高级。我们将使用插值部件(<strong>Interpolate</strong>)来确定我们可以在测量中损失多少粒度。假设我们希望更快地执行诊断。我们可以只测量每10个波数吗？或者每50次？</p>
+<p>我们将使用数据集部件(<strong>Datasets</strong>)中的肝脏光谱数据(<em>Liver spectroscopy</em>)。将部件连接到插值部件(<strong>Interpolate</strong>)并使用”线性间隔-<em>Linear interval</em>“选项。增量设置为10。然后在测试和评分部件(<strong>Test &amp; Score</strong>)中观察预测模型的性能。使用您想要的任何分类器；我们选择了逻辑回归(<strong>Logistic Regression</strong>)和随机森林(<strong>Random Forest</strong>)。AUC相当高。</p>
+<p>现在，将delta设为50，观察AUC的变化。不多尝试将增量设置为100或150。AUC仍然很高，这意味着分类器即使在如此低的分辨率下也是稳定的。这是一种很好的方法，可以确定您能够承受多大的粒度损失，从而仍然能够实现类值之间的良好分离。</p>
+<p><img src="1.orange_widget.assets/Interpolate-example.png" alt="Interpolate-example"></p>
+<h2 id="Preprocess-Spectra-预处理光谱"><a href="#Preprocess-Spectra-预处理光谱" class="headerlink" title="Preprocess Spectra - 预处理光谱"></a>Preprocess Spectra - 预处理光谱</h2><blockquote>
+<p>构造数据预处理管道。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+<li>Reference-参考：某些预处理方法中使用的可选参考数据集</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Preprocessed Data-预处理数据: 处理后的数据集</li>
+<li>Preprocessor-预处理方法：预处理方法</li>
+</ul>
+</blockquote>
+<p><strong>Preprocess Spectra</strong>部件将一系列预处理方法应用于谱数据。您可以从列表中选择预处理方法，然后按下右侧的三角形按钮以可视化结果。预处理的顺序很重要，所以要更改预处理的次序，只需将方法拖放到适当的位置即可。</p>
+<p>所选方法的输入数据显示在顶部绘图中，而预处理数据显示在底部绘图中。</p>
+<p>您可以通过按下右侧的三角形按钮来观察每个预处理步骤。要应用所有这些并观察<u>最终结果预览</u>，请按<em>Final preview</em>。要输出数据，请按<em>Commit</em>。</p>
+<p>参考数据集是沿着输入数据进行处理的：只有先预处理器的使用参考作为输入，且如果引用需要保持固定，请在<strong>Preprocess Spectra</strong>部件中对多个方法进行拆分，然后与参考进行连接。</p>
+<p>下面是<strong>Preprocess Spectra</strong>部件的示例，并对其主要功能进行了一些解释。</p>
+<p><img src="1.orange_widget.assets/Preprocess-Spectra-stamped.png" alt="img"></p>
+<ol>
+<li>从下拉菜单中添加预处理方法。</li>
+<li>使用编辑器菜单预览绘图，和在**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/spectroscopy/spectra/">Spectra</a>**部件中一样。上图显示了预处理前的数据和预处理后的数据。</li>
+<li>预览单个预处理结果（上面的图将显示其输入，下面的图显示其输出）。</li>
+<li>单击“最终预览”(<em>Final Preview</em>)按钮，观察预处理的最终结果。更改图中显示的光谱数量。</li>
+<li>单击”提交”(<em>Commit</em>)按钮，计算并输出预处理数据。</li>
+</ol>
+<p><strong>Preprocessing Methods - 预处理方法</strong></p>
+<ul>
+<li><p>Cut (keep) - 裁剪(保持)：选择要保留的光谱区域的截断值。</p>
+</li>
+<li><p>Cut (remove) - 裁剪(去除)：选择要去除的光谱区域的截断值。</p>
+</li>
+<li><p>Gaussian smoothing - 高斯滤波：应用高斯滤波。</p>
+</li>
+<li><p>Savitzky-Golay Filter - S-G滤波器：应用<a target="_blank" rel="noopener" href="https://blog.csdn.net/shenziheng1/article/details/53391422/">Savitzky Golay</a>滤波器。</p>
+</li>
+<li><p>Baseline Correction - 基线修正：修正基线。</p>
+</li>
+<li><p>Normalize Spectra - 标准化光谱：应用标准化方法。</p>
+<ul>
+<li>Vector normalization - 矢量标准化: 计算 L2 norm</li>
+<li>Min-Max normalization - 最小-最大值标准化：用$Y_{max}-Y_{min}$范围划分每个光谱</li>
+<li>Area normalization - 区域标准化：提供了几种方法，也允许选择计算的特定范围</li>
+<li>Attribute normalization: 使用一个可用的预计算属性，对每个频谱进行标准化</li>
+<li>Standard Normal Variate (SNV) - 标准正态变量：$\tilde{X}^{SNV}_i &#x3D; (X_i - \tilde{X}_i) &#x2F; \sigma_i$</li>
+<li>Normalize by Reference - 通过参考进行标准化：输入一个光谱作为参考，来对每个光谱进行标准化。</li>
+</ul>
+</li>
+<li><p>Integrate - 积分：计算选定区域的积分。类似于<strong>Integrate Spectra</strong>部件。</p>
+</li>
+<li><p>PCA denoising - PCA去噪：使用PCA方法对数据进行去噪</p>
+</li>
+<li><p>Transmittance to Absorbance - 透射谱到吸收谱：从透射光谱转换为吸收光谱。</p>
+</li>
+<li><p>Absorbance to Transmittance - 吸收谱到透射谱：将吸收光谱转换为透射光谱。</p>
+</li>
+<li><p>Shift spectra - 转移光谱：转移周围的事物。</p>
+</li>
+<li><p>EMSC：特殊的谱方法。</p>
+</li>
+<li><p>Spike Removal - 尖峰去除：通过修正的z分数(z-score)去除光谱中的尖峰。</p>
+</li>
+<li><p>Asymmetric Least Squares Smoothing - 不对称最小二乘平滑：可用于基线减法的三种ALS方法。</p>
+</li>
+<li><p>Atmospheric gas correction - 大气气体校正：使用参考光谱去除H20&#x2F;CO2贡献。</p>
+</li>
+</ul>
+<p><strong>Example - 示例</strong></p>
+<p>通常，我们会在分析开始时使用<strong>Preprocess Spectra</strong>部件。我们将使用<strong>Datasets</strong>部件中的肝脏光谱数据(<em>liver spectroscopy</em>)。</p>
+<p>在<strong>Preprocess Spectra</strong>部件中，我们将选择一对预处理方法并观察它们的输出。首先，让我们使用基线校正(<em>Baseline Correction</em>)，该方法中从光谱中去除基线。</p>
+<p>然后我们将使用<strong>裁剪(保持)</strong>[<em>Cut (keep)</em> ]方法切割感兴趣的区域。要设置要保留的区域，在绘图中向左或向右拖动红线。您将看到底部如何随着选择的改变而改变。</p>
+<p>要查看预处理的最终结果，请按<em>Final preview</em>，一旦您对结果感到满意，请按<em>Commit</em>。我们可以在<strong>Spectra</strong>部件中观察最终结果，或者在下游分析中使用预处理数据。</p>
+<p><img src="1.orange_widget.assets/Preprocess-Spectra-Example.png" alt="img"></p>
+<h2 id="Integrate-Spectra-谱积分"><a href="#Integrate-Spectra-谱积分" class="headerlink" title="Integrate Spectra - 谱积分"></a>Integrate Spectra - 谱积分</h2><blockquote>
+<p>构造数据预处理管道。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Integrated Data-被积数据: 附加积分列的数据集</li>
+<li>Preprocessor-预处理方法：预处理方法</li>
+</ul>
+</blockquote>
+<p><strong>Integrate Spectra</strong>部件允许您通过选择感兴趣的区域，将积分列添加到数据集中，并将其与多种方法集成。</p>
+<p><img src="1.orange_widget.assets/Integrate-Spectra-stamped.png" alt="img"></p>
+<ol>
+<li>添加积分：<ul>
+<li>从0开始积分；</li>
+<li>从基线开始积分；</li>
+<li>从0到峰值；</li>
+<li>从基线到峰值；</li>
+<li>邻近值；</li>
+<li>从0开始X值的最大值；</li>
+<li>从基线开始X值的最大值；</li>
+</ul>
+</li>
+<li>切换预览；</li>
+<li>使用编辑器菜单预览绘图，就像在<strong>Spectra</strong>部件中一样。</li>
+<li>显示光谱的子样本（为了展示）。</li>
+<li>将积分输出为元属性。否则只输出积分。提交以将更改发送到输出。</li>
+</ol>
+<p><strong>Example - 示例</strong></p>
+<p>这是一个关于如何使用<strong>Integrate Spectra</strong>部件的简单示例。该部件提供了许多积分光谱区域的选项，结果作为附加列添加到数据集中。</p>
+<p>我们正在使用<strong>Datasets</strong>部件中的肝脏光谱数据集(<em>liver spectroscopy</em>)。在<strong>Integrate Spectra</strong>部件中，我们选择<u>从0开始积分</u>(selected <em>integral from 0</em>)，并用红线设置下限和上限。我们也可以通过设置左侧的下限和上限值来实现。</p>
+<p>要观察积分区域，我们需要按下方法旁边的三角形播放按钮。要输出数据，我们需要按Commit。</p>
+<p>最后，我们可以在<strong>Data Table</strong>中观察带有区域积分值的附加列。</p>
+<p><img src="1.orange_widget.assets/Integrate-Spectra-Example.png" alt="img"></p>
+<h2 id="Peak-Fit-峰值拟合"><a href="#Peak-Fit-峰值拟合" class="headerlink" title="Peak Fit - 峰值拟合"></a>Peak Fit - 峰值拟合</h2><blockquote>
+<p>将数据拟合到复合峰值模型。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Fit Parameters-拟合参数：模型参数的最佳拟合值</li>
+<li>Fits-拟合：总评估最佳拟合</li>
+<li>Residuals-残差：拟合与数据之间的差异</li>
+<li>Data-数据：附有拟合参数注释的输入数据集</li>
+</ul>
+</blockquote>
+<p><strong>Peak Fit</strong>部件计算任意用户定义的复合峰值模型的最小二乘最小化曲线拟合。它输出定义模型的最佳拟合参数和最终的总拟合。</p>
+<p><img src="1.orange_widget.assets/Peak-Fit-stamped.png" alt="img"></p>
+<ol>
+<li>从下拉菜单中添加<strong>model</strong>组件。</li>
+<li>输入模型的初始参数和约束。</li>
+<li>可视化初始峰值和峰值颜色。</li>
+<li>选择用于预览拟合计算的数据子样本。</li>
+<li>子样本拟合结果的绘图预览。所选模型的中心线与所选曲线的拟合结果一起可视化：<ul>
+<li>黑色虚线：选定曲线</li>
+<li>红线：完全匹配</li>
+<li>彩色线条：单个部件拟合</li>
+<li>彩色破折号：单个组件初始值</li>
+<li>浅黑色：可选择的其他子样本光谱</li>
+</ul>
+</li>
+<li>提交(Commit)以开始对整个数据集进行拟合计算。</li>
+</ol>
+<p><strong>Models and Parameters - 模型和参数</strong></p>
+<p><strong>Peak Fit</strong>部件使用出色的<code>lmfit</code>包进行模型定义和非线性优化计算。</p>
+<p>可变的模型参数是特定于模型的，但是每个峰状模型至少包括：</p>
+<ul>
+<li>center - 中心：峰值的质心x值</li>
+<li>amplitude - 振幅：峰值强度或面积的乘数</li>
+<li>sigma：峰值的特征宽度</li>
+</ul>
+<p>可用模型如下：</p>
+<ul>
+<li>Gaussian - 高斯模型：基于高斯或正态分布函数的模型。</li>
+<li>Lorentzian - 洛伦兹模型：基于洛伦兹(Lorentzian)或柯西-洛伦兹(Cauchy-Lorentz)分布函数的模型。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.SplitLorentzianModel"><em>Split Lorentzian</em></a> - 分离洛伦兹模型：具有独立左&#x2F;右宽度参数的洛伦兹模型。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.VoigtModel"><em>Voigt</em></a> - Voigt：基于Voigt分布函数的模型。</li>
+<li>伪Voigt模型：高斯函数和洛伦兹函数加权和的Voigt近似。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.MoffatModel"><em>Moffat</em></a>：基于Moffat分布函数的模型。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.Pearson7Model"><em>Pearson VII</em></a>：基于<a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.Pearson7Model"><em>Pearson VII</em></a>分布的模型。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.StudentsTModel"><em>Student’s t</em></a>模型：基于<a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.StudentsTModel"><em>Student’s t</em></a>分布函数的模型。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.BreitWignerModel"><em>Breit-Wigner-Fano</em></a>：基于<a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.BreitWignerModel"><em>Breit-Wigner-Fano</em></a>函数的模型。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.LognormalModel"><em>Log-normal</em></a> - 对数正态：基于<a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.LognormalModel"><em>Log-normal</em></a>分布函数的模型。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.DampedOscillatorModel"><em>Damped Harmonic Oscillator Amplitude</em></a>：基于<a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.DampedOscillatorModel"><em>Damped Harmonic Oscillator Amplitude</em></a>的模型。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.DampedHarmonicOscillatorModel"><em>Damped Harmonic Oscillator (DAVE)</em></a>：具有DAVE定义的<a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.DampedHarmonicOscillatorModel"><em>Damped Harmonic Oscillator</em></a>模型。</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.ExponentialGaussianModel"><em>Exponential Gaussian</em></a>: A model of an Exponentially modified Gaussian distribution.</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.SkewedGaussianModel"><em>Skewed Gaussian</em></a>: A Gaussian model using a skewed normal distribution.</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.SkewedVoigtModel"><em>Skewed Voigt</em></a>: A Voigt model using a skewed normal distribution.</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.ThermalDistributionModel"><em>Thermal Distribution</em></a>: A thermal model based on one of Bose-Einstein, Maxwell-Boltzmann, or Fermi-Dirac distributions.</li>
+<li><a target="_blank" rel="noopener" href="https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.DoniachModel"><em>Doniach Sunjic</em></a>: A model of a Doniach-Sunjic asymmetric lineshape.</li>
+</ul>
+<p>包括一些基线模型，但预处理基线（在<strong>Preprocess Spectra</strong>部件中）减少了模型中变化参数的数量，并可能提高拟合性能。</p>
+<p><strong>Constraints - 限制条件</strong></p>
+<p>每个变化的参数都可以应用约束以提高拟合性能。约束类型可以是：</p>
+<ul>
+<li>fixed：参数不变</li>
+<li>limits：指定的最小值和最大值</li>
+<li>delta：最小值和最大值设置为初始值±delta值。</li>
+<li>expr：某些模型默认从另一个参数计算参数。无法输入自定义表达式。</li>
+</ul>
+<p>这些约束的常见用途是：</p>
+<ul>
+<li>将中心位置限制在某个x值范围内</li>
+<li>设置最小振幅(<em>amplitude</em>)以约束峰值</li>
+<li>设置最大sigma以排除不合理的宽峰值</li>
+</ul>
+<h2 id="Multifile-多文件"><a href="#Multifile-多文件" class="headerlink" title="Multifile - 多文件"></a>Multifile - 多文件</h2><blockquote>
+<p>从输入文件读取数据并将数据表发送到输出。</p>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Data-数据：所有加载文件的数据表</li>
+</ul>
+</blockquote>
+<p><strong>Multifile</strong>部件从不同的源加载数据，工作方式类似于光谱中的<strong>Concatenate</strong>部件。该部件将输出属性和特征的联合，其中缺少不匹配波数的值。要插入缺少的数据，请使用<strong>Interpolate</strong>部件。</p>
+<p><img src="1.orange_widget.assets/Multifile-stamped.png" alt="img"></p>
+<ol>
+<li>已加载文件。</li>
+<li>加载本地文件。</li>
+<li>删除所选文件。</li>
+<li>清除所有文件。</li>
+<li>标记连接的数据。</li>
+<li>重新加载文件。</li>
+<li>域编辑器。特征可以通过双击进行编辑。用户可以更改属性名称，为每个属性选择变量类型（<em>Continuous</em>、<em>Nominal</em>、<em>String</em>、<em>Datetime</em>），并选择如何进一步定义属性（如<em>Features</em>、<em>Targets</em> 或<em>Meta</em>）。用户还可以决定忽略某个属性。</li>
+<li>将多文件添加到报告中，提交以应用更改。</li>
+</ol>
+<p><strong>Example - 示例</strong></p>
+<p>下面是一个如何使用<strong>Multifile</strong>部件的简单示例。我们已经加载了存储在本地机器上的两个数据集。我们使用文件夹图标访问文件并加载它们。现在，我们的文件显示在顶部框中。我们已经给这些文件贴上了胶原蛋白(<em>collagen</em>)的标签，弄清楚它是什么。</p>
+<p>我们可以在<strong>Spectra</strong>部件或<strong>Data Table</strong>中观察连接的数据。</p>
+<p><img src="1.orange_widget.assets/Multifile-Example.png" alt="img"></p>
+<h2 id="Tile-File-平铺文件"><a href="#Tile-File-平铺文件" class="headerlink" title="Tile File - 平铺文件"></a>Tile File - 平铺文件</h2><blockquote>
+<p>从输入文件逐个读取数据，对光谱(spectra)进行预处理，并将数据表发送到输出。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Preprocessor-预处理器：“预处理光谱”部件中的预处理器列表</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Data-数据：从输入文件读取的预处理数据集</li>
+</ul>
+</blockquote>
+<p><strong>Tilefile</strong>部件从马赛克光谱图像加载数据，并将提供的预处理器应用于数据。预处理一次应用一个马赛克拼块，生成的处理数据集被合并到单个数据表中。</p>
+<p>至少有一个预处理器应该减小数据集的大小（如<strong>Cut-剪切</strong>、<strong>Integrate-积分</strong>），以利用此文件加载器并减少总内存使用。</p>
+<p>默认情况下，小部件不会自动加载数据集。这防止了在配置所需的预处理器链之前将大型数据集加载到内存中。因此需要按“Reload-重新加载”按钮加载数据。</p>
+<p><img src="1.orange_widget.assets/Tilefile-stamped.png" alt="img"></p>
+<ol>
+<li>浏览以前打开的数据文件，或加载任何示例文件。</li>
+<li>浏览数据文件。</li>
+<li>（重新）加载当前选定的数据文件。</li>
+<li>从URL地址插入数据。</li>
+<li>预处理数据集的信息：数据集大小、数据特征的数量和类型。</li>
+<li>有关预处理数据集中功能的其他信息。可以通过双击功能进行编辑。用户可以更改属性名称，为每个属性选择变量类型（Continuous、Nominal、String、Datetime），并选择如何进一步定义属性（如Features、Targets或Meta）。用户还可以决定忽略属性。</li>
+<li>浏览文档数据集。</li>
+<li>有关应用的预处理器列表的信息。</li>
+<li>制作报告。</li>
+</ol>
+<p><strong>Example</strong></p>
+<p>下面是一个关于如何使用<strong>Tilefile</strong>部件的简单示例。我们在<strong>Preprocess Spectra</strong>部件中配置了一个预处理器列表，并将<strong>预处理器(Preprocessor)<strong>输出连接到</strong>Tilefile</strong>部件的输入。我们加载了存储在本地机器上的马赛克数据集。我们使用文件夹图标访问文件并加载它们。我们检查将应用的预处理器，然后按“Reload-重新加载”加载数据。现在，有关预处理数据集的信息显示在信息框和域编辑器中。</p>
+<p>我们可以在<strong>HyperSpectra</strong>部件或<strong>Data Table</strong>部件中观察预处理的数据。</p>
+<p><img src="1.orange_widget.assets/Tilefile-Example.png" alt="img"></p>
+<h2 id="Average-Spectra-平均光谱"><a href="#Average-Spectra-平均光谱" class="headerlink" title="Average Spectra - 平均光谱"></a>Average Spectra - 平均光谱</h2><blockquote>
+<p>平均光谱</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Averages-平均值：被平均的数据集</li>
+</ul>
+</blockquote>
+<p><strong>Average Spectra</strong>部件允许您计算平均光谱。它可以输出整个数据集的平均值，或按类别特征定义的组输出平均值。</p>
+<p><img src="1.orange_widget.assets/Average-Spectra-stamped.png" alt="img"></p>
+<p>使用<em>Group by</em>（分组依据）输出由分类特征定义的平均值。<br>如果该组中的每一行都具有相同的值，则非数值数据列将返回一个值，否则将返回Unknown。</p>
+<h2 id="Interferogram-to-Spectrum-干涉图到光谱"><a href="#Interferogram-to-Spectrum-干涉图到光谱" class="headerlink" title="Interferogram to Spectrum - 干涉图到光谱"></a>Interferogram to Spectrum - 干涉图到光谱</h2><blockquote>
+<p>对干涉图执行快速傅里叶变换，包括零填充、变迹和相位校正。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Interferogram-干涉图：输入的干涉图</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Spectra-谱图：光谱数据集</li>
+<li>Phases-阶段：阶段</li>
+</ul>
+</blockquote>
+<h2 id="Reshape-Map-重构二维图"><a href="#Reshape-Map-重构二维图" class="headerlink" title="Reshape Map - 重构二维图"></a>Reshape Map - 重构二维图</h2><blockquote>
+<p>构建或修改输入数据集的形状，以从系列数据创建二维地图或更改现有二维数据集的尺寸。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Map Data-图数据：一个图数据</li>
+</ul>
+</blockquote>
+<p><strong>Reshape Map</strong>部件将输入数据转换为二维图。</p>
+<p><img src="1.orange_widget.assets/Reshape-Map-stamped.png" alt="img"></p>
+<ol>
+<li>贴图形状：<ul>
+<li>X维度。</li>
+<li>Y尺寸。</li>
+</ul>
+</li>
+<li>自动发送数据或按发送。</li>
+</ol>
+<h2 id="SNR-信噪比"><a href="#SNR-信噪比" class="headerlink" title="SNR - 信噪比"></a>SNR - 信噪比</h2><blockquote>
+<p>Signal-to-Noise Ratio (SNR) 信噪比</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：输入数据集</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Signal-to-noise ratio-信噪比：信噪比数据集<ul>
+<li>$SNR &#x3D; (\frac{\overline{Spectra_{x, y}}}{\sigma _{x, y}})$</li>
+</ul>
+</li>
+<li>Averages-平均值：平均后的数据集<ul>
+<li>$Averages &#x3D; (\overline{Spectra_{x, y}})$</li>
+</ul>
+</li>
+<li>Standard Deviation-标准差：标准差数据集<ul>
+<li>$Standard Deviation &#x3D; (\sigma _{x, y})$</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><strong>SNR</strong>部件计算频谱的SNR、平均值或标准差。它可以通过坐标（x，y）输出整个数据集的结果。</p>
+<hr>
+
+<p>使用<em>Select axis:x</em>选择一个轴，该轴将作为由数字元定义的坐标系的第一个元素。</p>
+<p>使用<em>Select axis: y</em>选择一个轴，该轴将作为数字元定义的坐标系的第二个元素。</p>
+<p><img src="1.orange_widget.assets/snr_print.png" alt="img"></p>
+<p>在上面的示例中，结果将是：<br>输出&#x3D;信噪比（列、行）  <strong>output &#x3D; Signal-to-noise ratio(column, row)</strong></p>
+<p>$SNR &#x3D; (\frac{\overline{Spectra_{column, row}}}{\sigma _{column, row}})$</p>
+<hr>
+
+<p>如果只选择一个轴：</p>
+<p><img src="1.orange_widget.assets/snr_average_x.png" alt="img"></p>
+<p>输出&#x3D;平均值（x）  <strong>output &#x3D; Average(x)</strong></p>
+<p>$Average &#x3D; (\overline{Spectra_{column}})$ 或者</p>
+<p><img src="1.orange_widget.assets/snr_std_y.png" alt="img"></p>
+<p>输出&#x3D;标准差(x)  <strong>output &#x3D; Standard Deviation(x)</strong></p>
+<p>$Standard Deviation &#x3D; (\sigma _{column})$</p>
+<p>如果您想要完整数据集的结果，可以将两者都保留为None。</p>
+<h1 id="Time-series-时间序列"><a href="#Time-series-时间序列" class="headerlink" title="Time series - 时间序列"></a>Time series - 时间序列</h1><h2 id="As-Timeseries-作为时间序列"><a href="#As-Timeseries-作为时间序列" class="headerlink" title="As Timeseries - 作为时间序列"></a>As Timeseries - 作为时间序列</h2><blockquote>
+<p>构建或修改输入数据集的形状，以从系列数据创建二维地图或更改现有二维数据集的尺寸。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Data-数据：任何数据表</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Time series-时间序列：重新解释为时间序列的数据表。</li>
+</ul>
+</blockquote>
+<p>此部件将任何数据表重新解释为时间序列，因此它可以与此插件中的其他小部件一起使用。在小部件中，您可以设置哪个数据属性表示时间变量。</p>
+<p><img src="1.orange_widget.assets/as-timeseries-stamped.png" alt="img"></p>
+<ol>
+<li>时间属性，其值表示测量的顺序和间隔。可以是任何连续属性。</li>
+<li>或者，可以指定时间序列序列由实例顺序表示。</li>
+</ol>
+<p><strong>Example - 示例</strong></p>
+<p>该部件的输入来自任何可进行数据发送的部件，例如<strong>File</strong>部件。注意，无论何时使用Orange核心部件（如 <strong>Select Columns</strong>部件）进行一些处理，都需要将转换重新应用到时间序列中。</p>
+<p><img src="1.orange_widget.assets/as-timeseries-ex1.png" alt="img"></p>
+<h2 id="Interpolate-插值-1"><a href="#Interpolate-插值-1" class="headerlink" title="Interpolate - 插值"></a>Interpolate - 插值</h2><blockquote>
+<p>通过插值法补充时间序列中的缺失值。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Time series-时间序列：<strong>As Timeseries</strong>部件输出的时间序列数据。</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Time series-时间序列：当算法需要内插时间序列（无缺失值）时，使用所选默认内插方法的输入时间序列。</li>
+<li>Interpolated time series-插值的时间序列：根据所选插值方法插值的任何缺失值的输入时间序列。</li>
+</ul>
+</blockquote>
+<p>大多数时间序列算法假设，数据中没有任何缺失的值。在这个小部件中，您可以选择插值方法来计算缺失的值。默认情况下，它是线性插值（快速合理的默认值）。</p>
+<p><img src="1.orange_widget.assets/interpolate-stamped.png" alt="img"></p>
+<ol>
+<li>插值类型。可以选择线性、三次样条曲线、邻近或平均插值之一：<ul>
+<li><strong>线性插值</strong>将丢失的值替换为两个最近定义的数据点之间的线性间隔值。</li>
+<li><strong>样条插值</strong>将三次多项式拟合到缺失值周围的点。这是一种非常缓慢的方法，通常会产生最佳效果。</li>
+<li><strong>邻近点插值</strong>将丢失的值替换为先前定义的值。</li>
+<li><strong>均值插值</strong>用序列的均值替换缺失的值。</li>
+</ul>
+</li>
+<li>**多变量插值(<strong>Multi-variate interpolation</strong>)**将整个系列表作为二维平面而不是单独的一维系列进行插值。</li>
+</ol>
+<p>序列端点（头部和尾部）上的缺失值始终使用*邻近值(nearest)<em>的方法进行插值。除非将插值方法设置为</em>邻近值(nearest)*，否则离散时间序列（即序列）总是以序列模式（最频繁的值-众数）进行插补。</p>
+<p><strong>Example - 示例</strong></p>
+<p>传递缺少值的时间序列，得到插值时间序列。</p>
+<p><img src="1.orange_widget.assets/interpolate-ex1.png" alt="img"></p>
+<h2 id="Moving-Transform-移动变换"><a href="#Moving-Transform-移动变换" class="headerlink" title="Moving Transform - 移动变换"></a>Moving Transform - 移动变换</h2><blockquote>
+<p>在滑动窗口、连续块或时间序列的时间段上计算聚合。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Time series-时间序列：时间序列（如，<strong>As Timeseries</strong>部件提供的时间序列）。</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Time series-时间序列: 计算聚合数据的时间序列</li>
+</ul>
+</blockquote>
+<p><img src="1.orange_widget.assets/moving-transform.png" alt="img"></p>
+<ol>
+<li>定义形成数据块的方法：<ul>
+<li>滑动窗：使用指定宽度的滑动窗。该函数通常用于平滑数据。<ul>
+<li>窗口宽度：窗口中的实例数</li>
+<li>数据输出：<strong>Discard original data-放弃原始数据</strong>，只输出计算列；<strong>Keep original data -保留原始数据</strong>还保留原始数据，但前N-1个实例（其中N是窗口宽度）除外，这些实例发生在第一个完整窗口之前；<strong>Include leading instances-包含前面的数据</strong>还包括前N-1个实例，但缺少计算列中的条目值。</li>
+</ul>
+</li>
+<li>连续块：聚合连续块中的数据<ul>
+<li>块宽度：块中实例的数量</li>
+<li>数据输出：放弃原始数据将仅输出聚合列；<em>Keep first instance</em>、<em>Keep middle instance</em>和<em>Keep last instance</em>分别是将第一个、中间个或最后一个数据实例作为块的代表。</li>
+</ul>
+</li>
+<li>聚合时间段：基于时间段（年、月、日、小时、分钟、秒）或同一年中的某个月（12个实例）、某一年的某一天（365或366个实例），某一月的某一日（~31个实例）或某一周的某一周（7个实例）和某一天的某一小时（24个实例）聚合数据。此功能将替换<em><strong>Aggregate</strong></em>部件。</li>
+</ul>
+</li>
+<li>如果勾选了“自动应用”，则会自动传达更改。或者，单击“应用”。</li>
+<li>变量选择：<ul>
+<li>筛选器提供了一种按名称搜索变量的快捷方式。开始键入变量名称以从列表中选择它。</li>
+<li>或者，从变量列表中选择变量。您可以使用Ctrl（Cmd）键或在列表中拖动来选择多个变量并对其应用相同的聚合。</li>
+<li>仅显示数字变量将隐藏变量列表中的非数字变量。</li>
+</ul>
+</li>
+<li>可能的聚合列表：<ul>
+<li>平均值-Mean value</li>
+<li>总和-Sum</li>
+<li>乘法-Product</li>
+<li>最低限度-Minimum</li>
+<li>最大限度-Maximum</li>
+<li>跨度-Span</li>
+<li>中位数-Median</li>
+<li>模式-Mode</li>
+<li>标准偏差-Standard deviation</li>
+<li>方差-Variance</li>
+<li>线性MA-<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Moving_average#Weighted_moving_average">Linear MA</a></li>
+<li>指数MA-<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average">Exponential MA</a></li>
+<li>谐波平均值-<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Harmonic_mean">Harmonic mean</a></li>
+<li>几何平均值-<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Geometric_mean">Geometric mean</a></li>
+<li>非零计数-Non-zero count：计数非零值</li>
+<li>定义的计数-Defined count：计数非缺失值的数量</li>
+<li>累计和Cumulative sum</li>
+<li>累计乘-Cumulative product</li>
+</ul>
+</li>
+</ol>
+<p><strong>Examples-示例</strong></p>
+<p>移动变换的一个简单用例是在时间序列上应用平滑函数。我们使用**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/moving_transform_w/yahoo_finance.md">Yahoo Finance</a>部件<strong>检索亚马逊（AMZN）的每日股票价值，并将数据传递给</strong>Moving Transform**。为了得到一个5天的移动平均线，我们使用了一个具有平均值聚合的滚动窗口。在折线图( <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/line_chart/">Line Chart</a>)中，我们可以看到High变量的初始（蓝色）值现在被平滑（红线）。</p>
+<p><img src="1.orange_widget.assets/Moving-Transform-Example1.png" alt="img"></p>
+<p>另一种使用<strong>Moving Transform</strong>的方法是按给定周期聚合数据。假设我们希望观察**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datasets/">Datasets</a><strong>部件中网络安全漏洞(<em>Cyber security breaches</em>)数据的年平均值。我们在 <strong><a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/as_timeseries/">As Timeseries</a><strong>中将<em>breach_start</em>设置为时间变量。在</strong>Moving Transform</strong>中，我们按年份进行汇总，并使用美国国家(<em>US State</em>)和违约类型(<em>Type of Breach</em>)和个人受影响程度(<em>Individuals Affected</em>)变量的总和。在</strong><a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable/">Data Table</a>**中，我们可以看到聚合数据。共有14个实例，每个实例代表一年。</p>
+<p><img src="https://orangedatamining.com/widget-catalog/time-series/images/Moving-Transform-Example2.png" alt="img"></p>
+<p>更多内容见<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/seasonal_adjustment/">Seasonal Adjustment</a></p>
+<h2 id="Line-Chart-折线图"><a href="#Line-Chart-折线图" class="headerlink" title="Line Chart - 折线图"></a>Line Chart - 折线图</h2><blockquote>
+<p>在最基本的时间序列可视化中，可视化时间序列的顺序和进程。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Time series-时间序列：时间序列（如<strong>As Timeseries</strong>部件提供的时间序列）。</li>
+<li>Features-特征：属性列表</li>
+<li>Forecast-预测：其中一个模型（如VAR或ARIMA）输出的时间序列预测。</li>
+</ul>
+</blockquote>
+<p>您可以在此部件中可视化时间序列。请注意，<em>line</em>选项将数据显示为连接的线。如果不存在日期，部件将显示它们，然后将绘制一条线，将上一个已知值与下一个值连接起来。在缺少值的情况下，小部件将不会在给定位置绘制线，从而使图表断开连接。为了更好地查看缺少的值，我们建议使用列(<em>column</em>)选项。</p>
+<p><img src="1.orange_widget.assets/LineChart.png" alt="img"></p>
+<ol>
+<li>在当前图表下方添加新的折线图。该小部件最多可以显示5个平行图表。</li>
+<li>设置图表类型。选项有：直线、阶梯线、列、区域。X按钮删除关联的图表。</li>
+<li>在线性和对数y轴之间切换。</li>
+<li>选择要显示的时间序列（使用<em>Ctrl&#x2F;Cmd</em>键选择多个序列）。筛选器允许按名称从列表中搜索所需的变量。</li>
+</ol>
+<p><strong>Example - 示例</strong></p>
+<p>该示例使用了上一年的**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/yahoo_finance/">Yahoo Finance</a><strong>数据。我们可以观察</strong>Line Chart**中的数据。</p>
+<p>为了查看预测，我们使用<strong>VAR模型</strong>(<strong><a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/var/">VAR Model</a></strong>)来训练模型。随后，我们将模型的预测附加到折线图的预测输入信号上。预测用虚线绘制，置信区间作为范围区域。</p>
+<p><img src="1.orange_widget.assets/LineChart-Example.png" alt="img"></p>
+<h2 id="Periodogram-周期性"><a href="#Periodogram-周期性" class="headerlink" title="Periodogram-周期性"></a>Periodogram-周期性</h2><blockquote>
+<p>可视化时间序列的周期、季节性、周期性和最重要的时期。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Time series-时间序列：时间序列（如<strong>As Timeseries</strong>部件提供的时间序列）。</li>
+</ul>
+</blockquote>
+<p>在这个小部件中，您可以可视化时间序列中最重要的时段。</p>
+<p><img src="1.orange_widget.assets/periodogram.png" alt="img"></p>
+<ol>
+<li>选择要计算周期图的系列。</li>
+</ol>
+<p>使用 Lomb-Scargle 方法计算非等间距序列的周期图。</p>
+<p><strong>Example - 示例</strong></p>
+<p>下面是一个关于如何使用周期图小部件的简单示例。我们已经将**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/yahoo_finance/">Yahoo Finance</a>**传递给部件，并绘制了过去6年亚马逊股票的周期性。</p>
+<p><img src="1.orange_widget.assets/Periodogram-Example.png" alt="img"></p>
+<p>更多内容见<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/correlogram/">Correlogram-相关性</a></p>
+<h2 id="Correlogram-相关性"><a href="#Correlogram-相关性" class="headerlink" title="Correlogram - 相关性"></a>Correlogram - 相关性</h2><blockquote>
+<p>可视化变量的自相关性。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Time series-时间序列：时间序列（如<strong>As Timeseries</strong>部件提供的时间序列）。</li>
+</ul>
+</blockquote>
+<p>在这个小部件中，您可以可视化所选时间序列的自相关系数。</p>
+<p><img src="1.orange_widget.assets/correlogram.png" alt="img"></p>
+<ol>
+<li>选择要计算自相关的系列。</li>
+<li>选择使用偏自相关函数（PACF）来计算系数。选择绘制95%显著性区间（水平虚线）。超出此区间的系数可能很重要。</li>
+</ol>
+<p><strong>Example - 示例</strong></p>
+<p>下面是一个关于如何使用周期图小部件的简单示例。我们已经将**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/yahoo_finance/">Yahoo Finance</a>**传递给小部件，并绘制了过去6年亚马逊股票的自相关性。</p>
+<p><img src="1.orange_widget.assets/Correlogram-Example.png" alt="img"></p>
+<p>更多内容见<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/periodogram_w/">Periodogram-周期性</a></p>
+<h2 id="Spiralogram-螺旋线图"><a href="#Spiralogram-螺旋线图" class="headerlink" title="Spiralogram - 螺旋线图"></a>Spiralogram - 螺旋线图</h2><blockquote>
+<p>在螺旋热图中可视化时间序列的周期性。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Time series-时间序列：时间序列（如，<strong>As Timeseries</strong>部件提供的时间序列）。</li>
+</ul>
+<p><strong>输出</strong>：</p>
+<ul>
+<li>Selected Data-被选择的数据: 从绘图中选择的实例</li>
+<li>Statistics-统计数据：图表中显示的统计数据表</li>
+</ul>
+</blockquote>
+<p>螺旋图用于可视化时间序列，并通过分类变量比较属性值。实例可以从绘图中选择并发送到下游。</p>
+<p><img src="1.orange_widget.assets/spiralogram.png" alt="img"></p>
+<ol>
+<li>圆周上的单位。选项包括：一年中的一个月（12个单位）、一年中一天（365个单位），一个月中的一天（~30个单位）和一周中的一周（周一至周日，7个单位）以及一天中的一小时（24个单位）及数据中的所有变量。</li>
+<li>垂直轴的单位。隐藏内部标签将删除垂直轴上的标签。</li>
+<li>每个螺旋图部分的颜色。默认值为显示实例计数。如果选择了数据中的属性，则聚合方法可用。选项包括：平均值、总和、乘积、最小值、最大值、跨度、中值、模式、标准差、方差、调和平均值、几何平均值、非零计数和定义计数(mean value, sum, product, minimum, maximum, span, median, mode, standard deviation, variance, harmonic mean, geometric mean, non-zero count, and defined count)。</li>
+</ol>
+<p><strong>Example - 示例</strong></p>
+<p>在下面的示例中，我们使用的是斯洛文尼亚非法废物倾倒场(<em>Illegal waste dumpsite in Slovenia</em>)数据，可从<strong>Datasets</strong>部件获得。垃圾场登记的时间、存放的废物种类、现场是否清洁等数据记录。</p>
+<p>我们将使用<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/as_timeseries/">As Timeseries</a>设置条目创建日期(<em>Entry creation date</em>)作为时间序列变量。然后我们将数据传递给<strong>Spiralogram</strong>。该小部件提供了许多选项，因此我们将在这里显示稍微复杂一些的设置。</p>
+<p>我们把这个圈子分成一年中的几个月。接下来，我们用一个属性“已清理(<em>cleaned</em>)”来分割垂直轴，这意味着外圈显示已清理的垃圾堆，内圈显示带有垃圾的垃圾堆。最后，我们将颜色设置为轮胎(<em>Tires</em>)[%]，并使用默认的平均值。这将显示每个月发现的轮胎的平均百分比，分为已清洁和未清洁的站点。从图中，我们可以看到，1月和11月登记的场地在垃圾场中轮胎的比例较高。可能，这与11月强制更换冬季轮胎有关，导致在自然环境中倾倒的旧轮胎数量高于平均值。已清理和未清理的场地之间没有明显区别。</p>
+<p>我们还选择了11月登记并已清理的场地。我们将数据传递到数据表，在那里我们可以检查各个垃圾场。</p>
+<p><img src="1.orange_widget.assets/Spiralogram-Example.png" alt="img"></p>
+<h2 id="Granger-Causality-因果关系"><a href="#Granger-Causality-因果关系" class="headerlink" title="Granger Causality - 因果关系"></a>Granger Causality - 因果关系</h2><blockquote>
+<p>测试一个时间序列Granger因果关系（即可以是另一时间序列的指标）。</p>
+<p><strong>输入</strong>：</p>
+<ul>
+<li>Time series-时间序列：时间序列（如，<strong>As Timeseries</strong>部件提供的时间序列）。</li>
+</ul>
+</blockquote>
+<p>这个小部件执行一系列统计测试，以确定导致其他序列的序列，因此我们可以使用前者来预测后者。</p>
+<p><img src="1.orange_widget.assets/granger-causality-stamped.png" alt="img"></p>
+<ol>
+<li>期望的信心水平。</li>
+<li>要测试的最大延迟。</li>
+<li>运行测试。</li>
+<li>表示一个序列引起另一个序列的最小延迟。在上面示例的第一行中，如果我们有奥地利的月度失业率时间序列，我们可以在10个月前谈谈匈牙利的失业率。</li>
+<li>起因（前因）序列。</li>
+<li>影响（结果）序列。</li>
+</ol>
+<p>你感兴趣Granger-cause时间序列同样是是VAR模型中的最佳候选。但要小心，即使一个系列被称为格兰杰因果(Granger-cause)另一个系列，这并不意味着真的存在因果关系。注意你的结论。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://dreamstar.top">dreamstar</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://dreamstar.top/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/">http://dreamstar.top/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://dreamstar.top" target="_blank">Dreamstar</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="../../../../../../../img/for_post/orange_illustration_landing.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="../../../../../../04/16/0.hexo-theme/theme-github-deploy/" title="theme-hexo blog 博客的部署方式"><img class="cover" src="../../../../../../../img/default_cover-3.png" onerror="onerror=null;src='../../../../../../../img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">theme-hexo blog 博客的部署方式</div></div></a></div><div class="next-post pull-right"><a href="../../../../../../../2023/12/07/0.hexo-theme/theme-Butterfly/" title="hexo-theme-Butterfly"><img class="cover" src="../../../../../../../img/default_cover-3.png" onerror="onerror=null;src='../../../../../../../img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hexo-theme-Butterfly</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="../img/avatar.jpg" onerror="this.onerror=null;this.src='../img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">dreamstar</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/arrayofstar" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="../mailto:mengfan.1993@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Orange-widget-%E5%B0%8F%E9%83%A8%E4%BB%B6%E7%AE%80%E4%BB%8B"><span class="toc-text">Orange widget 小部件简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Data-%E6%95%B0%E6%8D%AE"><span class="toc-text">Data - 数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#File-%E6%96%87%E4%BB%B6"><span class="toc-text">File - 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSV-File-Import-CSV%E6%96%87%E4%BB%B6%E5%AF%BC%E5%85%A5"><span class="toc-text">CSV File Import - CSV文件导入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Datasets-%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">Datasets - 数据集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL-Table-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8"><span class="toc-text">SQL Table - 数据库表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Table-%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-text">Data Table - 数据表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Paint-Data-%E7%BB%98%E5%88%B6%E6%95%B0%E6%8D%AE"><span class="toc-text">Paint Data - 绘制数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Info-%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">Data Info - 数据信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rank-%E6%8E%92%E5%90%8D"><span class="toc-text">Rank - 排名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Edit-Domain-%E7%BC%96%E8%BE%91%E5%9F%9F"><span class="toc-text">Edit Domain - 编辑域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Color-%E9%A2%9C%E8%89%B2"><span class="toc-text">Color - 颜色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature-Statistics-%E7%89%B9%E5%BE%81%E7%BB%9F%E8%AE%A1"><span class="toc-text">Feature Statistics - 特征统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Save-Data-%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE"><span class="toc-text">Save Data - 保存数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Transform-%E8%BD%AC%E6%8D%A2"><span class="toc-text">Transform - 转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Sampler-%E6%95%B0%E6%8D%AE%E9%87%87%E6%A0%B7%E5%99%A8"><span class="toc-text">Data Sampler - 数据采样器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Select-Columns-%E9%80%89%E6%8B%A9%E5%88%97"><span class="toc-text">Select Columns - 选择列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Select-Rows-%E9%80%89%E6%8B%A9%E8%A1%8C"><span class="toc-text">Select Rows - 选择行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Transpose-%E8%BD%AC%E7%BD%AE"><span class="toc-text">Transpose - 转置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Merge-Data-%E5%90%88%E5%B9%B6%E6%95%B0%E6%8D%AE"><span class="toc-text">Merge Data - 合并数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Concatenate-%E4%B8%B2%E8%81%94"><span class="toc-text">Concatenate - 串联</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Select-by-Data-Index-%E6%8C%89%E6%95%B0%E6%8D%AE%E7%B4%A2%E5%BC%95%E9%80%89%E6%8B%A9"><span class="toc-text">Select by Data Index - 按数据索引选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Unique-%E5%94%AF%E4%B8%80%E6%80%A7-%E5%8E%BB%E9%87%8D"><span class="toc-text">Unique - 唯一性(去重)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Aggregate-Columns-%E8%81%9A%E5%90%88%E5%88%97-%E7%BB%9F%E8%AE%A1%E6%8C%87%E6%A0%87"><span class="toc-text">Aggregate Columns - 聚合列&#x2F;统计指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Group-by-%E5%88%86%E7%BB%84"><span class="toc-text">Group by - 分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pivot-Table-%E6%95%B0%E6%8D%AE%E9%80%8F%E8%A7%86%E8%A1%A8"><span class="toc-text">Pivot Table - 数据透视表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Apply-Domain-%E5%BA%94%E7%94%A8%E5%9F%9F"><span class="toc-text">Apply Domain - 应用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Preprocess-%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-text">Preprocess - 预处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Impute-%E6%8F%92%E5%80%BC-%E6%8E%A8%E6%96%AD"><span class="toc-text">Impute - 插值&#x2F;推断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Continuize-%E8%BF%9E%E7%BB%AD%E5%8C%96"><span class="toc-text">Continuize - 连续化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Discretize-%E7%A6%BB%E6%95%A3%E5%8C%96"><span class="toc-text">Discretize - 离散化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Randomize-%E9%9A%8F%E6%9C%BA%E5%8C%96"><span class="toc-text">Randomize - 随机化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Purge-Domain-%E6%B8%85%E9%99%A4%E5%9F%9F"><span class="toc-text">Purge Domain - 清除域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Melt-%E6%95%B0%E6%8D%AE%E8%9E%8D%E5%90%88"><span class="toc-text">Melt - 数据融合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature-Constructor-%E7%89%B9%E5%BE%81%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-text">Feature Constructor - 特征构造器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Create-Class-%E5%88%9B%E5%BB%BA%E7%B1%BB"><span class="toc-text">Create Class - 创建类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Create-Instance-%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B"><span class="toc-text">Create Instance -创建实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-Script-Python%E8%84%9A%E6%9C%AC"><span class="toc-text">Python Script - Python脚本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Visualize-%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">Visualize - 可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tree-Viewer-%E6%A0%91%E6%9F%A5%E7%9C%8B%E5%99%A8"><span class="toc-text">Tree Viewer - 树查看器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Box-Plot-%E7%AE%B1%E5%9E%8B%E5%9B%BE"><span class="toc-text">Box Plot - 箱型图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Violin-Plot-%E5%B0%8F%E6%8F%90%E7%90%B4%E5%9B%BE"><span class="toc-text">**Violin Plot -小提琴图 **</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distributions-%E5%88%86%E5%B8%83%E5%9B%BE"><span class="toc-text">**Distributions -分布图 **</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scatter-Plot-%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="toc-text">Scatter Plot - 散点图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Line-Plot-%E7%BA%BF%E5%BD%A2%E5%9B%BE"><span class="toc-text">Line Plot - 线形图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bar-Plot-%E6%9D%A1%E5%BD%A2%E5%9B%BE"><span class="toc-text">Bar Plot - 条形图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Heat-Map-%E7%83%AD%E5%9B%BE"><span class="toc-text">Heat Map - 热图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Model-%E6%A8%A1%E5%9E%8B"><span class="toc-text">Model - 模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tree-%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-text">Tree - 决策树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SVM-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="toc-text">SVM - 支持向量机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Naive-Bayes-%E8%B4%9D%E5%8F%B6%E6%96%AF%E7%AE%97%E6%B3%95"><span class="toc-text">Naive Bayes - 贝叶斯算法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Evaluate-%E8%AF%84%E4%BC%B0"><span class="toc-text">Evaluate - 评估</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Test-and-Score-%E6%B5%8B%E8%AF%95%E5%92%8C%E8%AF%84%E5%88%86"><span class="toc-text">Test and Score - 测试和评分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Predictions-%E9%A2%84%E6%B5%8B"><span class="toc-text">Predictions - 预测</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spectroscopy-%E5%85%89%E8%B0%B1%E5%AD%A6"><span class="toc-text">Spectroscopy - 光谱学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spectra-%E5%85%89%E8%B0%B1-%E8%B0%B1%E5%9B%BE"><span class="toc-text">Spectra - 光谱 - 谱图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HyperSpectra-%E8%B6%85%E5%85%89%E8%B0%B1-%E5%B9%B3%E9%9D%A2%E5%85%89%E8%B0%B1"><span class="toc-text">HyperSpectra - 超光谱 - 平面光谱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interpolate-%E6%8F%92%E5%80%BC"><span class="toc-text">Interpolate - 插值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Preprocess-Spectra-%E9%A2%84%E5%A4%84%E7%90%86%E5%85%89%E8%B0%B1"><span class="toc-text">Preprocess Spectra - 预处理光谱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Integrate-Spectra-%E8%B0%B1%E7%A7%AF%E5%88%86"><span class="toc-text">Integrate Spectra - 谱积分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Peak-Fit-%E5%B3%B0%E5%80%BC%E6%8B%9F%E5%90%88"><span class="toc-text">Peak Fit - 峰值拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Multifile-%E5%A4%9A%E6%96%87%E4%BB%B6"><span class="toc-text">Multifile - 多文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tile-File-%E5%B9%B3%E9%93%BA%E6%96%87%E4%BB%B6"><span class="toc-text">Tile File - 平铺文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Average-Spectra-%E5%B9%B3%E5%9D%87%E5%85%89%E8%B0%B1"><span class="toc-text">Average Spectra - 平均光谱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interferogram-to-Spectrum-%E5%B9%B2%E6%B6%89%E5%9B%BE%E5%88%B0%E5%85%89%E8%B0%B1"><span class="toc-text">Interferogram to Spectrum - 干涉图到光谱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reshape-Map-%E9%87%8D%E6%9E%84%E4%BA%8C%E7%BB%B4%E5%9B%BE"><span class="toc-text">Reshape Map - 重构二维图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SNR-%E4%BF%A1%E5%99%AA%E6%AF%94"><span class="toc-text">SNR - 信噪比</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Time-series-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97"><span class="toc-text">Time series - 时间序列</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#As-Timeseries-%E4%BD%9C%E4%B8%BA%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97"><span class="toc-text">As Timeseries - 作为时间序列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interpolate-%E6%8F%92%E5%80%BC-1"><span class="toc-text">Interpolate - 插值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Moving-Transform-%E7%A7%BB%E5%8A%A8%E5%8F%98%E6%8D%A2"><span class="toc-text">Moving Transform - 移动变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Line-Chart-%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-text">Line Chart - 折线图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Periodogram-%E5%91%A8%E6%9C%9F%E6%80%A7"><span class="toc-text">Periodogram-周期性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Correlogram-%E7%9B%B8%E5%85%B3%E6%80%A7"><span class="toc-text">Correlogram - 相关性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spiralogram-%E8%9E%BA%E6%97%8B%E7%BA%BF%E5%9B%BE"><span class="toc-text">Spiralogram - 螺旋线图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Granger-Causality-%E5%9B%A0%E6%9E%9C%E5%85%B3%E7%B3%BB"><span class="toc-text">Granger Causality - 因果关系</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="../2024/06/24/1.MachineLearning/Orange/2.orange_widget_development/2.orange_widget_development/" title="Orange 小部件开发指南"><img src="../img/for_post/orange_illustration_landing.png" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="Orange 小部件开发指南"/></a><div class="content"><a class="title" href="../2024/06/24/1.MachineLearning/Orange/2.orange_widget_development/2.orange_widget_development/" title="Orange 小部件开发指南">Orange 小部件开发指南</a><time datetime="2024-06-24T15:00:00.000Z" title="发表于 2024-06-24 23:00:00">2024-06-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/04/25/1.MachineLearning/AutoML/PyCaret/" title="PyCaret-自动机器学习框架"><img src="../img/for_post/pycaret.svg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="PyCaret-自动机器学习框架"/></a><div class="content"><a class="title" href="../2024/04/25/1.MachineLearning/AutoML/PyCaret/" title="PyCaret-自动机器学习框架">PyCaret-自动机器学习框架</a><time datetime="2024-04-25T14:00:00.000Z" title="发表于 2024-04-25 22:00:00">2024-04-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/04/16/0.hexo-theme/theme-github-deploy/" title="theme-hexo blog 博客的部署方式"><img src="../img/default_cover-3.png" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="theme-hexo blog 博客的部署方式"/></a><div class="content"><a class="title" href="../2024/04/16/0.hexo-theme/theme-github-deploy/" title="theme-hexo blog 博客的部署方式">theme-hexo blog 博客的部署方式</a><time datetime="2024-04-15T18:01:33.000Z" title="发表于 2024-04-16 02:01:33">2024-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/" title="Orange widget 小部件简介"><img src="../img/for_post/orange_illustration_landing.png" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="Orange widget 小部件简介"/></a><div class="content"><a class="title" href="../2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/" title="Orange widget 小部件简介">Orange widget 小部件简介</a><time datetime="2024-03-18T14:00:00.000Z" title="发表于 2024-03-18 22:00:00">2024-03-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2023/12/07/0.hexo-theme/theme-Butterfly/" title="hexo-theme-Butterfly"><img src="../img/default_cover-3.png" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="hexo-theme-Butterfly"/></a><div class="content"><a class="title" href="../2023/12/07/0.hexo-theme/theme-Butterfly/" title="hexo-theme-Butterfly">hexo-theme-Butterfly</a><time datetime="2023-12-07T14:50:53.000Z" title="发表于 2023-12-07 22:50:53">2023-12-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By dreamstar</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="../../../../../../../js/utils.js"></script><script src="../../../../../../../js/main.js"></script><script src="../../../../../../../js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

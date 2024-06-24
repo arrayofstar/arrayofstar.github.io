@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Orange 小部件开发指南 | Dreamstar</title><meta name="author" content="dreamstar"><meta name="copyright" content="dreamstar"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Orange Widget Base - Widget Development 开始逐步翻译至中文，点击右上角可以查看英文版  准备开始 - Getting StartedOrange Widgets是Orange的可视化编程环境Orange Canvas中的组件。它们代表了一些自带功能，并提供图形用户界面（GUI）。小部件(Widgets)之间相互通信，并通过通信通道传递对象，以便从左到右与其他">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Orange 小部件开发指南">
+<meta property="og:url" content="http://dreamstar.top/2024/06/24/1.MachineLearning/Orange/2.orange_widget_development/2.orange_widget_development/index.html">
+<meta property="og:site_name" content="Dreamstar">
+<meta property="og:description" content="Orange Widget Base - Widget Development 开始逐步翻译至中文，点击右上角可以查看英文版  准备开始 - Getting StartedOrange Widgets是Orange的可视化编程环境Orange Canvas中的组件。它们代表了一些自带功能，并提供图形用户界面（GUI）。小部件(Widgets)之间相互通信，并通过通信通道传递对象，以便从左到右与其他">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://dreamstar.top/img/for_post/orange_illustration_landing.png">
+<meta property="article:published_time" content="2024-06-24T15:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-24T15:00:00.000Z">
+<meta property="article:author" content="dreamstar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://dreamstar.top/img/for_post/orange_illustration_landing.png"><link rel="shortcut icon" href="../../../../../../../img/favicon-mf.ico"><link rel="canonical" href="http://dreamstar.top/2024/06/24/1.MachineLearning/Orange/2.orange_widget_development/2.orange_widget_development/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="../../../../../../../css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Orange 小部件开发指南',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-24 23:00:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="../img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="../tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="../music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="../Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="../movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('../../../../../../../img/for_post/orange_illustration_landing.png')"><nav id="nav"><span id="blog-info"><a href="../index.html" title="Dreamstar"><img class="site-icon" src="../img/favicon-mf.ico"/><span class="site-name">Dreamstar</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="../index.html"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="../archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="../tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="../categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="../music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="../Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="../movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="../link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="../about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Orange 小部件开发指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-24T15:00:00.000Z" title="发表于 2024-06-24 23:00:00">2024-06-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-24T15:00:00.000Z" title="更新于 2024-06-24 23:00:00">2024-06-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="../../../../../../../categories/Orange/">Orange</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Orange 小部件开发指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Orange-Widget-Base-Widget-Development"><a href="#Orange-Widget-Base-Widget-Development" class="headerlink" title="Orange Widget Base - Widget Development"></a><a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/#">Orange Widget Base - Widget Development</a></h1><blockquote>
+<p>开始逐步翻译至中文，点击右上角可以查看英文版</p>
+</blockquote>
+<h1 id="准备开始-Getting-Started"><a href="#准备开始-Getting-Started" class="headerlink" title="准备开始 - Getting Started"></a>准备开始 - Getting Started</h1><p>Orange Widgets是Orange的可视化编程环境Orange Canvas中的组件。它们代表了一些自带功能，并提供图形用户界面（GUI）。小部件(Widgets)之间相互通信，并通过通信通道传递对象，以便从左到右与其他小部件交互。<br>在这个部分，我们将从一些简单的要点开始，向您展示如何构建一个简单的小部件，并使该小部件可以在Orange Canvas中运行。</p>
+<h2 id="先决条件-Prerequisites"><a href="#先决条件-Prerequisites" class="headerlink" title="先决条件 - Prerequisites"></a>先决条件 - Prerequisites</h2><p>每个Orange小部件都属于一个类别，并且在该类别中具有相关的优先级。打开Orange Canvas（Orange附带的可视化编程环境）时，小部件列在左侧的工具箱中：</p>
+<p><img src="https://img-blog.csdnimg.cn/direct/36dc65ffb02a43f58b950240d603457d.png" alt="_images/widgettoolbox.png"></p>
+<p>每个小部件都有一个名称描述和一组输入&#x2F;输出（称为小部件的元描述）。</p>
+<p>这些元数据是在Orange Canvas应用程序启动时发现，该应用程序利用了setuptools&#x2F;displit及其<a target="_blank" rel="noopener" href="https://pythonhosted.org/setuptools/setuptools.html#dynamic-discovery-of-services-and-plugins">入口点协议</a>。Orange Canvas使用<code>Orange.widgets</code>入口点查找小部件。</p>
+<h2 id="Defining-a-widget-定义小部件"><a href="#Defining-a-widget-定义小部件" class="headerlink" title="Defining a widget - 定义小部件"></a>Defining a widget - 定义小部件</h2><p><a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/widget.html#orangewidget.widget.OWBaseWidget"><code>OWBaseWidget</code></a>是Orange Canvas工作流中小部件的基类。</p>
+<p>画布框架中的每个小部件都需要定义其元数据。这包括小部件的名称和文本描述，更重要的是它的输入&#x2F;输出规范。这是通过在小部件的类命名空间中定义常量来实现的。</p>
+<p>我们将从一个非常简单的例子开始。小部件的功能为：输出用户指定的单个整数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> orangewidget.widget <span class="keyword">import</span> OWBaseWidget, Output</span><br><span class="line"><span class="keyword">from</span> orangewidget.settings <span class="keyword">import</span> Setting</span><br><span class="line"><span class="keyword">from</span> orangewidget <span class="keyword">import</span> gui</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">IntNumber</span>(<span class="title class_ inherited__">OWBaseWidget</span>):</span><br><span class="line">    <span class="comment"># Widget&#x27;s name as displayed in the canvas</span></span><br><span class="line">    name = <span class="string">&quot;Integer Number&quot;</span></span><br><span class="line">    <span class="comment"># Short widget description</span></span><br><span class="line">    description = <span class="string">&quot;Lets the user input a number&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># An icon resource file path for this widget</span></span><br><span class="line">    <span class="comment"># (a path relative to the module where this widget is defined)</span></span><br><span class="line">    icon = <span class="string">&quot;icons/number.svg&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Widget&#x27;s outputs; here, a single output named &quot;Number&quot;, of type int</span></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Outputs</span>:</span><br><span class="line">        number = Output(<span class="string">&quot;Number&quot;</span>, <span class="built_in">int</span>)</span><br></pre></td></tr></table></figure>
+
+<p>根据设计原则，Orange小部件的主界面通常被划分为控制区域和主区域。控制区域出现在左侧，应该包括一些选项&#x2F;设置。主区域通常包括一个图形、表格或一些绘图，这些图形、表格和绘图基于小部件的输入和控制区域中的选项&#x2F;设置。**<a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/widget.html#orangewidget.widget.OWBaseWidget"><code>OWBaseWidget</code></a> <strong>通过其属性</strong>self.controlArea<strong>和</strong>self.mainArea**使这两个区域可用。注意，虽然所有小部件都有这种通用的视觉外观是最好的，但您仍可以以任何方式使用这些区域，甚至忽略其中一个区域，使用与Orange中其他小部件不同的风格来组成您的小部件。</p>
+<p>我们使用类属性标志指定默认布局。在这里，我们将只使用单列（controlArea）GUI。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Basic (convenience) GUI definition:</span></span><br><span class="line"><span class="comment">#   a simple &#x27;single column&#x27; GUI layout  # 简单的单列GUI布局</span></span><br><span class="line">want_main_area = <span class="literal">False</span></span><br><span class="line"><span class="comment">#   with a fixed non resizable geometry. # 固定且不可调整大小</span></span><br><span class="line">resizing_enabled = <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+<p>我们希望在保存&#x2F;加载工作流时保存&#x2F;恢复用户当前输入的数字。我们可以通过在小部件的类定义中声明一个特殊的属性&#x2F;成员来实现这一点，如下所示：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">number = Setting(<span class="number">42</span>)</span><br></pre></td></tr></table></figure>
+
+<p>最后，定义GUI和相关小部件功能的实际代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">    <span class="built_in">super</span>().__init__()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">from</span> AnyQt.QtGui <span class="keyword">import</span> QIntValidator</span><br><span class="line">    gui.lineEdit(self.controlArea, self, <span class="string">&quot;number&quot;</span>, <span class="string">&quot;Enter a number&quot;</span>,</span><br><span class="line">                 box=<span class="string">&quot;Number&quot;</span>,</span><br><span class="line">                 callback=self.number_changed,</span><br><span class="line">                 valueType=<span class="built_in">int</span>, validator=QIntValidator())</span><br><span class="line">    self.number_changed()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">number_changed</span>(<span class="params">self</span>):</span><br><span class="line">    <span class="comment"># Send the entered number on &quot;Number&quot; output</span></span><br><span class="line">    self.Outputs.number.send(self.number)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>更多内容见：<a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/gui.html#orangewidget.gui.lineEdit"><code>orangewidget.gui.lineEdit()</code></a>,</p>
+</blockquote>
+<p>但是这时小部件目前是无法使用的，因为没有小部件来接受它的输出。因此，让我们定义一个显示数字的小部件。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> orangewidget.widget <span class="keyword">import</span> OWBaseWidget, Input</span><br><span class="line"><span class="keyword">from</span> orangewidget <span class="keyword">import</span> gui</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Print</span>(<span class="title class_ inherited__">OWBaseWidget</span>):</span><br><span class="line">    name = <span class="string">&quot;Print&quot;</span></span><br><span class="line">    description = <span class="string">&quot;Print out a number&quot;</span></span><br><span class="line">    icon = <span class="string">&quot;icons/print.svg&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Inputs</span>:</span><br><span class="line">        number = Input(<span class="string">&quot;Number&quot;</span>, <span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">    want_main_area = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        self.number = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        self.label = gui.widgetLabel(self.controlArea, <span class="string">&quot;The number is: ??&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @Inputs.number</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_number</span>(<span class="params">self, number</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;Set the input number.&quot;&quot;&quot;</span></span><br><span class="line">        self.number = number</span><br><span class="line">        <span class="keyword">if</span> self.number <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            self.label.setText(<span class="string">&quot;The number is: ??&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.label.setText(<span class="string">&quot;The number is &#123;&#125;&quot;</span>.<span class="built_in">format</span>(self.number))</span><br></pre></td></tr></table></figure>
+
+<p>我们用类<em>Inputs</em>定义输入，就像输出需要由<em>Outputs</em>定义一样。但是，每个输入都必须由一个类方法处理。我们通过装饰器来标记；在上述情况下，将*@Inputs.number<em>放在方法的定义之前。<br>请注意，在</em>set_number<em>方法中，我们检查数字是否为</em>None<em>。当小部件之间的连接被删除时，或者如果我们所连接的发送小部件故意清空了通道，则会向小部件发送</em>None*。<br>现在，我们可以使用一个小部件来输入数字，另一个来显示它。<br>再一个：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> orangewidget.widget <span class="keyword">import</span> OWBaseWidget, Input, Output</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Adder</span>(<span class="title class_ inherited__">OWBaseWidget</span>):</span><br><span class="line">    name = <span class="string">&quot;Add two integers&quot;</span></span><br><span class="line">    description = <span class="string">&quot;Add two numbers&quot;</span></span><br><span class="line">    icon = <span class="string">&quot;icons/add.svg&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Inputs</span>:</span><br><span class="line">        a = Input(<span class="string">&quot;A&quot;</span>, <span class="built_in">int</span>)</span><br><span class="line">        b = Input(<span class="string">&quot;B&quot;</span>, <span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Outputs</span>:</span><br><span class="line">        <span class="built_in">sum</span> = Output(<span class="string">&quot;A + B&quot;</span>, <span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">    want_main_area = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        self.a = <span class="literal">None</span></span><br><span class="line">        self.b = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @Inputs.a</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_A</span>(<span class="params">self, a</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;Set input &#x27;A&#x27;.&quot;&quot;&quot;</span></span><br><span class="line">        self.a = a</span><br><span class="line"></span><br><span class="line"><span class="meta">    @Inputs.b</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_B</span>(<span class="params">self, b</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;Set input &#x27;B&#x27;.&quot;&quot;&quot;</span></span><br><span class="line">        self.b = b</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">handleNewSignals</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;Reimplemeted from OWBaseWidget.&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> self.a <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> self.b <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            self.Outputs.<span class="built_in">sum</span>.send(self.a + self.b)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="comment"># Clear the channel by sending `None`</span></span><br><span class="line">            self.Outputs.<span class="built_in">sum</span>.send(<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>See also：<a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/widget.html#orangewidget.widget.OWBaseWidget.handleNewSignals"><code>handleNewSignals()</code></a></p>
+</blockquote>
+<p>在学习了什么是Orange Widget以及如何在玩具示例中定义之后，我们将构建一个比较有用的小部件，这些小部件可以与现有的Orange widgets一起工作。<br>我们将从一个非常简单的例子开始，它将在输入上接收一个数据集，并输出一个包含10%数据实例的数据集。我们将把这个小部件称为<em>OWDataSamplerA</em>（OW代表Orange widget，DataSampler的命名是因为，这是小部件将要做的事情，而A因为我们在教程中对一些小部件进行了原型化）。</p>
+<h2 id="一个“示例”包-A-‘Demo’-package"><a href="#一个“示例”包-A-‘Demo’-package" class="headerlink" title="一个“示例”包 - A ‘Demo’ package"></a>一个“示例”包 - A ‘Demo’ package</h2><p>首先，为了将我们的新小部件插入到在Orange Canvas的工具箱中，我们将创建一个名为<em>Orange demo</em>的虚拟<a target="_blank" rel="noopener" href="https://python-packaging-user-guide.readthedocs.org/">python项目</a>。创建Orange插件的一个很好的起点是<a target="_blank" rel="noopener" href="https://github.com/biolab/orange3-example-addon">示例插件</a>。</p>
+<p>文件布局如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">orange-demo/</span><br><span class="line">      setup.py</span><br><span class="line">      orangedemo/</span><br><span class="line">                  __init__.py</span><br><span class="line">                  OWDataSamplerA.py</span><br></pre></td></tr></table></figure>
+
+<p>orange-demo&#x2F;setup.py的内容应该包含：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup</span><br><span class="line"></span><br><span class="line">setup(name=<span class="string">&quot;Demo&quot;</span>,</span><br><span class="line">      packages=[<span class="string">&quot;orangedemo&quot;</span>],</span><br><span class="line">      package_data=&#123;<span class="string">&quot;orangedemo&quot;</span>: [<span class="string">&quot;icons/*.svg&quot;</span>]&#125;,</span><br><span class="line">      classifiers=[<span class="string">&quot;Example :: Invalid&quot;</span>],</span><br><span class="line">      <span class="comment"># Declare orangedemo package to contain widgets for the &quot;Demo&quot; category</span></span><br><span class="line">      entry_points=&#123;<span class="string">&quot;orange.widgets&quot;</span>: <span class="string">&quot;Demo = orangedemo&quot;</span>&#125;,</span><br><span class="line">      )</span><br></pre></td></tr></table></figure>
+
+<p>请注意，我们声明我们的<em>orangedemo</em>包包含来自特定定义类别<em>Demo</em>的小部件。</p>
+<blockquote>
+<p>See also：<a target="_blank" rel="noopener" href="https://github.com/biolab/orange3/wiki/Add-Ons">https://github.com/biolab/orange3/wiki/Add-Ons</a></p>
+</blockquote>
+<p>根据前面的示例，我们定义OWDataSamplerA小部件的模块开始如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Orange.data</span><br><span class="line"><span class="keyword">from</span> orangewidget.widget <span class="keyword">import</span> OWBaseWidget, Input, Output</span><br><span class="line"><span class="keyword">from</span> orangewidget.utils.widgetpreview <span class="keyword">import</span> WidgetPreview</span><br><span class="line"><span class="keyword">from</span> orangewidget <span class="keyword">import</span> gui</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">OWDataSamplerA</span>(<span class="title class_ inherited__">OWBaseWidget</span>):</span><br><span class="line">    name = <span class="string">&quot;Data Sampler&quot;</span></span><br><span class="line">    description = <span class="string">&quot;Randomly selects a subset of instances from the dataset&quot;</span></span><br><span class="line">    icon = <span class="string">&quot;icons/DataSamplerA.svg&quot;</span>  <span class="comment"># mf-需自行准备svg文件</span></span><br><span class="line">    priority = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Inputs</span>:</span><br><span class="line">        data = Input(<span class="string">&quot;Data&quot;</span>, Orange.data.Table)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Outputs</span>:</span><br><span class="line">        sample = Output(<span class="string">&quot;Sampled Data&quot;</span>, Orange.data.Table)</span><br><span class="line"></span><br><span class="line">    want_main_area = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># GUI</span></span><br><span class="line">        box = gui.widgetBox(self.controlArea, <span class="string">&quot;Info&quot;</span>)</span><br><span class="line">        self.infoa = gui.widgetLabel(box, <span class="string">&#x27;No data on input yet, waiting to get something.&#x27;</span>)</span><br><span class="line">        self.infob = gui.widgetLabel(box, <span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>该小部件定义了一个输入通道“Data”和一个输出通道“Sampled Data”。两者都将携带<code>Orange.data.Table</code>.类型的令牌。在代码中，我们将把信号称为<em>Inputs.data</em>和<em>Outputs.sample</em>。</p>
+<p>通道可以携带任意类型的令牌。然而，小部件的目的是与其他小部件信息交流，因此作为主要设计原则之一，我们试图通过最小化不同通道类型的数量来最大限度地提高小部件的灵活性。在检查是否能重用现有信号之前，不要发明新的信号类型。</p>
+<p>由于我们的小部件除了一些信息外不会其他显示任何内容，因此我们将把这两个标签放在控制区域，并用“Info”框将其包裹。</p>
+<p>接下来的四行指定了小部件的GUI。这将很简单，并且将只包括两行文本，如果什么都不发生，第一行将报告“no data yet - 还没有数据”，第二行将为空。</p>
+<p>为了完成我们的小部件，我们现在需要定义一个处理输入数据的方法。我们将其称为<code>set_data()</code>；名称是任意的，但调用方法<code>set_&lt;name of the input&gt;</code>似乎是一种很好的做法。为了将其指定为接受<code>Inputs.data</code>中定义的信号的方法，我们用*@Inputs.data*对其进行修饰。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Inputs.data</span></span><br><span class="line"> <span class="keyword">def</span> <span class="title function_">set_data</span>(<span class="params">self, dataset</span>):</span><br><span class="line">     <span class="keyword">if</span> dataset <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">         self.infoa.setText(<span class="string">&#x27;%d instances in input dataset&#x27;</span> % <span class="built_in">len</span>(dataset))</span><br><span class="line">         indices = numpy.random.permutation(<span class="built_in">len</span>(dataset))</span><br><span class="line">         indices = indices[:<span class="built_in">int</span>(numpy.ceil(<span class="built_in">len</span>(dataset) * <span class="number">0.1</span>))]</span><br><span class="line">         sample = dataset[indices]</span><br><span class="line">         self.infob.setText(<span class="string">&#x27;%d sampled instances&#x27;</span> % <span class="built_in">len</span>(sample))</span><br><span class="line">         self.Outputs.sample.send(sample)</span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         self.infoa.setText(<span class="string">&#x27;No data on input yet, waiting to get something.&#x27;</span>)</span><br><span class="line">         self.infob.setText(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">         self.Outputs.sample.send(<span class="string">&quot;Sampled Data&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><code>dataset</code> 参数是通过我们方法需要处理的来自于输入通道的令牌。</p>
+<p>为了处理非空令牌，小部件更新接口报告输入上的数据数量，然后使用Orange进行数据采样，并更新接口报告采样实例数量。最后，采样数据作为令牌发送到定义为<em>Output.sample</em>的输出通道。</p>
+<p>虽然我们的小部件现在已经准备好测试了，但最后，让我们为我们的小组件设计一个图标。正如小部件标题中所指定的，我们将称之为<strong>DataSamplerA.svg</strong>，并将其放在orange-demo目录的icons子目录中。</p>
+<p>有了目前的文件素材，我们现在可以开始安装orangedemo软件包了。我们将通过运行<code>pip install -e .</code>来实现这一点。命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -e . </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：根据您的python安装环境，您可能需要管理员&#x2F;超级用户权限。</p>
+</blockquote>
+<p>为了进行测试，我们现在打开Orange Canvas。小部件工具箱中应该有一个名为Demo的新窗格。如果我们点击这个窗格，它会显示我们的小部件的图标。试着将鼠标悬停在它上面，看看标题和频道信息是否处理正确：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e7db0cd1245e3dcf247c4f0ea8122587.png" alt="_images/samplewidgetontoolbox.png"></p>
+<p>现在进行真正的测试。我们将File小部件放在画布上（从Data窗格），并加载<strong>iris.tab</strong>数据集。我们还将数据采样器小部件放在画布上并打开它（双击图标，或右键单击并选择打开）：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/71afceea9ae1705351367746d95fded9.png" alt="_images/datasamplerAempty.png"></p>
+<p>现在连接“文件”和“数据采样器”小部件（单击“文件”小部件的输出连接器，并将行拖动到“数据采样器》的输入连接器）。如果一切正常，只要释放鼠标，连接就会建立，并且等待文件小部件输出的令牌会被发送到数据采样器小部件，后者会更新其窗口：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/08fa29dfb7fa2b7a4331a7f1d3c99952.png" alt="_images/datasamplerAupdated.png"></p>
+<p>要查看数据采样器是否确实向输出发送了一些数据，请将其连接到数据表小部件：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/18f21115ca1b389a12b112357b29eebc.png" alt="_images/schemawithdatatable.png"></p>
+<p>尝试打开不同的数据文件（更改应该通过小部件连接传递数据，打开“数据表”窗口后，您应该立即看到采样结果）。同时尝试删除“文件”和“数据采样器”之间的连接（右键单击连接，选择“删除”）。查看数据表中显示的数据会发生什么变化？</p>
+<h2 id="在Orange-Canvas外测试小工具-Testing-Your-Widget-Outside-Orange-Canvas"><a href="#在Orange-Canvas外测试小工具-Testing-Your-Widget-Outside-Orange-Canvas" class="headerlink" title="在Orange Canvas外测试小工具 - Testing Your Widget Outside Orange Canvas"></a>在Orange Canvas外测试小工具 - Testing Your Widget Outside Orange Canvas</h2><p>出于调试目的，我们希望能够独立运行小部件：如果包含小部件代码的文件作为主脚本执行，它应该显示小部件并向其提供一些合适的数据。最简单的方法是使用<strong>oragewidget.utils.WidgetPreview</strong>并将默认信号的数据传递给它。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    WidgetPreview(OWDataSamplerA).run(Orange.data.Table(<span class="string">&quot;iris&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<h1 id="教程（设置和控件）-Tutorial-Settings-and-Controls"><a href="#教程（设置和控件）-Tutorial-Settings-and-Controls" class="headerlink" title="教程（设置和控件）- Tutorial (Settings and Controls)"></a>教程（设置和控件）- Tutorial (Settings and Controls)</h1><p>在本教程的<a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/tutorial.html">前一节</a>中，我们刚刚构建了一个简单的采样小部件。现在让我们通过允许用户设置要保留在样本中的数据实例的比例，使这个小部件更加有用。假设我们想设计一个看起来像这样的小部件：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e3adf733c86cbf4e1a3c659709fe12e8.png" alt="_images/dataSamplerBWidget.png"></p>
+<p>我们添加的是一个选项框(Options box)，其中有一个用于设置样本大小的输入框，以及一个用于提交（发送）我们在设置中所做的任何更改的复选框和按钮。如果选中了“Commit data on selection change”复选框，则样本大小的任何变化都将使小部件发送采样的数据集。如果数据集很大（比如数千个或更多），我们可能只想在设置完样本大小后发送样本数据，因此我们不选中提交复选框，并在准备好后按“提交”。</p>
+<p>这是一个非常简单的界面，但它还有更多的功能。我们希望设置可以被保存（样本大小和提交按钮的状态）。也就是说，我们所做的任何更改，我们都希望保存它，以便下次打开小部件时，设置就在那里。</p>
+<h2 id="部件设置-Widgets-Settings"><a href="#部件设置-Widgets-Settings" class="headerlink" title="部件设置 - Widgets Settings"></a>部件设置 - Widgets Settings</h2><p>幸运的是，由于我们使用了基类<a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/widget.html#orangewidget.widget.OWBaseWidget"><code>OWBaseWidget</code></a>，所以设置可以很好的被处理。我们只需要告诉哪些变量将用于持久设置。</p>
+<p>在我们的小部件中，我们将使用两个设置变量，并在小部件类定义中声明这一点（在输入、输出定义之后）。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">OWDataSamplerB</span>(<span class="title class_ inherited__">OWBaseWidget</span>):</span><br><span class="line">    name = <span class="string">&quot;Data Sampler (B)&quot;</span></span><br><span class="line">    description = <span class="string">&quot;Randomly selects a subset of instances from the dataset.&quot;</span></span><br><span class="line">    icon = <span class="string">&quot;icons/DataSamplerB.svg&quot;</span></span><br><span class="line">    priority = <span class="number">20</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Inputs</span>:</span><br><span class="line">        data = Input(<span class="string">&quot;Data&quot;</span>, Orange.data.Table)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Outputs</span>:</span><br><span class="line">        sample = Output(<span class="string">&quot;Sampled Data&quot;</span>, Orange.data.Table)</span><br><span class="line"></span><br><span class="line">    proportion = settings.Setting(<span class="number">50</span>)</span><br><span class="line">    commitOnChange = settings.Setting(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>所有设置都必须指定其默认值。创建小部件时，小部件的成员已经恢复，并准备在其__init__方法中使用。两个变量（<code>self.proportion</code>和<code>self.commitOnChange</code>）的内容将在关闭我们的小部件时保存。在我们的小部件中，我们不会直接设置这些变量，而是将它们与GUI控件一起使用。</p>
+<h2 id="控制和模块的GUI-Controls-and-module-gui"><a href="#控制和模块的GUI-Controls-and-module-gui" class="headerlink" title="控制和模块的GUI - Controls and module gui"></a>控制和模块的GUI - Controls and module gui</h2><p>我们将使用**<code>orangewidget.gui</code>**来创建&#x2F;定义gui。有了这个库，选项框的GUI定义部分有点密集，但非常短。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">box = gui.widgetBox(self.controlArea, <span class="string">&quot;Info&quot;</span>)</span><br><span class="line">     self.infoa = gui.widgetLabel(box, <span class="string">&#x27;No data on input yet, waiting to get something.&#x27;</span>)</span><br><span class="line">     self.infob = gui.widgetLabel(box, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">     gui.separator(self.controlArea)</span><br><span class="line">     self.optionsBox = gui.widgetBox(self.controlArea, <span class="string">&quot;Options&quot;</span>)</span><br><span class="line">     gui.spin(self.optionsBox, self, <span class="string">&#x27;proportion&#x27;</span>,</span><br><span class="line">              minv=<span class="number">10</span>, maxv=<span class="number">90</span>, step=<span class="number">10</span>, label=<span class="string">&#x27;Sample Size [%]:&#x27;</span>,</span><br><span class="line">              callback=[self.selection, self.checkCommit])</span><br><span class="line">     gui.checkBox(self.optionsBox, self, <span class="string">&#x27;commitOnChange&#x27;</span>,</span><br><span class="line">                  <span class="string">&#x27;Commit data on selection change&#x27;</span>)</span><br><span class="line">     gui.button(self.optionsBox, self, <span class="string">&quot;Commit&quot;</span>, callback=self.commit)</span><br><span class="line">     self.optionsBox.setDisabled(<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>我们已经熟悉了第一部分-信息框。为了使小部件更好，我们在信息框和选项框之间放置了一个分隔符。在定义了选项框之后，这里是我们的第一个严格意义上的gui控件：<a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/gui.html#orangewidget.gui.spin"><code>orangewidget.gui.spin()</code></a>。第一个参数指定其父窗口小部件&#x2F;布局，在本例中为<code>self.optionsBox</code>（生成的窗口小部件对象将自动将自己附加到父窗口小部件的布局）。第二个（self）和第三个（“proportion”）定义了<strong>数值微调框</strong>(spin box)的属性绑定。也就是说，<strong>数值微调框</strong>(spin box)控件中的任何更改都将自动传播到<code>self.proportions</code>，反之亦然——通过赋值更改小部件代码中self.proprotions的值（例如self.proprotions &#x3D; 30）将更新<strong>数值微调框</strong>(spin box)的状态以匹配。</p>
+<p><strong>数值微调框</strong>(spin box)的其余部分为控件提供了一些参数（最小值、最大值和步长），传递给放置在顶部的标签(label)，以及当<strong>数值微调框</strong>(spin box)中的值更改时要调用哪个函数。我们需要第一个回调来制作数据样本，并在“信息框“中报告样本的大小，第二个回调用来检查我们是否可以发送这些数据。在orangewidget.gui中，回调要么是对函数的引用，要么是带有引用的列表，就像我们的例子一样。</p>
+<p>通过以上所有操作，<a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/gui.html#orangewidget.gui.checkBox"><code>orangewidget.gui.checkBox()</code></a>的调用参数也应该是清楚的。请注意，这和对<a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/gui.html#orangewidget.gui.spin"><code>orangewidget.gui.spin()</code></a>的调用不需要告诉控件初始化值的参数：构造时，两个控件都已经为相关变量设置了包含的值。</p>
+<p>就是这样。请注意，作为默认设置，我们禁用了“选项”框中的所有控件。这是因为在小部件开始时，没有数据可供采样。但这也意味着，在处理输入令牌时，我们应该注意启用和禁用。我们小部件的数据处理和令牌发送部分现在是</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Inputs.data</span></span><br><span class="line">   <span class="keyword">def</span> <span class="title function_">set_data</span>(<span class="params">self, dataset</span>):</span><br><span class="line">       <span class="keyword">if</span> dataset <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">           self.dataset = dataset</span><br><span class="line">           self.infoa.setText(<span class="string">&#x27;%d instances in input dataset&#x27;</span> % <span class="built_in">len</span>(dataset))</span><br><span class="line">           self.optionsBox.setDisabled(<span class="literal">False</span>)</span><br><span class="line">           self.selection()</span><br><span class="line">       <span class="keyword">else</span>:</span><br><span class="line">           self.dataset = <span class="literal">None</span></span><br><span class="line">           self.sample = <span class="literal">None</span></span><br><span class="line">           self.optionsBox.setDisabled(<span class="literal">False</span>)</span><br><span class="line">           self.infoa.setText(<span class="string">&#x27;No data on input yet, waiting to get something.&#x27;</span>)</span><br><span class="line">           self.infob.setText(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">       self.commit()</span><br><span class="line"></span><br><span class="line">   <span class="keyword">def</span> <span class="title function_">selection</span>(<span class="params">self</span>):</span><br><span class="line">       <span class="keyword">if</span> self.dataset <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">           <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">       n_selected = <span class="built_in">int</span>(numpy.ceil(<span class="built_in">len</span>(self.dataset) * self.proportion / <span class="number">100.</span>))</span><br><span class="line">       indices = numpy.random.permutation(<span class="built_in">len</span>(self.dataset))</span><br><span class="line">       indices = indices[:n_selected]</span><br><span class="line">       self.sample = self.dataset[indices]</span><br><span class="line">       self.infob.setText(<span class="string">&#x27;%d sampled instances&#x27;</span> % <span class="built_in">len</span>(self.sample))</span><br><span class="line"></span><br><span class="line">   <span class="keyword">def</span> <span class="title function_">commit</span>(<span class="params">self</span>):</span><br><span class="line">       self.Outputs.sample.send(self.sample)</span><br><span class="line"></span><br><span class="line">   <span class="keyword">def</span> <span class="title function_">checkCommit</span>(<span class="params">self</span>):</span><br><span class="line">       <span class="keyword">if</span> self.commitOnChange:</span><br><span class="line">           self.commit()</span><br></pre></td></tr></table></figure>
+
+<p>现在您还可以检查这个小部件的<a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/_downloads/97a96d5069e2303ad63d543ed4d0337f/OWDataSamplerB.py">完整代码</a>。为了将其与我们在上一节中开发的小部件区分开来，我们为其设计了一个特殊的图标。如果您希望在Orange Canvas中测试此小部件，请将其代码放在我们为上一个小部件创建的orangedemo目录中，并使用带有<strong>File</strong>和<strong>Data Table</strong>小部件的结构进行尝试。</p>
+<p><img src="https://img-blog.csdnimg.cn/direct/d73af99992e04f7da9e70114ca410bcd.png" alt="_images/schemawithdatasamplerB.png"></p>
+<p>表现良好的小部件会记住它们的设置——复选框和单选按钮的状态、行编辑中的文本、组合框中的选择等等。</p>
+<h2 id="持续默认值-Persisting-defaults"><a href="#持续默认值-Persisting-defaults" class="headerlink" title="持续默认值 - Persisting defaults"></a>持续默认值 - Persisting defaults</h2><p>当一个小部件被删除时，它的设置会被存储起来，用作该小部件未来实例的默认设置。</p>
+<p>更新后的默认值存储在用户的配置文件中。它的位置取决于操作系统：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(%APPDATA%Orange&lt;version&gt;widgets on windows, ~/Library/ApplicationSupport/orange/&lt;version&gt;/widgets on macOS, ~/.local/share/Orange/&lt;version&gt;/widgets on linux)</span><br></pre></td></tr></table></figure>
+
+<p>可以通过从该文件夹中删除文件、从命令行运行Orange（<em>–clear-widget-settings</em> 小部件设置选项）或通过Options&#x2F;Reset widget settings菜单操作来恢复原始默认值。</p>
+<h3 id="纯模式设置-Schema-only-settings"><a href="#纯模式设置-Schema-only-settings" class="headerlink" title="纯模式设置 - Schema-only settings"></a>纯模式设置 - Schema-only settings</h3><p>某些设置具有不应更改的默认值。例如，当使用<strong>Paint Data</strong>小部件时，绘制的点应保存在工作流中，但新的小部件应始终以空白页开头——修改后的值不应被记住。</p>
+<p>这可以通过使用<em>schema_only</em>标志声明设置来实现。这样的设置与工作流一起保存，但其默认值永远不会更改。</p>
+<h2 id="上下文相关设置-Context-dependent-settings"><a href="#上下文相关设置-Context-dependent-settings" class="headerlink" title="上下文相关设置 - Context dependent settings"></a>上下文相关设置 - Context dependent settings</h2><p>上下文相关设置取决于小部件输入。例如，<strong>scatter plot</strong>小部件包含指定x轴和y轴属性的设置，以及定义图形中示例的颜色、形状和大小的设置。</p>
+<p>更复杂的情况是用于数据选择的小部件，使用该小部件可以基于某些属性的值来选择示例。在应用保存的设置之前，这些小部件需要检查它们是否符合实际数据集的域。为了真正有用，上下文相关设置需要为所使用的每个特定数据集保存一个设置配置。也就是说，当给定特定的数据集时，它必须选择适用的、与当前使用的最佳数据集匹配的保存设置。</p>
+<p>上下文处理程序负责保存、加载和匹配上下文。目前，只实现了两类上下文处理程序。第一个是抽象<code>ContextHandler</code> ，第二个是<code>DomainContextHandler</code> ，其中上下文由数据集域定义，并且设置包含属性名称。后者应该能满足您的大部分需求，而对于更复杂的小部件，您需要从中派生新的类。甚至在某些情况下，上下文不是由域定义的，在这种情况下，ContextHandler将用作新处理程序的基础。</p>
+<p>上下文需要声明、打开和关闭。打开和关闭通常发生在处理数据信号的函数中（以相反的顺序）。这就是它在散点图中的样子（为了清晰起见，代码有所简化）。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Input.data</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">set_data</span>(<span class="params">self, data</span>):</span><br><span class="line">    self.closeContext()</span><br><span class="line">    self.data = data</span><br><span class="line">    self.graph.setData(data)</span><br><span class="line"></span><br><span class="line">    self.initAttrValues()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> data <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        self.openContext(data.domain)</span><br><span class="line"></span><br><span class="line">    self.updateGraph()</span><br><span class="line">    self.sendSelections()</span><br></pre></td></tr></table></figure>
+
+<p>一般来说，函数应该是这样的：</p>
+<ul>
+<li>进行所需的任何清理，但不清除任何需要保存的设置。散点图(Scatter plot)不需要。</li>
+<li>调用<code>self.closeContext()</code>；这样可以确保记住所有上下文相关的设置（例如，列表框中的属性名称）。</li>
+<li>初始化小部件状态并将控件设置为一些默认值，就好像没有上下文检索机制一样。散点图(Scatter plot)通过调用<code>self.initAttrValues()</code>来实现这一点，该函数将前两个属性分配给x和y轴，将class属性分配给颜色。在这个阶段，不应该调用任何依赖于设置的函数，例如绘制图形。</li>
+<li>调用<code>self.openContext(data.domain)</code>（稍后将详细介绍参数）。这将搜索合适的上下文，并在找到新值的情况下为控件分配新值。如果没有可使用的已保存上下文，则会创建一个新上下文，并使用上一点指定的默认值填充该上下文。</li>
+<li>最后，根据检索到的控件调整小部件。散点图(Scatter plot)现在通过调用<code>self.updateGraph()</code>来绘制图形。</li>
+</ul>
+<p>当打开上下文时，我们提供上下文所依赖的参数。对于散点图使用的**<code>DomainContextHandler</code><strong>，我们可以给它一个</strong><code>Orange.data.Domain</code>**。保存的上下文是否可以重用取决于域中是否存在属性。</p>
+<p>如果小部件构造得当（也就是说，如果它严格使用<code>orangewidget.gui</code>控件而不是Qt控件），则不需要其他管理来切换上下文。</p>
+<p>除了声明上下文设置之外，也就是说。散点图(Scatter plot)在其类定义中有这一点</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">settingsHandler = DomainContextHandler()</span><br><span class="line">attr_x = ContextSetting(<span class="string">&quot;&quot;</span>)</span><br><span class="line">attr_y = ContextSetting(<span class="string">&quot;&quot;</span>)</span><br><span class="line"></span><br><span class="line">auto_send_selection = Setting(<span class="literal">True</span>)</span><br><span class="line">toolbar_selection = Setting(<span class="number">0</span>)</span><br><span class="line">color_settings = Setting(<span class="literal">None</span>)</span><br><span class="line">selected_schema_index = Setting(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p><code>settingsHandler = DomainContextHandler()</code> 声明散点图使用<code>DomainContextHandler</code>。<code>attr_x</code> 和<code>attr_y</code> 被声明为<code>ContextSetting</code>。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://dreamstar.top">dreamstar</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://dreamstar.top/2024/06/24/1.MachineLearning/Orange/2.orange_widget_development/2.orange_widget_development/">http://dreamstar.top/2024/06/24/1.MachineLearning/Orange/2.orange_widget_development/2.orange_widget_development/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://dreamstar.top" target="_blank">Dreamstar</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="../../../../../../../img/for_post/orange_illustration_landing.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="../../../../../../04/25/1.MachineLearning/AutoML/PyCaret/" title="PyCaret-自动机器学习框架"><img class="cover" src="../../../../../../../img/for_post/pycaret.svg" onerror="onerror=null;src='../../../../../../../img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">PyCaret-自动机器学习框架</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="../img/avatar.jpg" onerror="this.onerror=null;this.src='../img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">dreamstar</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="../archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="../categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/arrayofstar" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="../mailto:mengfan.1993@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Orange-Widget-Base-Widget-Development"><span class="toc-text">Orange Widget Base - Widget Development</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%BC%80%E5%A7%8B-Getting-Started"><span class="toc-text">准备开始 - Getting Started</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6-Prerequisites"><span class="toc-text">先决条件 - Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Defining-a-widget-%E5%AE%9A%E4%B9%89%E5%B0%8F%E9%83%A8%E4%BB%B6"><span class="toc-text">Defining a widget - 定义小部件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E2%80%9C%E7%A4%BA%E4%BE%8B%E2%80%9D%E5%8C%85-A-%E2%80%98Demo%E2%80%99-package"><span class="toc-text">一个“示例”包 - A ‘Demo’ package</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8Orange-Canvas%E5%A4%96%E6%B5%8B%E8%AF%95%E5%B0%8F%E5%B7%A5%E5%85%B7-Testing-Your-Widget-Outside-Orange-Canvas"><span class="toc-text">在Orange Canvas外测试小工具 - Testing Your Widget Outside Orange Canvas</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%99%E7%A8%8B%EF%BC%88%E8%AE%BE%E7%BD%AE%E5%92%8C%E6%8E%A7%E4%BB%B6%EF%BC%89-Tutorial-Settings-and-Controls"><span class="toc-text">教程（设置和控件）- Tutorial (Settings and Controls)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E4%BB%B6%E8%AE%BE%E7%BD%AE-Widgets-Settings"><span class="toc-text">部件设置 - Widgets Settings</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84GUI-Controls-and-module-gui"><span class="toc-text">控制和模块的GUI - Controls and module gui</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E9%BB%98%E8%AE%A4%E5%80%BC-Persisting-defaults"><span class="toc-text">持续默认值 - Persisting defaults</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%AF%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE-Schema-only-settings"><span class="toc-text">纯模式设置 - Schema-only settings</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE-Context-dependent-settings"><span class="toc-text">上下文相关设置 - Context dependent settings</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="../2024/06/24/1.MachineLearning/Orange/2.orange_widget_development/2.orange_widget_development/" title="Orange 小部件开发指南"><img src="../img/for_post/orange_illustration_landing.png" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="Orange 小部件开发指南"/></a><div class="content"><a class="title" href="../2024/06/24/1.MachineLearning/Orange/2.orange_widget_development/2.orange_widget_development/" title="Orange 小部件开发指南">Orange 小部件开发指南</a><time datetime="2024-06-24T15:00:00.000Z" title="发表于 2024-06-24 23:00:00">2024-06-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/04/25/1.MachineLearning/AutoML/PyCaret/" title="PyCaret-自动机器学习框架"><img src="../img/for_post/pycaret.svg" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="PyCaret-自动机器学习框架"/></a><div class="content"><a class="title" href="../2024/04/25/1.MachineLearning/AutoML/PyCaret/" title="PyCaret-自动机器学习框架">PyCaret-自动机器学习框架</a><time datetime="2024-04-25T14:00:00.000Z" title="发表于 2024-04-25 22:00:00">2024-04-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/04/16/0.hexo-theme/theme-github-deploy/" title="theme-hexo blog 博客的部署方式"><img src="../img/default_cover-3.png" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="theme-hexo blog 博客的部署方式"/></a><div class="content"><a class="title" href="../2024/04/16/0.hexo-theme/theme-github-deploy/" title="theme-hexo blog 博客的部署方式">theme-hexo blog 博客的部署方式</a><time datetime="2024-04-15T18:01:33.000Z" title="发表于 2024-04-16 02:01:33">2024-04-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/" title="Orange widget 小部件简介"><img src="../img/for_post/orange_illustration_landing.png" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="Orange widget 小部件简介"/></a><div class="content"><a class="title" href="../2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/" title="Orange widget 小部件简介">Orange widget 小部件简介</a><time datetime="2024-03-18T14:00:00.000Z" title="发表于 2024-03-18 22:00:00">2024-03-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="../2023/12/07/0.hexo-theme/theme-Butterfly/" title="hexo-theme-Butterfly"><img src="../img/default_cover-3.png" onerror="this.onerror=null;this.src='../img/404.jpg'" alt="hexo-theme-Butterfly"/></a><div class="content"><a class="title" href="../2023/12/07/0.hexo-theme/theme-Butterfly/" title="hexo-theme-Butterfly">hexo-theme-Butterfly</a><time datetime="2023-12-07T14:50:53.000Z" title="发表于 2023-12-07 22:50:53">2023-12-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By dreamstar</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="../../../../../../../js/utils.js"></script><script src="../../../../../../../js/main.js"></script><script src="../../../../../../../js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
