@@ -161,7 +161,8 @@
 </blockquote>
 <p><strong>File</strong>小部件读取输入数据文件（带有数据实例的数据表）然后将数据集发送到其输出通道。最近打开的文件的历史记录保存在部件(widget)中。该部件还包括一个目录，其中包含与Orange一起预装的示例数据集。</p>
 <p>该小部件从Excel（.xlsx）、简单制表符分隔的文件（.txt）、逗号分隔文件（.csv）或URL读取数据。有关其他格式，请参阅下面的“其他格式”部分。</p>
-<p><img src="/images/File-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/File-stamped.png" class="" title="img">
+
 <ol>
 <li><p>浏览以前打开的数据文件，或加载任何示例文件。</p>
 </li>
@@ -182,14 +183,16 @@
 </ol>
 <p><strong>示例</strong></p>
 <p>大多数Orange工作流可能会从**文件(File)**部件开始。在下面的模式中，部件用于读取数据并发送到<code>数据表(Data Table)</code>和 <code>箱型图(Box Plot)</code>部件。</p>
-<p><img src="/images/File-Workflow.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/File-Workflow.png" class="" title="img">
+
 <p>读取数据</p>
 <ul>
 <li>Orange可以导入任何逗号、.xlsx或制表符分隔的数据文件或URL链接。使用<strong>File</strong>部件，然后根据需要选择class和meta属性。</li>
 <li>要指定属性的域和类型，可以在属性名称前面加上标签，后缀哈希值。c表示类，m表示元属性，i表示忽略列，C、D、S表示连续、离散和字符串属性类型。示例：C#mpg、mS#name、i#dummy。</li>
 <li>Orange的原生格式是一个制表符分隔的文本文件，有三个标题行。第一行包含属性名称，第二行包含类型（连续-<em>continuous</em>、离散-<em>discrete</em>或字符串-<em>string</em>），第三行包含可选元素（类-<em>class</em>、元-<em>meta</em>或时间-<em>time</em>）。</li>
 </ul>
-<p><img src="/images/spreadsheet-simple-head1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/spreadsheet-simple-head1.png" class="" title="img">
+
 <p>在<a target="_blank" rel="noopener" href="https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/loading-your-data/index.html">此处</a>阅读有关加载数据的更多信息。</p>
 <p>其他格式</p>
 <p>支持的格式和加载它们的小部件：</p>
@@ -197,7 +200,7 @@
 <li>distance matrix - 距离矩阵：<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/unsupervised/distancefile/">距离文件</a></li>
 <li>rpredictive model - 预测模型：<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/model/loadmodel/">载入模型</a></li>
 <li>network - 网络：网络插件中的网络文件</li>
-<li>images - 图像：图像分析-Image Analytics插件中加载的图像</li>
+<li>1.orange_widget - 图像：图像分析-Image Analytics插件中加载的图像</li>
 <li>text&#x2F;corpus - 文本&#x2F;语料库：文本插件中的语料库或导入文档</li>
 <li>single cell data - 单个单元数据：从单个单元数据插件中加载数据</li>
 <li>several spectroscopy files - 几个光谱文件：spectroscopy插件中的多文件</li>
@@ -217,7 +220,8 @@
 <p>输入选项</p>
 <p>用户设置导入参数的导入窗口，可以通过按下部件中的导入选项重新打开。</p>
 <p>右键单击列名称以设置列类型。右键单击行索引（左侧），将行标记为页眉、跳过或普通数据行。</p>
-<p><img src="/images/CSVFileImport-ImportOptions-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/CSVFileImport-ImportOptions-stamped.png" class="" title="img">
+
 <ol>
 <li>文件编码：默认为UTF-8，详见编码分章。</li>
 <li>导入设置：<ul>
@@ -250,7 +254,8 @@
 </ol>
 <p>部件 - Widget</p>
 <p>成功导入数据后的部件截图。</p>
-<p><img src="/images/CSVFileImport-widget-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/CSVFileImport-widget-stamped.png" class="" title="img">
+
 <ol>
 <li>文件夹图标可以打开对话框(用于导入本地.csv文件)。它可以用于加载第一个文件或更改现有文件（加载新数据）。文件下拉列表存储以前加载的数据集的路径。</li>
 <li>有关导入数据集的信息。报告实例（行）、变量（t特征或列）和元组变量（特殊列）的数量。</li>
@@ -258,10 +263,12 @@
 </ol>
 <p>编码 - Encoding</p>
 <p>“导入选项-编码”下拉列表中用于设置自定义编码的对话框。选择自定义编码列表…(<em>Customize Encodings List…</em>)以更改列表中显示的编码。要保存更改，只需关闭对话框。关闭和重新打开橙色（即使使用重置小部件设置）也不会重新设置列表。要执行此操作，请按Restore Defaults。要在列表中显示所有可用编码，请按全选。</p>
-<p><img src="/images/CSVFileImport-encodings.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/CSVFileImport-encodings.png" class="" title="img">
+
 <p><strong>示例</strong></p>
 <p>**CSV文件导入(CSV File Import)<strong>工作方式几乎与</strong>文件部件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/data/file.md">File</a>)**完全相同，区别在于添加了用于导入不同类型.CSV文件的选项。在此工作流中，部件从文件中读取数据，并将其发送到数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable/">Data Table</a>)以供检查。</p>
-<p><img src="/images/CSVFileImport-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/CSVFileImport-Example.png" class="" title="img">
+
 <h2 id="Datasets-数据集"><a href="#Datasets-数据集" class="headerlink" title="Datasets - 数据集"></a>Datasets - 数据集</h2><blockquote>
 <p>从在线存储库加载数据集。</p>
 <p><strong>输出</strong>：</p>
@@ -270,7 +277,8 @@
 </ul>
 </blockquote>
 <p>数据集部件(<strong>Datasets</strong>)从服务器检索选定的数据集并将其发送到输出。文件被下载到本地存储器，因此即使没有互联网连接也可以立即使用。每个数据集都提供了关于数据大小、实例数量、变量数量、目标和标记的描述和信息。</p>
-<p><img src="/images/Datasets-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Datasets-stamped.png" class="" title="img">
+
 <ol>
 <li>可用数据集数量以及已下载数据集数量的信息。</li>
 <li>可用数据集的内容。每个数据集都描述了大小、实例和变量的数量、目标变量的类型和标记。</li>
@@ -279,7 +287,8 @@
 </ol>
 <p><strong>示例</strong></p>
 <p>Orange工作流可从“数据集”部件(<strong>Datasets</strong> )开始，而不是文件部件(<strong>File</strong>)。在下面的示例中，部件从在线存储库中检索数据集（Kickstarter数据），随后将其发送到”数据表-<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/data/datatable">Data Table</a>“和”分布-<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/distributions">Distributions</a>“部件。</p>
-<p><img src="/images/Datasets-Workflow.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Datasets-Workflow.png" class="" title="img">
+
 <h2 id="SQL-Table-数据库表"><a href="#SQL-Table-数据库表" class="headerlink" title="SQL Table - 数据库表"></a>SQL Table - 数据库表</h2><blockquote>
 <p>从 SQL 数据库中读取数据。</p>
 <p><strong>输出</strong></p>
@@ -288,7 +297,7 @@
 </ul>
 </blockquote>
 <p><strong>SQL 小部件</strong>访问存储在SQL数据库中的数据。它可以连接到 PostgreSQL（需要 <a target="_blank" rel="noopener" href="http://initd.org/psycopg/">psycopg2</a> 模块）或 <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/sql-server/">SQL Server</a>（需要 <a target="_blank" rel="noopener" href="http://www.pymssql.org/en/stable/">pymssql</a> 模块）。</p>
-<p>为了处理大型数据库，Orange 尝试在不下载数据的情况下在数据库中执行部分计算。这仅适用于 PostgreSQL 数据库，并且需要在服务器上安装分位数和 <a target="_blank" rel="noopener" href="https://github.com/biolab/orange3/wiki/Installation-of-SQL-extensions">tsm_system_time</a> 扩展。如果没有安装这些扩展，数据将下载到本地。<img src="/images/AgAABvmS4SQLiQrTNKNKDqr2NJVh3fen.png" alt="img"></p>
+<p>为了处理大型数据库，Orange 尝试在不下载数据的情况下在数据库中执行部分计算。这仅适用于 PostgreSQL 数据库，并且需要在服务器上安装分位数和 <a target="_blank" rel="noopener" href="https://github.com/biolab/orange3/wiki/Installation-of-SQL-extensions">tsm_system_time</a> 扩展。如果没有安装这些扩展，数据将下载到本地。<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/AgAABvmS4SQLiQrTNKNKDqr2NJVh3fen.png" class="" title="img"></p>
 <ol>
 <li><p>数据库类型（可以是 PostgreSQL 或 MSSQL）。</p>
 </li>
@@ -336,7 +345,8 @@
 </ul>
 </blockquote>
 <p>数据表(<strong>Data Table</strong>)部件在其输入中接收一个或多个数据集，并将其作为电子表格显示。数据实例可以按属性值排序。该部件还支持手动选择数据实例。</p>
-<p><img src="/images/DataTable-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/DataTable-stamped.png" class="" title="img">
+
 <ol>
 <li>数据集的名称（通常是输入数据文件）。数据实例以行为单位，其属性值以列为单位。在上图的示例中，数据集按属性“sepal length”排序。</li>
 <li>有关当前数据集大小、数量和属性类型的信息</li>
@@ -348,9 +358,11 @@
 </ol>
 <p><strong>示例</strong></p>
 <p>我们使用两个<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file/">File</a>部件读取<em>Iris</em>和<em>Glass</em>数据集（在Orange发行版中有提供），并将它们发送到<strong>DataTable</strong>部件。</p>
-<p><img src="/images/DataTable-Schema.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/DataTable-Schema.png" class="" title="img">
+
 <p>第一个<strong>数据表</strong>中被选定的数据实例将传递到第二个<strong>数据表</strong>中。注意，我们可以选择要查看的数据集（iris 或 glass）。如果选择了“提交任何更改(<em>Commit on any change</em>)”，则从一个数据集更改会提交到另一个数据集中。</p>
-<p><img src="/images/DataTable-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/DataTable-Example.png" class="" title="img">
+
 <h2 id="Paint-Data-绘制数据"><a href="#Paint-Data-绘制数据" class="headerlink" title="Paint Data - 绘制数据"></a>Paint Data - 绘制数据</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>在二维平面上绘制数据。您可以放置单个数据点或使用画笔绘制更大的数据集。</p>
@@ -360,7 +372,8 @@
 </ul>
 </blockquote>
 <p>该部件支持通过在二维平面上直观地放置数据点来创建新数据集。数据点可以单独放置在平面上（Put），也可以通过刷（Brush）以更大的数量放置。如果数据用于监督学习，则数据点可以属于类。</p>
-<p><img src="/images/PaintData-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/PaintData-stamped.png" class="" title="img">
+
 <ol>
 <li>命名轴并选择一个类来绘制数据实例。您可以添加或删除类。只使用一个类创建无类、无监督的数据集。</li>
 <li>绘图工具。使用Brush（多个数据实例）或Put（单个数据实例）绘制数据点。使用“选择”选择数据点，然后使用“删除&#x2F;退格”键删除数据点。使用抖动 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Jitter">Jitter</a>（扩展）和磁铁（聚焦）重新定位数据点。使用缩放和滚动可放大或缩小。下面，设置笔刷、放置、抖动和磁铁工具的半径和强度。</li>
@@ -371,7 +384,8 @@
 </ol>
 <p><strong>示例 - example</strong></p>
 <p>在下面的示例中，我们绘制了一个包含4个类的数据集。这样的数据集非常适合演示k均值(k-means)和层次聚类(hierarchical cluster)方法。在截图中，我们看到总体上，<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/unsupervised/kmeans.md">k-Means</a>比<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/unsupervised/hierarchicalclustering/">Hierarchical Clustering</a>更能识别集群。它返回一个分数等级，其中最佳分数（具有最高值的分数）表示最可能的簇数。然而，分层聚类并不能将正确的类分组在一起。这是学习和探索统计概念的绝佳工具。</p>
-<p><img src="/images/PaintData-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/PaintData-Example.png" class="" title="img">
+
 <h2 id="Data-Info-数据信息"><a href="#Data-Info-数据信息" class="headerlink" title="Data Info - 数据信息"></a>Data Info - 数据信息</h2><blockquote>
 <p>显示选定数据集的信息。</p>
 <p><strong>输入</strong>：</p>
@@ -380,7 +394,8 @@
 </ul>
 </blockquote>
 <p>一个简单的小部件，提供有关数据集大小、特征、目标、元属性和位置的信息。</p>
-<p><img src="/images/data-info-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/data-info-stamped.png" class="" title="img">
+
 <ol>
 <li>关于数据集大小的信息</li>
 <li>关于离散和连续特征的信息</li>
@@ -391,7 +406,8 @@
 </ol>
 <p><strong>Example - 示例</strong></p>
 <p>下面的案例中，我们比较一下两个数据信息窗口<strong>Data Info</strong>小部件的基本统计数据，使用了Iris数据集，一个是关于整个数据集的信息，另一个是来自散点绘图(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/scatterplot">Scatter Plot</a>)窗口小部件（手动）选择的子集的信息。</p>
-<p><img src="/images/DataInfo-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/DataInfo-Example.png" class="" title="img">
+
 <h2 id="Rank-排名"><a href="#Rank-排名" class="headerlink" title="Rank - 排名"></a>Rank - 排名</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>分类或回归数据集中属性的排序。</p>
@@ -408,7 +424,8 @@
 </ul>
 </blockquote>
 <p><strong>Rank</strong>部件根据变量与离散或数字目标变量的相关性，基于适用的内部评分器（如信息增益、卡方检验和线性回归）和支持评分的任何关联外部模型（如线性回归、逻辑回归、随机森林、SGD等）对变量进行评分。该部件还可以处理无监督数据，但仅由外部记分器（例如PCA）进行。</p>
-<p><img src="/images/Rank-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Rank-stamped.png" class="" title="img">
+
 <ol>
 <li>选择评分方法。请参阅评分方法(<strong>Scoring methods</strong>)部分中的分类、回归和无监督数据选项。</li>
 <li>选择要输出的属性。<em>None</em>不会输出任何属性，而<em>All</em>将输出所有属性。通过手动选择，从右侧的表中选择属性。<em>Best ranked</em>将输出n个最佳排序属性。如果勾选了“<em>Send Automatically</em>”，小部件会自动将更改传递给其他小部件。</li>
@@ -437,12 +454,15 @@
 <p>Rank还可以使用某些学习者进行特征评分。例如，请参见<a target="_blank" rel="noopener" href="https://orangedatamining.com/learners-as-scorers/index/">Learners as Scorers</a>。</p>
 <p><strong>Example: Attribute Ranking and Selection - 示例：属性排序和选择</strong></p>
 <p>下面，我们在<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>小部件之后立即使用了<strong>Rank</strong>部件，以减少数据属性集，并仅包括信息量最大的属性：</p>
-<p><img src="/images/Rank-Select-Schema.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Rank-Select-Schema.png" class="" title="img">
+
 <p>请注意小部件如何输出仅包含最佳得分属性的数据集：</p>
-<p><img src="/images/Rank-Select-Widgets.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Rank-Select-Widgets.png" class="" title="img">
+
 <p><strong>Example: Feature Subset Selection for Machine Learning - 机器学习中的特征子集选择</strong></p>
 <p>下面是一个更复杂的例子。在下面的工作流中，我们首先将数据分为训练集和测试集。在上面的分支中，训练数据通过<strong>Rank</strong>小部件来选择信息量最大的属性，而在下面的分支中没有特征选择。选择的特征和原始数据集都被传递到他们自己的<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/evaluate/testandscore/">Test &amp; Score</a>部件，这些小部件开发了一个Naive Bayes分类器，并在测试集上对其进行评分。</p>
-<p><img src="/images/Rank-and-Test.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Rank-and-Test.png" class="" title="img">
+
 <p>对于具有许多特征的数据集，如上所示，朴素的贝叶斯分类器特征选择通常会产生更好的预测精度。</p>
 <h2 id="Edit-Domain-编辑域"><a href="#Edit-Domain-编辑域" class="headerlink" title="Edit Domain - 编辑域"></a>Edit Domain - 编辑域</h2><blockquote>
 <p>重命名特征和它的值。</p>
@@ -456,7 +476,8 @@
 </ul>
 </blockquote>
 <p>此部件可用于编辑&#x2F;更改数据集的域 - 重命名特征、重命名或合并分类特征的值、添加分类值和分配标签。</p>
-<p><img src="/images/EditDomain-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/EditDomain-stamped.png" class="" title="img">
+
 <ol>
 <li>输入数据集的所有特征（包括元属性）都列在变量(<em>Variables</em>)列表中。选择一个功能将在右侧显示一个编辑器。</li>
 <li>编辑选项：<ul>
@@ -472,7 +493,8 @@
 <li>要恢复对所选功能所做的更改，请在“变量”列表中选择该功能时按下“重置选定项”按钮。按全部重置将删除对域的所有更改。按Apply将新域发送到输出。</li>
 </ol>
 <p><strong>合并选项</strong></p>
-<p><img src="/images/EditDomain-merge.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/EditDomain-merge.png" class="" title="img">
+
 <ul>
 <li><em>Group selected values</em>-对选定值进行分组：选定的类别值变为单个变量。</li>
 <li><em>Group values with less than N occurrences</em>-对出现次数少于N次的值进行分组：数据中出现次数少于N次的值将被分组为单个值。</li>
@@ -482,7 +504,8 @@
 </ul>
 <p><strong>示例</strong></p>
 <p>下面，我们将演示如何简单地编辑现有域。我们选择了heart_disese.tab数据集并编辑了<em>gender</em>属性。在最初我们有女性(<em>female</em> )和男性(<em>male</em>)的值，我们将其改为女性(F)和男性(M)。然后我们使用向<em>下键</em>来切换变量的顺序。最后，我们添加了一个标签来标记属性是二进制(binary)的。我们可以在数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable/">Data Table</a>)部件中观察编辑的数据。</p>
-<p><img src="/images/EditDomain-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/EditDomain-Example.png" class="" title="img">
+
 <h2 id="Color-颜色"><a href="#Color-颜色" class="headerlink" title="Color - 颜色"></a>Color - 颜色</h2><blockquote>
 <p>为变量设置颜色图例。</p>
 <p>输入：</p>
@@ -495,7 +518,8 @@
 </ul>
 </blockquote>
 <p><strong>Color</strong>颜色小部件设置可视化的颜色图例。</p>
-<p><img src="/images/Color-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Color-stamped.png" class="" title="img">
+
 <ol>
 <li><p>离散变量列表。通过双击它设置每个变量的颜色。该小部件还可以通过单击名称来重命名变量。</p>
 </li>
@@ -504,8 +528,7 @@
 <li><p>制作报告。</p>
 </li>
 <li><p>应用更改。如果勾选自动应用，更改将自动传达。或者，只需单击应用。</p>
-<p><img src="/images/Color-Continuous_unindexed.png" alt="img"></p>
-</li>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Color-Continuous_unindexed.png" class="" title="img"></li>
 </ol>
 <p>数字变量的调色板按其属性分组和标记。</p>
 <ul>
@@ -522,9 +545,11 @@
 </ul>
 <p>示例</p>
 <p>我们选择使用 heart_disease 数据集。我们打开调色板并为直径缩小变量选择了两种新颜色。然后我们打开散点图小部件并查看对散点图所做的更改。</p>
-<p><img src="/images/Color-Example-Discrete.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Color-Example-Discrete.png" class="" title="img">
+
 <p>为了查看调色板对数值变量的影响，我们用胆固醇为散点图中的点着色，并在 Color 小部件中更改此属性的调色板。</p>
-<p><img src="/images/Color-Example-Continuous.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Color-Example-Continuous.png" class="" title="img">
+
 <h2 id="Feature-Statistics-特征统计"><a href="#Feature-Statistics-特征统计" class="headerlink" title="Feature Statistics - 特征统计"></a>Feature Statistics - 特征统计</h2><blockquote>
 <p>显示数据特征的基本统计信息。</p>
 <p>输入：</p>
@@ -540,7 +565,8 @@
 </ul>
 </blockquote>
 <p><strong>Feature Statistics</strong> 特征统计小部件提供了一种快速检查和查找给定数据集中感兴趣特征的方法。</p>
-<p><img src="/images/feature_statistics-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/feature_statistics-stamped.png" class="" title="img">
+
 <p>心脏病(<em>heart-disease</em>)数据集上的特征统计小部件。出于说明目的，特征 exerc ind ang 已手动更改为元变量。</p>
 <ol>
 <li><p>有关当前数据集大小以及特征数量和类型的信息</p>
@@ -567,11 +593,14 @@
 <p>另请注意，某些行的颜色不同。白色行表示常规特征，灰色行表示类变量，浅灰色表示元变量。</p>
 <p><strong>示例</strong></p>
 <p>特征统计小部件最常在文件小部件之后使用，以检查和查找给定数据集中可能感兴趣的特征。在以下示例中，我们使用心脏病(<em>heart-disease</em>)数据集。</p>
-<p><img src="/images/feature_statistics_workflow.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/feature_statistics_workflow.png" class="" title="img">
+
 <p>一旦我们找到了可能感兴趣的特征的一个子集，或者我们找到了想要排除的特征，我们可以简单地选择我们想要保留的特征。小部件输出仅具有这些特征的新数据集。</p>
-<p><img src="/images/feature_statistics_example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/feature_statistics_example1.png" class="" title="img">
+
 <p>或者，如果我们想要存储特征统计信息，我们可以使用统计信息输出并根据需要操作这些值。在此示例中，我们在表格中显示统计信息。</p>
-<p><img src="/images/feature_statistics_example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/feature_statistics_example2.png" class="" title="img">
+
 <h2 id="Save-Data-保存数据"><a href="#Save-Data-保存数据" class="headerlink" title="Save Data - 保存数据"></a>Save Data - 保存数据</h2><blockquote>
 <p>将数据保存到文件中。</p>
 <p>输入</p>
@@ -598,7 +627,8 @@
 </ul>
 <p>小部件不会在每次在输入中收到新信号时都保存数据，因为这会不断（而且，大多数情况下是无意中）覆盖文件。相反，只有在设置新文件名或用户按下“保存”按钮后才会保存数据。</p>
 <p>如果文件保存到与工作流相同的目录或该目录的子树中，则小部件会记住相对路径。否则，它将存储绝对路径但出于安全原因禁用自动保存。</p>
-<p><img src="/images/SaveData.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SaveData.png" class="" title="img">
+
 <ul>
 <li><p>向标题添加类型注释：在输出文件中包含 Orange 的三行标题。</p>
 </li>
@@ -611,7 +641,8 @@
 </ul>
 <p><strong>示例</strong></p>
 <p>在下面的工作流程中，我们使用了 <em>Zoo</em> 数据集。我们将数据加载到散点图小部件中，我们使用它选择了数据实例的子集并将它们推送到保存数据小部件以将它们存储在文件中。</p>
-<p><img src="/images/Save-Workflow.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Save-Workflow.png" class="" title="img">
+
 <h1 id="Transform-转换"><a href="#Transform-转换" class="headerlink" title="Transform - 转换"></a>Transform - 转换</h1><h2 id="Data-Sampler-数据采样器"><a href="#Data-Sampler-数据采样器" class="headerlink" title="Data Sampler - 数据采样器"></a>Data Sampler - 数据采样器</h2><blockquote>
 <p><strong>撰写：FE  校对：MF</strong></p>
 <p>从输入数据集中选择数据实例的子集。</p>
@@ -628,7 +659,8 @@
 </ul>
 </blockquote>
 <p><strong>Data Sampler</strong>小部件实现了多种数据采样方法。它输出一个采样数据集和一个补充数据集（输入集中的实例不包含在采样数据集中）。在提供输入数据集并按下<em>Sample Data</em>(采样数据)后，对输出进行处理。</p>
-<p><img src="/images/DataSampler-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/DataSampler-stamped.png" class="" title="img">
+
 <ol>
 <li>有关输入和输出数据集的信息。</li>
 <li>所需的采样方法：<ul>
@@ -644,15 +676,18 @@
 <p>如果选择了所有数据实例（通过将比例设置为 100% 或将固定样本大小设置为整个数据大小），输出实例仍会打乱顺序。</p>
 <p><strong>示例</strong></p>
 <p>首先，让我们看看<strong>数据采样器(Data Sampler)<strong>是如何工作的。我们将使用来自文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件的虹膜数据。我们看到数据中有 150 个实例。我们使用</strong>Data Sampler</strong>小部件对数据进行采样，为简单起见，我们选择使用 5 个实例的固定样本大小。我们可以在<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>部件中（Data Table (in-sample)）中观察采样数据。第二个数据表（数据表（样本外））显示了剩余的 145 个不在样本中的实例。要输出样本外数据，请双击小部件之间的连接并将输出重新连接到<em>Remaining Data –&gt; Data</em>。</p>
-<p><img src="/images/DataSampler-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/DataSampler-Example1.png" class="" title="img">
+
 <p>现在，我们将使用<strong>Data Sampler</strong>将数据拆分为训练和测试部分。我们正在使用文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件加载的鸢尾花(<em>iris</em>)数据。在<strong>Data Sampler</strong>中，我们以固定比例的数据(<em>Fixed proportion of data</em>)拆分数据，样本中保留 70% 的数据实例。</p>
 <p>然后我们将两个输出连接到测试和评分(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/evaluate/testandscore.md">Test &amp; Score</a>)小部件，<em>Data Sample –&gt; Data</em> and <em>Remaining Data –&gt; Test Data</em>。最后，我们添加了逻辑回归(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/model/logisticregression">Logistic Regression</a>)作为学习器。对数据输入运行逻辑回归并评估测试数据的结果。</p>
-<p><img src="/images/DataSampler-Example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/DataSampler-Example2.png" class="" title="img">
+
 <p><strong>过采样&#x2F;欠采样(Over&#x2F;Undersampling)</strong></p>
 <p>数据采样器(<strong>Data Sampler</strong>)还可用于对数据中的少数类进行过采样或对多数类进行欠采样。让我们展示一个过采样的例子。首先，使用选择行(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/selectrows.md">Select Rows</a>)小部件分离少数类别。我们正在使用来自文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件的虹膜数据。该数据集有150 个数据实例，每个类 50 个。让我们对<em>iris-setosa</em>进行过采样。</p>
 <p>在选择行(<strong>Select Rows</strong>)部件中，将条件设置为<em>iris is iris-setosa</em>。这将输出 <em>iris-setosa</em> 类的 50 个实例。现在，将匹配的数据(<em>Matching Data</em>)连接到数据采样器(<strong>Data Sampler</strong>)，选择固定的样本大小(<em>Fixed sample size</em>)，将其设置为100，然后选择替换样本(<em>Sample with replacement</em>)。按下 <em>Sample Data</em> 后，小部件将输出 100 个 <em>iris-setosa</em> 类的实例，其中一些将被复制（因为我们使用了 <em>Sample with replacement</em>）。</p>
 <p>最后，使用 <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/concatenate">Concatenate</a> 部件连接过采样实例和 <strong>Select Row</strong> 小部件的 <em>Unmatched Data</em> 输出。这将输出一个包含 200 个实例的数据集。我们可以在分布(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/distributions">Distributions</a>)部件中观察最终结果。</p>
-<p><img src="/images/DataSampler-Example-OverUnderSampling.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/DataSampler-Example-OverUnderSampling.png" class="" title="img">
+
 <h2 id="Select-Columns-选择列"><a href="#Select-Columns-选择列" class="headerlink" title="Select Columns - 选择列"></a>Select Columns - 选择列</h2><blockquote>
 <p>手动选择数据属性和数据域的组成。</p>
 <p>输入</p>
@@ -666,7 +701,8 @@
 </blockquote>
 <p>Select Columns 小部件用于手动组成您的数据域。用户可以决定使用哪些属性以及如何使用。 Orange 区分普通属性、（可选）类属性和元属性。例如，为了构建分类模型，域将由一组属性和一个离散的类属性组成。元属性不用于建模，但一些小部件可以将它们用作实例标签。</p>
 <p>橙色属性有一个类型，可以是离散的、连续的或字符串。属性类型用属性名称前出现的符号标记（分别为 D、C、S）。</p>
-<p><img src="/images/SelectColumns-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SelectColumns-stamped.png" class="" title="img">
+
 <ol>
 <li><p>不会出现在输出数据文件中的遗漏数据属性</p>
 </li>
@@ -687,9 +723,11 @@
 </ol>
 <p>示例</p>
 <p>在下面的工作流程中，来自“文件”小部件的鸢尾花数据被输入到“选择列”小部件中，我们在其中选择仅输出两个属性（即花瓣宽度和花瓣长度）。我们在“数据表”小部件中查看原始数据集和具有选定列的数据集。</p>
-<p><img src="/images/SelectColumns-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SelectColumns-Example1.png" class="" title="img">
+
 <p>为了更复杂地使用小部件，我们编写了一个工作流来重新定义心脏病数据集中的分类问题。最初，任务是预测患者的冠状动脉直径是否变窄。我们将问题更改为基于年龄、胸痛和胆固醇水平的性别分类问题，并将直径缩小作为元属性提供信息。</p>
-<p><img src="/images/SelectColumns-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SelectColumns-Example1.png" class="" title="img">
+
 <h2 id="Select-Rows-选择行"><a href="#Select-Rows-选择行" class="headerlink" title="Select Rows - 选择行"></a>Select Rows - 选择行</h2><blockquote>
 <p>根据数据特征的条件选择数据实例。</p>
 <p>输入</p>
@@ -709,7 +747,8 @@
 <p>此小部件根据用户定义的条件从输入数据集中选择一个子集。匹配选择规则的实例被放置在输出匹配数据通道中。</p>
 <p>数据选择的标准以联合术语的集合形式呈现（即所选项目是与“条件”中的所有术语相匹配的项目）。</p>
 <p>条件项是通过选择属性、从运算符列表中选择运算符以及在需要时定义要在条件项中使用的值来定义的。运算符对于离散、连续和字符串属性是不同的。</p>
-<p><img src="/images/SelectRows-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SelectRows-stamped.png" class="" title="img">
+
 <ol>
 <li><p>您要应用的条件、它们的运算符和相关值</p>
 </li>
@@ -732,9 +771,11 @@
 <p>如果选择自动发送，则输出会根据条件的组成或其任何条款的任何变化而更新。</p>
 <p>示例</p>
 <p>在下面的工作流程中，我们使用了文件小部件中的 Zoo 数据并将其输入到选择行小部件中。在小部件中，我们选择只输出两种动物类型，即鱼和爬行动物。我们可以检查原始数据集和数据表小部件中包含选定行的数据集。</p>
-<p><img src="/images/SelectRows-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SelectRows-Example.png" class="" title="img">
+
 <p>在下一个示例中，我们使用了泰坦尼克号数据集中的数据，并以类似的方式将其输入到箱形图小部件中。我们首先观察了基于生存的整个数据集。然后，我们在“选择行”小部件中仅选择了头等舱乘客，并将其再次输入到箱线图中。在那里我们可以看到所有头等舱乘客按存活率列出并按性别分组。</p>
-<p><img src="/images/SelectRows-Workflow.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SelectRows-Workflow.png" class="" title="img">
+
 <h2 id="Transpose-转置"><a href="#Transpose-转置" class="headerlink" title="Transpose - 转置"></a>Transpose - 转置</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>转置数据表。</p>
@@ -748,10 +789,12 @@
 </ul>
 </blockquote>
 <p>转置小部件转置数据表。</p>
-<p><img src="/images/transpose-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/transpose-stamped.png" class="" title="img">
+
 <p><strong>示例</strong></p>
 <p>这是一个简单的工作流程，展示了如何使用 <strong>Transpose</strong>部件。将小部件连接到文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/file.md">File</a>)小部件。 <strong>Transpose</strong> 的输出是一个转置数据表，其中行为列，列为行。您可以在数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)部件中观察到结果。</p>
-<p><img src="/images/transpose-example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/transpose-example.png" class="" title="img">
+
 <h2 id="Merge-Data-合并数据"><a href="#Merge-Data-合并数据" class="headerlink" title="Merge Data - 合并数据"></a>Merge Data - 合并数据</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>根据所选属性的值，合并两个数据集。</p>
@@ -768,7 +811,8 @@
 <p>合并数据(<strong>Merge Data</strong>)小部件用于根据所选属性（列）的值水平合并两个数据集。在输入中，需要两个数据集，数据和额外数据。两个数据集中的行与用户选择的属性对的值相匹配。小部件产生一个输出。它对应于输入数据中附加了输入额外数据的属性（列）的实例。</p>
 <p>要根据多个特征进行匹配，请单击加号图标以添加要合并的特征。</p>
 <p>如果选择的属性对不包含唯一值（换句话说，属性具有重复值），小部件将给出警告。相反，一个人可以匹配多个属性。单击加号图标以添加要合并的属性。最终结果必须是每一行的唯一组合。</p>
-<p><img src="/images/Merge-Data-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Merge-Data-stamped.png" class="" title="img">
+
 <ol>
 <li>有关主要数据的信息。</li>
 <li>有关要附加的数据的信息。</li>
@@ -787,34 +831,43 @@
 <p>来自额外数据的列被添加到数据中。没有匹配行的实例将添加缺失值。</p>
 <p>例如，第一个表可能包含城市名称，第二个表是城市及其坐标的列表。然后将带有坐标的列附加到带有城市名称的数据中。如果城市名称无法匹配，则会出现缺失值。</p>
 <p>在我们的示例中，第一个数据输入包含 6 个城市，但额外数据没有提供布拉迪斯拉发的纬度和经度值，因此字段将为空。</p>
-<p><img src="/images/MergeData_Append.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/MergeData_Append.png" class="" title="img">
+
 <p>（2）查找匹配的行对（内连接）</p>
 <p>只有那些匹配的行才会出现在输出中，并附加额外数据列。没有匹配项的行将被删除。</p>
 <p>在我们的示例中，数据输入中的布拉迪斯拉发没有纬度和经度值，而额外数据中的贝尔格莱德在我们合并的城市列中找不到。因此，两个实例都被删除——只有实例的交集被发送到输出。</p>
-<p><img src="/images/MergeData_Intersection.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/MergeData_Intersection.png" class="" title="img">
+
 <p>（3）连接表（外连接）</p>
 <p>来自数据和额外数据的行将出现在输出中。在无法匹配行的地方，将出现缺失值。</p>
 <p>在我们的示例中，Bratislava 和 Belgrade 现在都存在。布拉迪斯拉发将缺少纬度和经度值，而贝尔格莱德将缺少人口值。</p>
-<p><img src="/images/MergeData_Concatenate.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/MergeData_Concatenate.png" class="" title="img">
+
 <p>（4）行索引</p>
 <p>数据将按照它们在表中出现的相同顺序合并。来自数据输入的行号 1 将与来自额外数据输入的行号 1 连接。行号由 Orange 根据数据实例的原始顺序分配。</p>
 <p>（5）实例ID</p>
 <p>这是一个更复杂的选项。有时，分析中转换的数据和域不再相同。尽管如此，原始行索引仍然存在于后台（Orange 记得它们）。在这种情况下，可以合并实例 ID。例如，如果您使用 PCA 转换数据，在散点图中将其可视化，选择了一些数据实例，现在您希望看到所选子集的原始信息。将 Scatter Plot 的输出连接到 Merge Data，将原始数据集添加为 Extra Data 并按 Instance ID 合并。</p>
-<p><img src="/images/MergeData-InstanceID.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/MergeData-InstanceID.png" class="" title="img">
+
 <p>（6）合并两个或多个属性</p>
 <p>有时我们的数据实例对于列的组合是唯一的，而不是单个列。要按多个列合并，请按匹配条件旁边的加号添加行匹配条件。要删除它，请按 x。</p>
 <p>在下面的示例中，我们按学生列和班级列合并。</p>
-<p><img src="/images/MergeData-multiple.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/MergeData-multiple.png" class="" title="img">
+
 <p>假设我们有两个数据集，其中包含学生姓名和他们所在的班级。第一个数据集包含学生的成绩，第二个数据集包含他们选择的选修课。不幸的是，我们的数据中有两个 Jack，一个来自 A 类，另一个来自 B 类。Jane 也一样。</p>
 <p>为了区分两者，我们可以匹配学生姓名和班级的行。</p>
-<p><img src="/images/MergeData-multiple2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/MergeData-multiple2.png" class="" title="img">
+
 <p><strong>示例</strong></p>
-<p>在选定的共同属性的基础上，合并两个数据集的结果是将新的属性附加到原始文件中。在下面的例子中，我们想把只包含事实数据的<strong>zoo.tab</strong>文件和包含图片的<a target="_blank" rel="noopener" href="http://file.biolab.si/datasets/zoo-with-images.tab">zoo-with-images.tab</a>合并。两个文件都有一个共同的字符串属性<em>names</em>。现在，我们创建一个连接这两个文件的工作流。<em>zoo.tab</em> 数据作为连接到合并数据(<strong>Merge Data</strong>)部件的数据(<strong>Data</strong>)输入，而 <em>zoo-with-images.tab</em> 数据被连接到额外数据(<strong>Extra Data</strong>)输入。合并数据(<strong>Merged Data</strong>)小组件的输出然后被连接到数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)小部件。在后者中，显示了合并后的数据通道，其中图像属性被添加到原始数据中。</p>
-<p><img src="/images/MergeData-Example.png" alt="img"></p>
+<p>在选定的共同属性的基础上，合并两个数据集的结果是将新的属性附加到原始文件中。在下面的例子中，我们想把只包含事实数据的<strong>zoo.tab</strong>文件和包含图片的<a target="_blank" rel="noopener" href="http://file.biolab.si/datasets/zoo-with-1.orange_widget.tab">zoo-with-1.orange_widget.tab</a>合并。两个文件都有一个共同的字符串属性<em>names</em>。现在，我们创建一个连接这两个文件的工作流。<em>zoo.tab</em> 数据作为连接到合并数据(<strong>Merge Data</strong>)部件的数据(<strong>Data</strong>)输入，而 <em>zoo-with-1.orange_widget.tab</em> 数据被连接到额外数据(<strong>Extra Data</strong>)输入。合并数据(<strong>Merged Data</strong>)小组件的输出然后被连接到数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)小部件。在后者中，显示了合并后的数据通道，其中图像属性被添加到原始数据中。</p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/MergeData-Example.png" class="" title="img">
+
 <p>这个案例中，我们想在输出中包括所有的实例，甚至那些没有匹配属性<em>names</em>的位置，这种情况在下面的工作流程中显示。</p>
-<p><img src="/images/MergeData-Example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/MergeData-Example2.png" class="" title="img">
+
 <p>第三种类型的合并在下一个工作流程中显示。输出由两个输入组成，在没有找到匹配的地方分配了未知值。</p>
-<p><img src="/images/MergeData-Example3.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/MergeData-Example3.png" class="" title="img">
+
 <h2 id="Concatenate-串联"><a href="#Concatenate-串联" class="headerlink" title="Concatenate - 串联"></a>Concatenate - 串联</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>串联来自多个来源的数据。</p>
@@ -831,7 +884,8 @@
 </ul>
 </blockquote>
 <p>这个小组件将多个实例集（数据集）连接起来。合并是 “垂直 “的，这意味着，两组10个和5个的实例将产生一个新的15个的实例集。</p>
-<p><img src="/images/Concatenate.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Concatenate.png" class="" title="img">
+
 <ol>
 <li><p>设置属性合并方式：</p>
 <ul>
@@ -851,7 +905,8 @@
 <p><strong>示例</strong></p>
 <p>如下所示，该小部件可用于合并来自两个单独文件的数据。假设我们有两个具有相同属性的数据集，一个包含来自第一个实验的实例，另一个包含来自第二个实验的实例，我们希望将两个数据表连接在一起。我们使用 <strong>Concatenate</strong> 小部件按属性合并数据集（在现有属性下附加新行）。</p>
 <p>下面，我们使用了修改后的 <em>Zoo</em> 数据集。在第一个文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/file.md">File</a>)小部件中，我们只加载以字母 A 和 B 开头的动物，在第二个文件中只加载以字母 C 开头的动物。连接后，我们在数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)小部件中观察到新数据，在那里我们看到从 A 到 C 的完整表格。</p>
-<p><img src="/images/Concatenate-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Concatenate-Example.png" class="" title="img">
+
 <h2 id="Select-by-Data-Index-按数据索引选择"><a href="#Select-by-Data-Index-按数据索引选择" class="headerlink" title="Select by Data Index - 按数据索引选择"></a>Select by Data Index - 按数据索引选择</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>根据数据子集中的索引匹配实例。</p>
@@ -873,7 +928,8 @@
 </ul>
 </blockquote>
 <p>**按数据索引选择(Select by Data Index)**部件能够按索引匹配数据。数据集中的每一行都有一个索引和一个子集，这个小部件可以将这些索引与参考数据中的索引相匹配。大多数情况下，它用于从转换后的数据中检索原始数据（例如，从 PCA 空间）。</p>
-<p><img src="/images/Select-by-Data-Index-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Select-by-Data-Index-stamped.png" class="" title="img">
+
 <ol>
 <li><p>有关参考数据集的信息。此数据用作索引参考。</p>
 </li>
@@ -884,7 +940,8 @@
 <p>**按数据索引选择(Select by Data Index)**的典型用途是在转换后检索原始数据。我们将在文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/file.md">File</a>)小部件中加载 <em>iris.tab</em> 数据。然后我们将使用 <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/unsupervised/PCA.md">PCA</a> 转换这些数据。我们可以将转换后的数据投影到散点图(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/scatterplot">Scatter Plot</a>)中，在图中我们只能看到 PCA 成分，而看不到原始特征。</p>
 <p>现在我们选择一个感兴趣的子集（我们也可以选择整个数据集）。如果我们在数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)中观察它，我们可以看到数据被转换了。如果我们希望看到具有原始特征的数据，我们将不得不使用按数据索引选择(<strong>Select by Data Index</strong>)来检索它们。</p>
 <p>将原始数据和散点图(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/scatterplot">Scatter Plot</a>)中的子集连接到”按数据索引选择(<strong>Select by Data Index</strong>)”。小部件会将子集的索引与参考（原始）数据的索引进行匹配，并输出匹配的参考数据。另一个数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)中最终检查确认输出中的数据来自原始数据空间。</p>
-<p><img src="/images/Select-by-Data-Index-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Select-by-Data-Index-Example1.png" class="" title="img">
+
 <h2 id="Unique-唯一性-去重"><a href="#Unique-唯一性-去重" class="headerlink" title="Unique - 唯一性(去重)"></a>Unique - 唯一性(去重)</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>删除重复的数据实例。</p>
@@ -898,14 +955,16 @@
 </ul>
 </blockquote>
 <p>该小部件删除重复的数据实例。用户可以选择被观测变量的一个子集，并且两个实例被认为是重复的，尽管它们在其他被忽略的变量的值上可能不同。</p>
-<p><img src="/images/Unique-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Unique-stamped.png" class="" title="img">
+
 <ol>
 <li>选择比较数据实例时考虑的变量。</li>
 <li>保留的数据实例。选项是使用第一个、最后一个、中间的或随机的实例，或者不保留任何实例，即完全删除重复的实例。</li>
 </ol>
 <p><strong>示例</strong></p>
 <p>数据集 <em>Zoo</em> 包含两只青蛙。此工作流通过删除具有相同名称的实例来仅保留一个。</p>
-<p><img src="/images/Unique-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Unique-Example.png" class="" title="img">
+
 <h2 id="Aggregate-Columns-聚合列-统计指标"><a href="#Aggregate-Columns-聚合列-统计指标" class="headerlink" title="Aggregate Columns - 聚合列&#x2F;统计指标"></a>Aggregate Columns - 聚合列&#x2F;统计指标</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>计算所选列的总和、最大值、最小值……。</p>
@@ -919,7 +978,8 @@
 </ul>
 </blockquote>
 <p>聚合列输出所选列的聚合，例如总和、最小值、最大值等。</p>
-<p><img src="/images/AggregateColumns.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/AggregateColumns.png" class="" title="img">
+
 <ol>
 <li>选定的属性。</li>
 <li>聚合运算符：<ul>
@@ -938,7 +998,8 @@
 <p><strong>示例</strong></p>
 <p>对于此示例，我们将使用文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件中的鸢尾花数据并将其连接到<strong>聚合列</strong>(<strong>Aggregate Columns</strong>)。</p>
 <p>假设我们希望计算 <em>sepal_length</em> 和 <em>sepal_width</em> 属性的总和。我们从列表中选择这两个属性。</p>
-<p><img src="/images/AggregateColumns-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/AggregateColumns-Example.png" class="" title="img">
+
 <h2 id="Group-by-分组"><a href="#Group-by-分组" class="headerlink" title="Group by - 分组"></a>Group by - 分组</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>按选定的变量对数据进行分组，并使用选定的聚合来聚合列。</p>
@@ -953,7 +1014,8 @@
 </blockquote>
 <p><strong>分组</strong>(<strong>Group by</strong>)小部件首先根据<strong>分组</strong>列表中的选定变量识别组。组由所选变量中所有不同的值组合定义。</p>
 <p>在第二步中，小部件计算在小部件右侧的表中为每个组定义的聚合。</p>
-<p><img src="/images/Group-by-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Group-by-stamped.png" class="" title="img">
+
 <ol>
 <li><p>选择定义组的变量</p>
 </li>
@@ -971,7 +1033,8 @@
 <p>在小部件右侧的表格中，我们设置要计算每组<strong>静息 SBP</strong>(<strong>rest SBP</strong>) 变量值的<strong>平均值</strong>和<strong>中位数</strong>、<strong>胆固醇</strong>(<strong>cholesterol</strong>)变量值的<strong>中位数</strong>以及<strong>主要血管着色</strong>(<strong>major vessels colored</strong>)的<strong>平均值</strong>。</p>
 <p>在“数据表(<strong>Data Table</strong>)”小部件中，我们可以看到当直径变窄(<strong>cholesterol</strong>)为 0 时，女性和男性的<strong>静息 SBP</strong> (<strong>rest SBP</strong>)平均值均较低。女性的差异更大。仅女性的静息 SBP 中位数不同，而男性则相同。</p>
 <p>您还可以观察组间主要血管着色的胆固醇中位数水平和平均值之间的差异。</p>
-<p><img src="/images/Group-by-example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Group-by-example.png" class="" title="img">
+
 <h2 id="Pivot-Table-数据透视表"><a href="#Pivot-Table-数据透视表" class="headerlink" title="Pivot Table - 数据透视表"></a>Pivot Table - 数据透视表</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>根据列值重塑数据表。</p>
@@ -990,7 +1053,8 @@
 </ul>
 </blockquote>
 <p>**数据透视表(Pivot Table)**将一个更广泛的表的数据汇总成一个统计表。统计数据可以包括总和、平均值、计数等。该小部件还允许从表中选择一个子集并按行值分组，这些值必须是离散变量。只有数字变量的数据无法在表中显示。</p>
-<p><img src="/images/Pivot-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Pivot-stamped.png" class="" title="img">
+
 <ol>
 <li><p>用于行值的离散或数值变量。数字变量被视为整数。</p>
 </li>
@@ -1035,19 +1099,22 @@
 </li>
 </ol>
 <p><strong>离散变量 - Discrete variables</strong></p>
-<p><img src="/images/Pivot-discrete.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Pivot-discrete.png" class="" title="img">
+
 <p>仅选择了离散变量的数据透视表示例。我们在这个例子中使用心脏病(<em>heart-disease</em>)数据集。行对应于直径缩小(<em>diameter narrowing</em>)变量的值。我们的列是”性别”(<em>gender</em>)的值，即女性和男性。我们在单元格中使用 <em>thal</em> 作为取值对象。</p>
 <p>我们选择了 <em>Count</em> 和 <em>Majority</em> 作为聚合方法。在数据透视表中，我们可以看到没有直径变窄且为女性的实例数。此类患者有72人。同时，有92名男性患者没有直径变窄。 Thal 值在这里没有任何影响，我们只是计算数据中的出现次数。</p>
 <p>第二行显示高频值(majority)。这意味着大多数没有直径变窄的女性患者的 thal 结果都是正常的。相反，直径变窄的女性患者最常有可逆缺陷。</p>
 <p><strong>数值变量 - Numeric variables</strong></p>
-<p><img src="/images/Pivot-continuous.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Pivot-continuous.png" class="" title="img">
+
 <p>带有数字变量的数据透视表示例。我们在这个例子中使用”心脏病”(<em>heart-disease</em>)数据集。行对应于”直径缩小”(<em>diameter narrowing</em>)变量的值。我们的列是性别(<em>gender</em>)的值，即女性和男性。我们在我们的单元格中使用<em>rest SBP</em>作为取值对象。</p>
 <p>我们选择了 <em>Count</em>、<em>Sum</em> 和 <em>Median</em>  作为聚合方法。在 <em>Count</em>下，我们看到有 72 名女性患者没有直径变窄，与之前的离散值相同。不同之处在于总和和中位数聚合。我们看到没有直径变窄的女性患者的静息收缩压总和为 9269，中值为 130。</p>
 <p><strong>示例 - Example</strong></p>
 <p>我们在这个例子中使用”森林火灾”(<em>Forest Fires</em>)。在数据集(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datasets">Datasets</a>)小部件中加载数据并传递到**数据透视表(Pivot Table)**。”森林火灾”(<em>Forest Fires</em>)数据集按发生的月份和日期报告森林火灾。我们可以通过选择”计数”(<em>Count</em>)作为聚合方法并使用”月”(<em>month</em>)作为行和”日”(<em>day</em>)作为列值来聚合所有发生的森林火灾。由于我们使用的是 <em>Count</em>，因此 <em>Values</em> 变量将不起作用。</p>
 <p>我们可以在 <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/visualize/lineplot.md">Line Plot</a> 中绘制计数。但首先，让我们稍微组织一下数据。使用 <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/editdomain.md">Edit Domain</a>，我们将对行值重新排序，以便月份以正确的顺序显示，即从一月到十二月。要对列执行相同操作，我们将使用<strong>选择列</strong>(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/selectcolumns">Select Columns</a>)和重新排序日期从星期一到星期日。</p>
 <p>终于，我们的数据准备好了。让我们将它传递给 <strong>Line Plot</strong>。我们可以看到，森林火灾发生在八、九月份最为频繁，而周末的发生频率要高于工作日。</p>
-<p><img src="/images/Pivot-example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Pivot-example.png" class="" title="img">
+
 <h2 id="Apply-Domain-应用域"><a href="#Apply-Domain-应用域" class="headerlink" title="Apply Domain - 应用域"></a>Apply Domain - 应用域</h2><blockquote>
 <p>给定一个模板的转换方式并应用到某个数据集上</p>
 <p><strong>输入</strong>：</p>
@@ -1061,7 +1128,8 @@
 </ul>
 </blockquote>
 <p>应用域(Apply Domain)将新数据映射到转换后的空间。例如，如果我们使用PCA转换一些数据并希望在同一空间中观察新数据，我们可以使用“应用域”将新数据映射到从原始数据创建的PCA空间。</p>
-<p><img src="/images/ApplyDomain.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ApplyDomain.png" class="" title="img">
+
 <p>小部件接收数据集和用于转换数据集的模板数据集。</p>
 <p><strong>旁注-Side note</strong></p>
 <p>域转换通过使用模板数据中的信息来工作。例如，对于PCA，组件是不够的。转换需要关于每个列的中心、方差（如果数据是标准化的）以及数据是否以及如何预处理（连续化、插补等）的信息。</p>
@@ -1070,7 +1138,8 @@
 <p>我们将使用<strong>PCA</strong>部件转换数据，并选择前两个分量，这可以解释96%的方差。现在，我们想对“新”数据应用相同的预处理，即剩余的50个未处理的iris数据。将<strong>Select Rows</strong>部件中未使用的数据发送到<strong>Apply Domain</strong>部件。确保使用<strong>Select Rows</strong>部件的“不匹配数据”输出。然后添加来自PCA的变换数据的输出。</p>
 <p><strong>Apply Domain</strong>部件将对新数据应用预处理器并输出它。要将新数据添加到旧数据，请使用**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/concatenate/">Concatenate</a>部件<strong>。将PCA输出的转换数据用作主数据，将</strong>Apply Domain**部件中的转换数据作为附加数据。</p>
 <p>观察<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/transform/data/datatable.md">Data Table</a>(数据表)或<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/visualize/scatterplot/">Scatter Plot</a>(散点图)中的结果，以查看与旧数据相关的新数据。</p>
-<p><img src="/images/ApplyDomain-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ApplyDomain-Example.png" class="" title="img">
+
 <h2 id="Preprocess-预处理"><a href="#Preprocess-预处理" class="headerlink" title="Preprocess - 预处理"></a>Preprocess - 预处理</h2><blockquote>
 <p>撰写：FE  校对：MF</p>
 <p>使用选定的方法预处理数据。</p>
@@ -1087,7 +1156,8 @@
 </ul>
 </blockquote>
 <p>预处理对于获得更好质量的分析结果至关重要。 <strong>Preprocess</strong> 小部件提供了多种预处理方法，这些方法可以组合在一个预处理管道中。一些方法可作为单独的小部件使用，它们提供高级技术和更好的参数调整。</p>
-<p><img src="/images/preprocess-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/preprocess-stamped.png" class="" title="img">
+
 <ol>
 <li><p>预处理器列表。双击您希望使用的预处理器，并通过向上或向下拖动它们来打乱它们的顺序。您还可以通过将它们从左侧菜单拖动到右侧来添加预处理器。</p>
 </li>
@@ -1097,7 +1167,8 @@
 </li>
 </ol>
 <p><strong>预处理程序 - Preprocessors</strong></p>
-<p><img src="/images/Preprocess1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess1.png" class="" title="img">
+
 <ol>
 <li><p>预处理器列表。</p>
 </li>
@@ -1148,7 +1219,7 @@
 </ul>
 </li>
 <li><p>“选择随机特征”(<em>Select random features</em>)输出原始数据中固定数量的特征或百分比。这主要用于高级测试和教育目的。</p>
-<p><img src="/images/Preprocess2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess2.png" class="" title="img">
 </li>
 <li><p>归一化(Normalize)将值调整为通用比例。按平均值或中位数居中或完全忽略居中。与缩放类似，可以按 SD（标准差）、跨度或根本不缩放。</p>
 </li>
@@ -1165,22 +1236,23 @@
 <p>在构建预测模型时，必须注意的一点是如何进行预处理。在 Orange 中有两种可能的方法，每种方法都略有不同：</p>
 <ol>
 <li><p>将**预处理(Preprocess)**连接到学习器(learner)。这将覆盖学习者的默认预处理管道，并仅应用自定义预处理管道（默认预处理步骤在每个学习者的文档中都有描述）。</p>
-<p><img src="/images/Preprocess-Models1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess-Models1.png" class="" title="img">
 </li>
 <li><p>将**预处理(Preprocess)**连接到测试和评分(<strong>Test and Score</strong>)部件。这会将预处理器应用于交叉验证中的每个批次。然后学习器的预处理器将应用于预处理的子集。</p>
-<p><img src="/images/Preprocess-Models2.png" alt="img"></p>
-</li>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess-Models2.png" class="" title="img"></li>
 </ol>
 <p>最后，有一个错误的方法。将 Preprocess 直接连接到原始数据并输出预处理后的数据集可能会使模型过拟合。<strong>不要这样做！！！</strong></p>
-<p><img src="/images/Preprocess-Models3.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess-Models3.png" class="" title="img">
+
 <p><strong>示例</strong></p>
 <p>在第一个示例中，我们使用了文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件的下拉菜单中可用的 <em>heart_disease.tab</em> 数据集。然后我们使用 <strong>Preprocess</strong> 来估算缺失值和归一化特征。我们可以观察数据表的变化，并与未处理的数据进行比较。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Preprocess-Example1.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/1.orange_widget/Preprocess-Example1.png" alt="img"></p>
 <p>在第二个示例中，我们展示了如何使用 <strong>Preprocess</strong> 进行预测建模。</p>
 <p>这次我们使用文件(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/file">File</a>)小部件中的 <em>heart_disease.tab</em> 数据。您可以在下拉菜单中访问数据。这是一个包含 303 名因胸痛就医的患者的数据集。测试完成后，发现一些患者直径变窄(diameter narrowing)，而其他患者则没有（这是我们的类变量）。</p>
 <p>我们的数据集中缺少一些值，因此我们想在评估模型之前补偿(impute)缺失值。我们通过将预处理器(preprocessor)直接传递给**测试和评分(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/evaluate/testandscore">Test and Score</a>)**来做到这一点。在 <strong>Preprocess</strong> 中，我们设置正确的预处理管道（在我们的示例中只有一个具有”补偿缺失值”(<em>Impute missing values</em>)的预处理器），然后将其连接到 <strong>Test and Score</strong> 的 Preprocessor 输入。</p>
 <p>我们还传递数据和学习器（在本例中为逻辑回归<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/model/logisticregression">Logistic Regression</a>）。这是将预处理器传递给交叉验证的正确方法，因为每一折数据都将在训练阶段独立进行预处理。这对于特征选择尤为重要。</p>
-<p><img src="/images/Preprocess-Example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess-Example2.png" class="" title="img">
+
 <h2 id="Impute-插值-推断"><a href="#Impute-插值-推断" class="headerlink" title="Impute - 插值&#x2F;推断"></a>Impute - 插值&#x2F;推断</h2><blockquote>
 <p>替换数据中的未知值。</p>
 <p>输入</p>
@@ -1196,7 +1268,7 @@
 </ul>
 </blockquote>
 <p>Orange 的一些算法和可视化无法处理数据中的未知值。这个小部件执行统计学家所说的插值：它用根据数据计算或用户设置的值替换缺失值。默认插补是 (1-NN)。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/transform/images/impute-stamped.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/1.orange_widget/impute-stamped.png" alt="img"></p>
 <ol>
 <li><p>在最顶部的框默认方法(<em>Default method</em>)中，用户可以为所有属性指定通用插补技术。</p>
 <p>● <strong>Don’t Impute</strong> ：对缺失值不做任何处理。</p>
@@ -1219,7 +1291,8 @@
 </ol>
 <p><strong>示例 - Example</strong></p>
 <p>为了演示 <strong>Impute</strong> 小部件的工作原理，我们试用了 Iris 数据集并删除了一些数据。我们使用了 <strong>Impute</strong> 小部件并选择了基于模型的 imputer 来估算缺失值。在另一个数据表(<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable">Data Table</a>)中，我们看到问号标记如何变成不同的值（“Iris-setosa，“Iris-versicolor”）。</p>
-<p><img src="/images/Impute-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Impute-Example.png" class="" title="img">
+
 <h2 id="Continuize-连续化"><a href="#Continuize-连续化" class="headerlink" title="Continuize - 连续化"></a>Continuize - 连续化</h2><blockquote>
 <p>将离散变量（属性）转换为数字（“连续”）虚拟变量。</p>
 <p>输入</p>
@@ -1232,7 +1305,8 @@
 </ul>
 </blockquote>
 <p>Continuize 小部件在输入中接收数据集并输出相同的数据集，其中离散变量（包括二进制变量）被连续变量替换。</p>
-<p><img src="/images/Continuize-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Continuize-stamped.png" class="" title="img">
+
 <ol>
 <li><p>定义非二元分类变量的处理。</p>
 <p>本节中的示例将假设我们有一个离散的属性状态，其值按低、中和高的顺序列出。它们的转换选项是：</p>
@@ -1257,9 +1331,10 @@
 </ol>
 <p>示例</p>
 <p>首先，让我们看看 Continuize 小部件的输出是什么。我们将原始数据（心脏病数据集）输入数据表并查看它们的外观。然后我们继续离散值并在另一个数据表中观察它们。</p>
-<p><img src="/images/Continuize-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Continuize-Example1.png" class="" title="img">
+
 <p>在第二个示例中，我们展示了此小部件的典型用法 - 为了正确绘制数据的线性投影，需要将离散属性转换为连续属性，这就是我们在绘制数据之前将数据放入 Continuize 小部件的原因. “胸痛”属性原本有四个值，转化为三个连续属性；类似的情况发生在性别上，它被转化为一个单一的属性“gender&#x3D;female”。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Continuize-Example2.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/1.orange_widget/Continuize-Example2.png" alt="img"></p>
 <h2 id="Discretize-离散化"><a href="#Discretize-离散化" class="headerlink" title="Discretize - 离散化"></a>Discretize - 离散化</h2><blockquote>
 <p>将数字属性转换为分类属性。</p>
 <p>输入</p>
@@ -1272,7 +1347,7 @@
 </ul>
 </blockquote>
 <p>Discretize 小部件离散化数值变量。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Discretize.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/1.orange_widget/Discretize.png" alt="img"></p>
 <ol>
 <li><p>设置离散化的默认方法。</p>
 </li>
@@ -1303,7 +1378,7 @@
 <li><p>去除胆固醇，</p>
 </li>
 <li><p>并对其余变量使用 entropy-mdl，这导致通过运动和主要血管着色去除静息 SBP 和 ST 的两个间隔。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Discretize-Example.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/1.orange_widget/Discretize-Example.png" alt="img"></p>
 </li>
 </ol>
 <h2 id="Randomize-随机化"><a href="#Randomize-随机化" class="headerlink" title="Randomize - 随机化"></a>Randomize - 随机化</h2><blockquote>
@@ -1318,7 +1393,8 @@
 </ul>
 </blockquote>
 <p>Randomize 小部件在输入中接收数据集并输出相同的数据集，其中类、属性或&#x2F;和元数据被打乱。</p>
-<p><img src="/images/Randomize-Default.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Randomize-Default.png" class="" title="img">
+
 <ol>
 <li><p>选择要洗牌的数据集的列组。</p>
 </li>
@@ -1333,9 +1409,11 @@
 </ol>
 <p>示例</p>
 <p>Randomize 小部件通常紧跟在后面（例如 File 小部件。基本用法显示在以下工作流程中，其中 Iris 数据集的类变量的值被随机打乱。</p>
-<p><img src="/images/Randomize-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Randomize-Example1.png" class="" title="img">
+
 <p>在下一个示例中，我们将展示改组类值如何影响模型在与上述相同的数据集上的性能。</p>
-<p><img src="/images/Randomize-Example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Randomize-Example2.png" class="" title="img">
+
 <h2 id="Purge-Domain-清除域"><a href="#Purge-Domain-清除域" class="headerlink" title="Purge Domain - 清除域"></a>Purge Domain - 清除域</h2><blockquote>
 <p>删除未使用的属性值和无用的属性，对剩余值进行排序。</p>
 <p>输入</p>
@@ -1350,7 +1428,8 @@
 <p>名义属性的定义有时包含未出现在数据中的值。即使原始数据中没有发生这种情况，过滤数据、选择示例子集等也可以删除属性具有某些特定值的所有示例。这些值使数据呈现混乱，尤其是各种可视化，应该被删除。</p>
 <p>清除属性后，它可能会变成单值，或者在极端情况下，根本没有值（如果所有示例都未定义该属性的值）。在这种情况下，可以删除该属性。</p>
 <p>一个不同的问题是属性值的顺序：如果数据是从一个文件中读取的，其值的格式没有预先声明，它们将“按出现顺序”排序。有时我们更愿意将它们按字母顺序排序。</p>
-<p><img src="/images/PurgeDomain-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/PurgeDomain-stamped.png" class="" title="img">
+
 <ol>
 <li><p>清除属性。</p>
 </li>
@@ -1370,7 +1449,8 @@
 <p>示例</p>
 <p>清除域小部件通常会在数据过滤后出现，例如在选择可视化示例的子集时。</p>
 <p>在上面的模式中，我们使用 adult.tab 数据集：我们将其可视化并选择一部分数据，其中仅包含五个原始类别中的四个。为了摆脱空类，我们在进入箱线图小部件之前将数据通过清除域。后者仅显示清除数据输出中的四个类。要查看数据净化的效果，请取消选中删除未使用的类变量值并观察这对箱线图的影响。</p>
-<p><img src="/images/PurgeDomain-example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/PurgeDomain-example.png" class="" title="img">
+
 <h2 id="Melt-数据融合"><a href="#Melt-数据融合" class="headerlink" title="Melt - 数据融合"></a>Melt - 数据融合</h2><blockquote>
 <p>将宽数据转换为窄数据(<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Wide_and_narrow_data">wide data to narrow</a>)。</p>
 <p>输入</p>
@@ -1383,7 +1463,7 @@
 </ul>
 </blockquote>
 <p>Melt 小部件接收更常见的宽格式数据集并输出（row_id、变量、值）三元组表。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Melt-Default-stamped.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/1.orange_widget/Melt-Default-stamped.png" alt="img"></p>
 <p>1.选择用作 id 的变量。该小部件仅提供没有重复值的列。或者，行号可以用作 id。</p>
 <p>2.选择是否包括非数字变量，以及是否排除零值。</p>
 <p>3.使用变量名称（“item”）和相应的值设置列的名称。</p>
@@ -1391,9 +1471,9 @@
 <p>在下面的工作流程中，我们使用 Zoo 数据集，我们将所有变量转换为数字，将它们视为序数。除了腿数之外的所有变量都是布尔值（例如动物产卵或不产卵），因此值为 1 将对应于具有特定特征的动物。在数据表中，我们选择所有行（Ctrl-A 或 Cmd-A）并取消选择青蛙的重复描述以避免“名称”列中的重复值。</p>
 <p>我们将它传递给 Melt，在这里我们将名称指定为行 ID，并丢弃零值。结果表中的每一种动物都有多行：每一种动物特征都有一行。</p>
 <p>一个有趣的直接用途是将此数据传递给 Distributions 并查看动物最常见和最不常见的特征。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Melt-Workflow.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/1.orange_widget/Melt-Workflow.png" alt="img"></p>
 <p>在下一个示例中，我们展示改组类值如何影响模型在与上述相同的数据集上的性能。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/transform/images/Melt-Distribution.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/1.orange_widget/Melt-Distribution.png" alt="img"></p>
 <h2 id="Feature-Constructor-特征构造器"><a href="#Feature-Constructor-特征构造器" class="headerlink" title="Feature Constructor - 特征构造器"></a>Feature Constructor - 特征构造器</h2><blockquote>
 <p>向数据集添加新功能。</p>
 <p>输入</p>
@@ -1406,7 +1486,8 @@
 </ul>
 </blockquote>
 <p>特征构造器允许您手动将特征（列）添加到数据集中。新功能可以是对现有功能或多个功能（加法、减法等）的组合的计算。您可以选择它的特征类型（离散、连续或字符串）以及它的参数是什么（名称、值、表达式）。对于连续变量，您只需在 Python 中构造一个表达式。</p>
-<p><img src="/images/feature-constructor1-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/feature-constructor1-stamped.png" class="" title="img">
+
 <ol>
 <li><p>构造变量列表</p>
 </li>
@@ -1426,7 +1507,7 @@
 </li>
 </ol>
 <p>然而，对于离散变量，还有更多工作要做。首先为新功能添加或删除所需的值。然后选择基值和表达式。在下面的示例中，我们构造了一个带有“if lower than”的表达式并定义了三个条件；如果原始值低于 6，程序将归因于 0（我们将其重命名为较低），如果原始值低于 7，则归因于 1（中），所有其他值归因于 2（更高）。请注意，我们使用下划线作为特征名称（例如 petal_length）。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/transform/images/feature-constructor2-stamped.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/transform/feature-constructor2-stamped.png" alt="img"></p>
 <ol>
 <li><p>变量定义列表</p>
 </li>
@@ -1449,7 +1530,8 @@
 </ol>
 <p>示例</p>
 <p>使用特征构造器，您可以轻松调整现有特征或将现有特征组合成新特征。下面，我们向泰坦尼克号数据集添加了一个新的离散特征。我们创建了一个名为“财务状况”的新属性，如果此人属于第一类（status &#x3D; first），则将其值设置为富有，而对于其他人则不富有。我们可以看到带有数据表小部件的新数据集。</p>
-<p><img src="/images/FeatureConstructor-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/FeatureConstructor-Example.png" class="" title="img">
+
 <p>提示</p>
 <p>如果您不熟悉 Python 数学语言，这里有一个快速介绍。</p>
 <ul>
@@ -1478,7 +1560,8 @@
 </ul>
 </blockquote>
 <p>Create Class 从现有的离散属性或字符串属性创建新的类属性。该小部件匹配所选属性的字符串值，并为匹配实例构造一个新的用户定义值。</p>
-<p><img src="/images/CreateClass-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/CreateClass-stamped.png" class="" title="img">
+
 <ol>
 <li>构造新类的属性。</li>
 <li>匹配：<ul>
@@ -1496,7 +1579,8 @@
 <p>例子</p>
 <p>这是一个使用 auto-mpg 数据集的简单示例。将数据传递给创建类。选择 car_name 作为创建新类的列。在这里，我们希望创造与汽车品牌相匹配的新价值。首先，我们键入 ford 作为匹配字符串的新值。然后我们定义将匹配数据实例的子字符串。这意味着所有在其 car_name 中包含 ford 的实例现在将在新类列中具有值 ford。接下来，我们为本田和菲亚特定义相同的。该小部件将告诉我们有多少实例尚未匹配（剩余实例）。我们将它们命名为其他，但您可以通过添加带有“+”的条件来继续创建新值。</p>
 <p>我们将新的类列命名为 car_brand 并在字符串的开头进行匹配。</p>
-<p><img src="/images/CreateClass-example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/CreateClass-example.png" class="" title="img">
+
 <p>最后，我们可以观察数据表中的新列或使用该值作为散点图中的颜色。</p>
 <h2 id="Create-Instance-创建实例"><a href="#Create-Instance-创建实例" class="headerlink" title="Create Instance -创建实例"></a>Create Instance -创建实例</h2><blockquote>
 <p>从示例数据集交互式创建实例。</p>
@@ -1513,7 +1597,8 @@
 </ul>
 </blockquote>
 <p>Create Instance 小部件根据输入数据创建一个新实例。该小部件在两列表中显示输入数据集的所有变量。 Variable 列表示变量的名称，同时 Value 列可以设置变量的值。每个值最初设置为变量的中值。这些值可以通过单击相应的按钮手动设置为中值、平均值、随机或输入。为了更轻松地搜索变量，该表附有过滤器。单击上述按钮之一时，仅考虑过滤后的变量。还可以通过右键单击一行并在上下文菜单中选择一个选项来设置值。</p>
-<p><img src="/images/CreateInstance-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/CreateInstance-stamped.png" class="" title="img">
+
 <ol>
 <li><p>按变量名过滤表。</p>
 </li>
@@ -1544,9 +1629,11 @@
 </ol>
 <p>例子</p>
 <p>Create Instance 通常用于检查模型在某些任意数据上的性能。基本用法显示在以下工作流中，其中（房屋）数据集用于拟合线性回归模型，然后用于预测数据的目标值，由创建实例小部件创建。在 File 和 Create Instance 之间插入一个 Rank 小部件可以输出（并因此做出预测）最重要的特征。插入“选择列”小部件以省略实际目标值。</p>
-<p><img src="/images/CreateInstance-example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/CreateInstance-example.png" class="" title="img">
+
 <p>下一个示例显示如何检查创建的实例是否是某种异常值。创建的实例被提供给 PCA，然后在散点图中检查其第一个和第二个组件。创建的实例在图中显示为红色，如果它看起来远离原始数据（蓝色），则可以将其视为异常值。</p>
-<p><img src="/images/CreateInstance-example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/CreateInstance-example2.png" class="" title="img">
+
 <h2 id="Python-Script-Python脚本"><a href="#Python-Script-Python脚本" class="headerlink" title="Python Script - Python脚本"></a>Python Script - Python脚本</h2><blockquote>
 <p>通过 Python 脚本扩展功能。</p>
 <p>输入：</p>
@@ -1590,20 +1677,24 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from Orange.data import Domain, Table</span><br><span class="line">domain = Domain([attr for attr in in_data.domain.attributes</span><br><span class="line">                 if attr.is_continuous or len(attr.values) &lt;= 5],</span><br><span class="line">                in_data.domain.class_vars)</span><br><span class="line">out_data = Table(domain, in_data)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/PythonScript-filtering.png" alt="img"></p>
+
+
 <p>第二个示例显示如何在几行代码中舍入所有值。这次我们使用 wine.tab 并将所有值四舍五入为整数。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">out_data = in_data.copy()</span><br><span class="line">#copy, otherwise input data will be overwritten</span><br><span class="line">np.round(out_data.X, 0, out_data.X)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/PythonScript-round.png" alt="img"></p>
+
+
 <p>第三个示例向数据中引入了一些高斯噪声。我们再次复制输入数据，然后使用双 for 循环遍历所有值并添加随机噪声。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import random</span><br><span class="line">from Orange.data import Domain, Table</span><br><span class="line">new_data = in_data.copy()</span><br><span class="line">for inst in new_data:</span><br><span class="line">  for f in inst.domain.attributes:</span><br><span class="line">    inst[f] += random.gauss(0, 0.02)</span><br><span class="line">out_data = new_data</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/PythonScript-gauss.png" alt="img"></p>
+
+
 <p>最后一个示例使用 Orange3-Text 插件。 Python 脚本对于文本挖掘中的自定义预处理、从字符串中提取新特征或利用高级 nltk 或 gensim 函数非常有用。下面，我们简单地通过用空格分割来自 deerwester.tab 的输入数据来标记它们。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">print(&#x27;Running Preprocessing ...&#x27;)</span><br><span class="line">tokens = [doc.split(&#x27; &#x27;) for doc in in_data.documents]</span><br><span class="line">print(&#x27;Tokens:&#x27;, tokens)</span><br><span class="line">out_object = in_data</span><br><span class="line">out_object.store_tokens(tokens)</span><br></pre></td></tr></table></figure>
 
 <p>您可以添加许多其他预处理步骤以进一步调整输出。 Python 脚本的输出可以与接受脚本生成的输出类型的任何小部件一起使用。在这种情况下，连接是绿色的，表示词云小部件的输入类型正确。</p>
-<p><img src="/images/PythonScript-Example3.png" alt="img"></p>
+
+
 <h1 id="Visualize-可视化"><a href="#Visualize-可视化" class="headerlink" title="Visualize - 可视化"></a><strong>Visualize - 可视化</strong></h1><h2 id="Tree-Viewer-树查看器"><a href="#Tree-Viewer-树查看器" class="headerlink" title="Tree Viewer - 树查看器"></a><strong>Tree Viewer - 树查看器</strong></h2><blockquote>
 <p>分类树和回归树的可视化。</p>
 <p>输入</p>
@@ -1619,7 +1710,8 @@
 </ul>
 </blockquote>
 <p>这是一个多功能小部件，具有分类和回归树的二维可视化。用户可以选择一个节点，指示小部件输出与该节点关联的数据，从而实现探索性数据分析。</p>
-<p><img src="/images/TreeViewer-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/TreeViewer-stamped.png" class="" title="img">
+
 <ol>
 <li><p>输入信息。</p>
 </li>
@@ -1644,11 +1736,14 @@
 </ol>
 <p>例子</p>
 <p>下面是一个简单的分类模式，我们已经在其中读取数据、构建决策树并在我们的树查看器中查看它。如果查看器和树都打开，则树归纳算法的任何重新运行都会立即影响可视化。因此，您可以使用这种组合来探索归纳算法的参数如何影响结果树的结构。</p>
-<p><img src="/images/TreeViewer-classification.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/TreeViewer-classification.png" class="" title="img">
+
 <p>点击任意一个节点都会输出相关的数据实例。这在下面的模式中进行了探讨，该模式显示了数据表和散点图中的子集。确保树数据作为数据子集传递；这可以通过首先将散点图连接到文件小部件，然后将其连接到树查看器小部件来完成。所选数据将显示为粗体点。<br>Tree Viewer 还可以导出标记数据。将数据表连接到树查看器并将小部件之间的链接设置为数据而不是选定数据。这会将整个数据发送到数据表，并带有一个附加的元列标记选定的数据实例（对选定的是，对其余的是否）。</p>
-<p><img src="/images/TreeViewer-selection.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/TreeViewer-selection.png" class="" title="img">
+
 <p>最后，Tree Viewer 也可用于可视化回归树。使用 housing.tab 数据集将随机森林连接到文件小部件。然后将毕达哥拉斯森林连接到随机森林。在 Pythagorean Forest 中选择您希望进一步分析的回归树并将其传递给 Tree Viewer。小部件将显示构造的树。对于可视化更大的树，尤其是对于回归，毕达哥拉斯树可能是更好的选择。</p>
-<p><img src="/images/TreeViewer-regression.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/TreeViewer-regression.png" class="" title="img">
+
 <h2 id="Box-Plot-箱型图"><a href="#Box-Plot-箱型图" class="headerlink" title="Box Plot - 箱型图"></a><strong>Box Plot - 箱型图</strong></h2><blockquote>
 <p>显示属性值的分布。</p>
 <p>输入</p>
@@ -1664,14 +1759,15 @@
 </ul>
 </blockquote>
 <p>箱形图小部件显示属性值的分布。使用此小部件检查任何新数据以快速发现任何异常情况是一种很好的做法，例如重复值（例如，灰色和灰色）、异常值等。可以选择条形 - 例如，分类数据的值或数字数据的分位数范围。</p>
-<p><img src="/images/BoxPlot-Continuous.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/BoxPlot-Continuous.png" class="" title="img">
+
 <ol>
 <li><p>选择你要绘制的变量。勾选按与子组的相关性排序，以通过Chi2或方差分析对所选子组的变量进行排序。</p>
 </li>
 <li><p>选择子组，查看按离散子组显示的箱形图。勾选 “按变量相关性排序”，在所选变量上按Chi2或ANOVA排序子组。</p>
 </li>
 <li><p>当实例按子组分组时，你可以改变显示模式。注释框将显示终值、平均值和中位数，而比较中位数和比较平均值自然会在子组之间比较选定的值。</p>
-<p><img src="/images/BoxPlot-Continuous-small.png" alt="continuous"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/BoxPlot-Continuous-small.png" class="" title="continuous">
 </li>
 <li><p>平均值（深蓝色的垂直线）。蓝色细线代表标准差。</p>
 </li>
@@ -1690,13 +1786,16 @@
 <li><p>按子组频率排序： 按子组的频率降序排列。</p>
 </li>
 </ul>
-<p><img src="/images/BoxPlot-Discrete.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/BoxPlot-Discrete.png" class="" title="img">
+
 <p>例子</p>
 <p>箱形图小部件最常用于在文件小部件之后立即观察数据集的统计属性。在第一个示例中，我们使用心脏病数据来检查我们的变量。</p>
-<p><img src="/images/BoxPlot-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/BoxPlot-Example1.png" class="" title="img">
+
 <p>箱形图对于查找特定数据集的属性也很有用，例如，在另一个小部件中手动定义的一组实例（例如散点图或属于某个集群或分类树节点的实例。现在让我们使用动物园数据并创建具有距离和层次聚类的典型聚类工作流程。</p>
 <p>现在定义集群选择的阈值（单击顶部的标尺）。将箱形图连接到层次聚类，勾选按相关性排序，然后选择聚类作为子组。这将根据属性定义所选子组的程度对属性进行排序，在我们的例子中是一个集群。看起来我们的集群确实与动物类型非常吻合！</p>
-<p><img src="/images/BoxPlot-Example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/BoxPlot-Example2.png" class="" title="img">
+
 <h2 id="Violin-Plot-小提琴图"><a href="#Violin-Plot-小提琴图" class="headerlink" title="**Violin Plot -小提琴图 **"></a>**Violin Plot -小提琴图 **</h2><blockquote>
 <p>可视化小提琴图中特征值的分布。</p>
 <p>输入</p>
@@ -1712,14 +1811,16 @@
 </ul>
 </blockquote>
 <p>Violin Plot 小部件与 Box Plot 起着类似的作用。它显示了定量数据在分类变量的多个级别上的分布，以便可以比较这些分布。与箱形图不同，其中所有绘图组件都对应于实际数据点，小提琴图具有基础分布的核密度估计。</p>
-<p><img src="/images/ViolinPlot-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ViolinPlot-stamped.png" class="" title="img">
+
 <ol>
 <li><p>选择要绘制的变量。勾选 Order by relevance to subgroups 以在所选子组上按 Chi2 或 ANOVA 对变量进行排序。</p>
 </li>
 <li><p>选择子组以查看由离散子组显示的小提琴图。勾选按与变量的相关性排序，以在所选变量上按 Chi2 或 ANOVA 对子组排序。</p>
 </li>
 <li><p>箱线图：勾选以显示底层箱线图。</p>
-<p><img src="/images/ViolinPlot-boxplot.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ViolinPlot-boxplot.png" class="" title="img">
+
 <p>带状图：勾选以显示由点表示的基础数据。</p>
 <p>地毯图：勾选以显示由线条表示的基础数据。</p>
 <p>订购子组：勾选以按中位数（升序）订购小提琴。</p>
@@ -1731,9 +1832,11 @@
 </ol>
 <p>例子</p>
 <p>Violin Plot 小部件最常用于在 File 小部件之后立即观察数据集的统计属性。在第一个示例中，我们使用心脏病数据来检查我们的变量。</p>
-<p><img src="/images/ViolinPlot-example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ViolinPlot-example1.png" class="" title="img">
+
 <p>小提琴图也可用于离群值检测。在下一个示例中，我们通过仅选择落在 Q1 − 1.5 和 Q3 + 1.5 IQR 内的实例来消除异常值。</p>
-<p><img src="/images/ViolinPlot-example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ViolinPlot-example2.png" class="" title="img">
+
 <h2 id="Distributions-分布图"><a href="#Distributions-分布图" class="headerlink" title="**Distributions -分布图 **"></a>**Distributions -分布图 **</h2><blockquote>
 <p>显示单个属性的值分布。</p>
 <p>输入</p>
@@ -1749,7 +1852,8 @@
 </blockquote>
 <p>Distributions 小部件显示离散或连续属性的值分布。如果数据包含类变量，则分布可能以类为条件。</p>
 <p>该图显示了每个属性值在数据中出现的次数（例如，在多少实例中）。如果数据包含类变量，将显示每个属性值的类分布（如下面的快照所示）。为了创建此图，我们使用了 Zoo 数据集。</p>
-<p><img src="/images/Distributions-Discrete.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Distributions-Discrete.png" class="" title="img">
+
 <ol>
 <li>用于显示的变量列表。按频率排序类别按频率显示值。</li>
 <li>使用滑块设置 Bin 宽度。精密刻度设置为合理的间隔。拟合分布将选定的分布拟合到图中。选项包括 Normal、Beta、Gamma、Rayleigh、Pareto、Exponential、Kernel density。</li>
@@ -1764,9 +1868,11 @@
 </ol>
 <p>对于连续属性，属性值也显示为直方图。可以将各种分布拟合到数据，例如，高斯核密度估计。隐藏条隐藏直方图条并仅显示分布（分布的旧行为）。</p>
 <p>对于这个例子，我们使用了 Iris 数据集。</p>
-<p><img src="/images/Distributions-Continuous.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Distributions-Continuous.png" class="" title="img">
+
 <p>在无类域中，条形显示为蓝色。我们使用了 Housing 数据集。</p>
-<p><img src="/images/Distributions-NoClass.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Distributions-NoClass.png" class="" title="img">
+
 <h2 id="Scatter-Plot-散点图"><a href="#Scatter-Plot-散点图" class="headerlink" title="Scatter Plot - 散点图"></a><strong>Scatter Plot - 散点图</strong></h2><blockquote>
 <p>具有探索性分析和智能数据可视化增强功能的散点图可视化。</p>
 <p>输入</p>
@@ -1787,7 +1893,8 @@
 </ul>
 </blockquote>
 <p>散点图小部件提供二维散点图可视化。数据显示为点的集合，每个点具有确定水平轴位置的 x 轴属性值和确定垂直轴位置的 y 轴属性值。可以在小部件的左侧调整图形的各种属性，例如点的颜色、大小和形状、轴标题、最大点大小和抖动。下面的快照显示了 Iris 数据集的散点图以及类属性的颜色匹配。</p>
-<p><img src="/images/Scatterplot-Iris-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Scatterplot-Iris-stamped.png" class="" title="img">
+
 <ol>
 <li><p>选择x和y属性。用 “查找信息预测 “优化你的预测。该功能通过平均分类精度对属性对进行评分，并返回得分最高的属性对，同时进行可视化更新。</p>
 </li>
@@ -1807,25 +1914,30 @@
 </li>
 </ol>
 <p>如果勾选了显示颜色区域和显示回归线框，则以下是散点图小部件的示例。</p>
-<p><img src="/images/Scatterplot-ClassDensity.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Scatterplot-ClassDensity.png" class="" title="img">
+
 <p>智能数据可视化</p>
 <p>如果数据集有很多属性，则不可能手动扫描所有对以找到有趣或有用的散点图。 Orange 通过小部件中的“查找信息预测”选项实现智能数据可视化。</p>
 <p>如果在“颜色”部分中选择了分类变量，则分数计算如下。对于每个数据实例，该方法在投影的 2D 空间中找到 10 个最近的邻居，即在属性对的组合上。然后检查它们中有多少具有相同的颜色。投影的总分就是同色邻居的平均数。</p>
 <p>数字颜色的计算是类似的，除了确定系数用于测量投影的局部均匀性。</p>
 <p>要使用此方法，请转到小部件中的 Find Informative Projections 选项，打开子窗口并按 Start Evaluation。该功能将按平均分类准确度得分返回属性对列表。</p>
 <p>下面是一个演示排名实用程序的示例。第一个散点图投影设置为默认的萼片宽度到萼片长度图（为简单起见，我们使用 Iris 数据集）。运行 Find Informative Projections 优化后，散点图转换为更好的花瓣宽度到花瓣长度图的投影。</p>
-<p><img src="/images/ScatterPlotExample-Ranking.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ScatterPlotExample-Ranking.png" class="" title="img">
+
 <p>选择</p>
 <p>选择可用于在数据中手动定义子组。选择数据实例时使用 Shift 修饰符将它们放入新组中。 Shift + Ctrl（或 MacOs 上的 Shift + Cmd）将实例附加到最后一个组。</p>
 <p>信号数据输出一个数据表，其中包含一个包含组索引的附加列。</p>
-<p><img src="/images/ScatterPlot-selection.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ScatterPlot-selection.png" class="" title="img">
+
 <p>探索性数据分析</p>
 <p>与其他 Orange 小部件一样，散点图支持放大和缩小部分绘图以及手动选择数据实例。这些功能位于小部件的左下角。</p>
 <p>默认工具是选择，它选择所选矩形区域内的数据实例。 Pan 使您能够在窗格周围移动散点图。借助 Zoom，您可以通过鼠标滚动来放大和缩小窗格，而 Reset zoom 可将可视化重置为最佳大小。下面显示了一个简单模式的示例，我们从矩形区域中选择数据实例并将它们发送到数据表小部件。请注意，散点图并未显示所有 52 个数据实例，因为一些数据实例重叠（它们使用的两个属性具有相同的值）。</p>
-<p><img src="/images/ScatterPlotExample-Explorative.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ScatterPlotExample-Explorative.png" class="" title="img">
+
 <p>示例</p>
 <p>散点图可以与任何输出选定数据实例列表的小部件结合使用。在下面的示例中，我们结合了树和散点图来显示从选定的决策树节点中获取的实例（单击树的任何节点会将一组选定的数据实例发送到散点图，并用填充符号标记选定的实例）。</p>
-<p><img src="/images/ScatterPlotExample-Classification.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/ScatterPlotExample-Classification.png" class="" title="img">
+
 <p>参考</p>
 <p>Gregor Leban and Blaz Zupan and Gaj Vidmar and Ivan Bratko (2006) VizRank: Data Visualization Guided by Machine Learning. Data Mining and Knowledge Discovery, 13 (2). pp. 119-136. 在这里可用。</p>
 <h2 id="Line-Plot-线形图"><a href="#Line-Plot-线形图" class="headerlink" title="Line Plot - 线形图"></a><strong>Line Plot - 线形图</strong></h2><blockquote>
@@ -1842,7 +1954,8 @@
 </ul>
 </blockquote>
 <p>线形图一种将数据显示为一系列的点，由直线段连接的图。它只适用于数字数据，而分类数据可用于对数据点进行分组。</p>
-<p><img src="/images/LinePlot-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/LinePlot-stamped.png" class="" title="img">
+
 <ol>
 <li><p>有关输入数据的信息。</p>
 </li>
@@ -1864,7 +1977,8 @@
 <p>例子</p>
 <p>线图是一个标准的可视化小部件，它显示数据配置文件，通常是有序的数字数据。在这个简单的示例中，我们将在折线图中显示鸢尾花数据，并按 iris 属性分组。该图显示了花瓣长度如何很好地区分类值。</p>
 <p>如果我们在散点图中观察到这一点，我们可以确认确实如此。花瓣长度是一个有趣的类分离属性，尤其是在用花瓣宽度增强时，在线图中也很好地分离了它。</p>
-<p><img src="/images/LinePlot-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/LinePlot-Example.png" class="" title="img">
+
 <h2 id="Bar-Plot-条形图"><a href="#Bar-Plot-条形图" class="headerlink" title="Bar Plot - 条形图"></a><strong>Bar Plot - 条形图</strong></h2><blockquote>
 <p>可视化离散类别之间的比较。</p>
 <p>输入</p>
@@ -1879,7 +1993,8 @@
 </ul>
 </blockquote>
 <p>条形图小部件可视化数字变量并通过分类变量比较它们。该小部件对于观察异常值、组内分布和比较类别很有用。</p>
-<p><img src="/images/Bar-Plot-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Bar-Plot-stamped.png" class="" title="img">
+
 <ol>
 <li>图的参数。值是要绘制的数值变量。 Group by 是对数据进行分组的变量。注释是图下方的分类标签。颜色是分类变量，其值用于为条形着色。</li>
 <li>选择、缩放、平移和缩放以适合是探索图形的选项。手动选择数据实例用作角度&#x2F;方形选择工具。双击移动投影。滚动或缩小以进行缩放。</li>
@@ -1888,7 +2003,8 @@
 </ol>
 <p>例子</p>
 <p>条形图小部件最常在文件小部件之后立即用于比较分类值。在这个例子中，我们使用心脏病数据来检查我们的变量。</p>
-<p><img src="/images/Bar-Plot-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Bar-Plot-Example.png" class="" title="img">
+
 <p>首先，我们从我们的数据集中观察了患者的胆固醇值。我们根据直径缩小对他们进行分组，这定义了患有心脏病的患者 (1) 和没有心脏病的患者 (0)。我们使用相同的变量为条形着色。</p>
 <p>然后，我们使用 Select Rows 选择了 60 岁以上的患者。我们将子集发送到条形图以在小部件中突出显示这些患者。胆固醇水平高的大异常值显然超过 60 岁。</p>
 <h2 id="Heat-Map-热图"><a href="#Heat-Map-热图" class="headerlink" title="Heat Map - 热图"></a><strong>Heat Map - 热图</strong></h2><blockquote>
@@ -1905,7 +2021,8 @@
 </blockquote>
 <p>热图是一种图形方法，用于可视化双向矩阵中的属性值。它只适用于含有数字变量的数据集。这些值根据选定的调色板用颜色表示。通过在x轴和y轴上结合类别变量和属性，我们可以看到属性值最强的地方和最弱的地方，从而使我们能够找到每个类别的典型特征。</p>
 <p>这个小组件可以通过点击和拖动来选择行。我们可以用Ctrl++（Cmd++）放大，用Ctrl+-（Cmd+-）缩小。Ctrl+0 (Cmd+0)将缩放重置为扩展版本，而Ctrl+9 (Cmd+9)将其重置为默认版本。</p>
-<p><img src="/images/HeatMap.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/HeatMap.png" class="" title="img">
+
 <ol>
 <li>色调表。从线性、发散、色盲友好或其他调色板中选择。低和高是调色板的阈值（低为低值的属性，高为高值的属性）。选择分歧调色板中的一个，它有两个极端的颜色，在中点有一个中性（黑色或白色）的颜色，可以选择设置一个有意义的中点值（默认为0）。</li>
 <li>合并行数。如果可视化中的行数太多，可以用k-means算法将它们合并到N个选定的聚类中（默认为50）。</li>
@@ -1927,16 +2044,19 @@
 <p>高级可视化</p>
 <p>热力图可以实现一些整洁的绘图增强功能。这些选项是对行和&#x2F;或列进行聚类，以便更好地组织数据，对行和列进行注释，以及按分类变量分割数据。</p>
 <p>行和列的聚类是独立进行的。行聚类是通过欧氏距离计算的，而列聚类则使用皮尔逊相关系数。层次聚类是基于Ward联系法。用最优叶子排序的聚类方法对树状图中的左右分支进行重新排序，使相邻叶子之间的距离之和最小（Bar-Joseph等，2001）。</p>
-<p><img src="/images/HeatMap-advanced.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/HeatMap-advanced.png" class="" title="img">
+
 <p>例子</p>
 <p>基因表达</p>
 <p>下面的热图显示了 brown-selected 数据集的属性值 (Brown et al. 2000)。热图特别适合显示基因表达，棕色选择的数据集包含不同条件下的酵母基因表达。<br>热图以蓝色显示低表达，以黄色和白色显示高表达。为了更好地组织，我们向列添加了聚类（优化排序），这会将具有相似配置文件的列放在一起。通过这种方式，我们可以在右下角看到导致核糖体基因低表达的条件。</p>
 <p>此外，右侧的行颜色增强了绘图，显示了行属于哪个类。</p>
-<p><img src="/images/HeatMap-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/HeatMap-Example1.png" class="" title="img">
+
 <p>情绪分析</p>
 <p>热图非常适合可视化任何类型的可比较数字变量，例如文档集合中的情绪。我们将从语料库小部件中获取书籍摘录语料库，并将其传递给情感分析小部件，该小部件计算每个文档的情感分数。情绪分析的输出是四列，正面、负面和中性情绪分数，以及将以前的分数聚合成一个数字的复合分数。正复合值（白色）代表正文档，而负复合值（蓝色）代表负文档。</p>
 <p>我们使用行聚类将相似的行更靠近地放置在一起，从而产生明确的负组和正组。现在我们可以选择负面的儿童读物并探索它们是哪些。</p>
-<p><img src="/images/HeatMap-Example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/HeatMap-Example2.png" class="" title="img">
+
 <p>参考文献</p>
 <p>Bar-Joseph, Z., Gifford, D.K., Jaakkola, T.S. (2001) Fast optimal leaf ordering for hierarchical clustering, Bioinformatics, 17, 22-29.</p>
 <p>Brown, M.P., Grundy, W.N., Lin, D., Cristianini, N., Sugnet, C., Furey, T.S., Ares, M., Haussler, D. (2000) Knowledge-based analysis of microarray gene expression data by using support vector machines, Proceedings of the National Academy of Sciences, 1, 262-267.</p>
@@ -1956,7 +2076,8 @@
 </blockquote>
 <p>树是一种简单的算法，它将数据按类的纯度（分类的信息增益和数字目标变量的MSE）分割成节点。它是随机森林的前驱。Orange的树是内部设计的，可以处理分类和数字数据集。</p>
 <p>它也可以用于分类和回归任务。</p>
-<p><img src="/images/Tree-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Tree-stamped.png" class="" title="img">
+
 <ol>
 <li>学习者可以被赋予一个名称，它将在其他部件中出现。默认名称是 “树”。</li>
 <li>树的参数：<ul>
@@ -1973,11 +2094,14 @@
 <p>树不使用任何预处理。</p>
 <p>实例</p>
 <p>这个小组件有两个典型的用途。首先，你可能想诱导一个模型并检查它在树状视图中的样子。</p>
-<p><img src="/images/Tree-classification-visualize.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Tree-classification-visualize.png" class="" title="img">
+
 <p>第二个模式训练模型并根据逻辑回归评估其性能。</p>
-<p><img src="/images/Tree-classification-model.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Tree-classification-model.png" class="" title="img">
+
 <p>我们在两个示例中都使用了 iris 数据集。然而，Tree 也适用于回归任务。使用住房数据集并将其传递给 Tree。从 Tree Viewer 中选择的树节点显示在散点图中，我们可以看到所选示例表现出相同的特征。</p>
-<p><img src="/images/Tree-regression-subset.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Tree-regression-subset.png" class="" title="img">
+
 <h2 id="SVM-支持向量机"><a href="#SVM-支持向量机" class="headerlink" title="SVM - 支持向量机"></a>SVM - 支持向量机</h2><blockquote>
 <p>支持向量机将输入映射到更高维的特征空间。</p>
 <p>输入</p>
@@ -1995,7 +2119,8 @@
 <p>支持向量机（SVM）是一种机器学习技术，它用一个超平面来分离属性空间，从而使不同类或类值的实例之间的余量最大化。该技术经常产生极高的预测性能结果。Orange嵌入了来自LIBSVM包的一个流行的SVM实现。这个小部件是它的图形用户界面。</p>
 <p>对于回归任务，SVM在高维特征空间中使用ε-不敏感的损失进行线性回归。它的估计精度取决于C、ε和核参数的良好设置。该小组件在SVM回归的基础上输出类别预测。</p>
 <p>这个小工具对分类和回归任务都有效。</p>
-<p><img src="/images/SVM-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SVM-stamped.png" class="" title="img">
+
 <ol>
 <li>学习者可以被赋予一个名字，它将以这个名字出现在其他小工具中。默认名称是 “SVM”。</li>
 <li>带有测试误差设置的SVM类型。SVM和ν-SVM是基于误差函数的不同最小化。在右边，你可以设置测试误差的界限：<ul>
@@ -2037,9 +2162,11 @@
 <p>要删除默认的预处理，请将一个空的预处理部件连接到学习者身上。</p>
 <p><strong>例子</strong></p>
 <p>在第一个（回归）例子中，我们使用了住房数据集，并用数据采样器将数据分成两个数据子集（数据样本和剩余数据）。样本被送到SVM，SVM产生了一个模型，然后在预测中使用该模型来预测剩余数据的值。如果数据已经在两个独立的文件中，也可以使用类似的模式；在这种情况下，将使用两个文件部件，而不是文件-数据采样器的组合。</p>
-<p><img src="/images/SVM-Predictions.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SVM-Predictions.png" class="" title="img">
+
 <p>第二个例子展示了如何将SVM与Scatter Plot结合使用。下面的工作流程在虹膜数据上训练一个SVM模型，并输出支持向量，即那些在学习阶段被用作支持向量的数据实例。我们可以在散点图的可视化中观察到哪些是这些数据实例。请注意，为了使工作流程正常工作，你必须设置部件之间的链接，如下图所示。</p>
-<p><img src="/images/SVM-support-vectors.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/SVM-support-vectors.png" class="" title="img">
+
 <p><strong>参考文献</strong></p>
 <p>StatSoft上的SVM介绍。</p>
 <h2 id="Naive-Bayes-贝叶斯算法"><a href="#Naive-Bayes-贝叶斯算法" class="headerlink" title="Naive Bayes - 贝叶斯算法"></a>Naive Bayes - 贝叶斯算法</h2><blockquote>
@@ -2060,7 +2187,8 @@
 </ul>
 </blockquote>
 <p>朴素贝叶斯从数据中学习朴素贝叶斯模型。它仅适用于分类任务。</p>
-<p><img src="/images/NaiveBayes-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/NaiveBayes-stamped.png" class="" title="img">
+
 <p>此小部件有两个选项：它将在其他小部件中显示的名称和生成报告。默认名称是朴素贝叶斯。当您更改它时，您需要按应用。</p>
 <p>预处理</p>
 <p>当没有给出其他预处理器时，朴素贝叶斯使用默认预处理。它按以下顺序执行它们：</p>
@@ -2071,9 +2199,11 @@
 <p>要删除默认预处理，请将一个空的 Preprocess 小部件连接到学习者。</p>
 <p>例子</p>
 <p>在这里，我们介绍了此小部件的两种用途。首先，我们将朴素贝叶斯的结果与另一个模型随机森林进行比较。我们将虹膜数据从文件连接到测试和评分。我们还将朴素贝叶斯和随机森林连接到 Test &amp; Score 并观察它们的预测分数。</p>
-<p><img src="/images/NaiveBayes-classification.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/NaiveBayes-classification.png" class="" title="img">
+
 <p>第二个模式显示了使用朴素贝叶斯做出的预测的质量。我们为 Test &amp; Score 小部件提供一个朴素贝叶斯学习器，然后将数据发送到混淆矩阵。我们还将散点图与文件连接起来。然后我们在混淆矩阵中选择错误分类的实例，并将它们提供给散点图。散点图中的粗点是朴素贝叶斯错误分类的实例。</p>
-<p><img src="/images/NaiveBayes-visualize.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/NaiveBayes-visualize.png" class="" title="img">
+
 <h1 id="Evaluate-评估"><a href="#Evaluate-评估" class="headerlink" title="Evaluate - 评估"></a>Evaluate - 评估</h1><h2 id="Test-and-Score-测试和评分"><a href="#Test-and-Score-测试和评分" class="headerlink" title="Test and Score - 测试和评分"></a>Test and Score - 测试和评分</h2><blockquote>
 <p>在数据上测试学习算法。</p>
 <p>输入</p>
@@ -2089,7 +2219,8 @@
 </blockquote>
 <p>该小部件测试学习算法。可以使用不同的采样方案，包括使用单独的测试数据。这个小部件做了两件事。首先，它显示了一个表格，其中包含不同的分类器性能指标，例如分类精度和曲线下面积。其次，它输出评估结果，可以被其他小部件用于分析分类器的性能，例如 ROC Analysis 或 Confusion Matrix。</p>
 <p>学习者信号有一个不常见的特性：它可以连接到多个小部件，以使用相同的过程测试多个学习者。</p>
-<p><img src="/images/TestAndScore-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/TestAndScore-stamped.png" class="" title="img">
+
 <ol>
 <li><p>该小部件支持各种采样方法。</p>
 <ul>
@@ -2106,7 +2237,8 @@
 <li><p>该小部件将计算许多性能统计数据。默认显示一些。要查看其他统计信息，请右键单击标题并选择所需的统计信息。</p>
 <ul>
 <li><p>分类</p>
-<p><img src="/images/TestAndScore-Classification.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/TestAndScore-Classification.png" class="" title="img">
+
 <ul>
 <li>ROC 下的面积是接受者操作曲线下的面积。</li>
 <li>分类准确率是正确分类的例子的比例。</li>
@@ -2120,7 +2252,8 @@
 </ul>
 </li>
 <li><p>回归</p>
-<p><img src="/images/TestAndScore-Regression.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/TestAndScore-Regression.png" class="" title="img">
+
 <ul>
 <li>MSE 测量误差或偏差的平方的平均值（估计值与估计值之间的差异）。</li>
 <li>RMSE 是一组数字的平方的算术平均值的平方根（衡量估计量与数据拟合的不完美程度）</li>
@@ -2144,18 +2277,19 @@
 <p>在构建预测模型时，必须注意如何预处理数据。在 Orange 中有两种可能的方法，每种方法都略有不同：</p>
 <ol>
 <li><p>将 Preprocess 连接到学习者。这将覆盖学习者的默认预处理管道，并仅应用自定义预处理管道（默认预处理步骤在每个学习者的文档中都有描述）。该过程可能会导致学习者出现错误。</p>
-<p><img src="/images/Preprocess-Models1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess-Models1.png" class="" title="img">
 </li>
 <li><p>将预处理连接到测试和评分。这会将预处理器应用于交叉验证中的每个批次。然后学习器的预处理器将应用于预处理的子集。</p>
-<p><img src="/images/Preprocess-Models2.png" alt="img"></p>
-</li>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess-Models2.png" class="" title="img"></li>
 </ol>
 <p>最后，有一个错误的方法来做到这一点。将 Preprocess 直接连接到原始数据并输出预处理后的数据集可能会使模型过拟合。不要这样做。</p>
-<p><img src="/images/Preprocess-Models3.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess-Models3.png" class="" title="img">
+
 <p>例子</p>
 <p>在小部件的典型使用中，我们给它一个数据集和一些学习算法，然后我们在 Test &amp; Score 小部件和 ROC 中的表格中观察它们的性能。数据通常在测试前进行预处理；在这种情况下，我们在泰坦尼克号数据集上进行了一些手动特征选择（选择列小部件），我们只想知道幸存者的性别和状态，而忽略年龄。</p>
 <p>在底部的表格中，我们对模型进行了成对比较。我们选择比较是基于 ROC 曲线统计下的面积。表中的数字给出了行对应的模型优于列对应的模型的概率。例如，我们可以看到树优于 SVM 的概率几乎为 1，而树优于朴素贝叶斯的概率为 0.001。表中较小的数字是基于可忽略的阈值 0.1，该对之间的差异可忽略的概率。</p>
-<p><img src="/images/TestAndScore-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/TestAndScore-Example.png" class="" title="img">
+
 <p>混淆矩阵小部件的文档中介绍了使用此小部件的另一个示例。</p>
 <h2 id="Predictions-预测"><a href="#Predictions-预测" class="headerlink" title="Predictions - 预测"></a>Predictions - 预测</h2><blockquote>
 <p>显示模型对数据的预测。</p>
@@ -2167,7 +2301,8 @@
 <p>评估结果：测试分类算法的结果</p>
 </blockquote>
 <p>小部件接收一个数据集和一个或多个预测变量（预测模型，而不是学习算法 - 请参见下面的示例）。它输出数据和预测。</p>
-<p><img src="/images/Predictions-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Predictions-stamped.png" class="" title="img">
+
 <ol>
 <li>有关输入的信息，即要预测的实例数、预测变量数和任务（分类或回归）。如果您已按属性对数据表进行排序并且希望查看原始视图，请按恢复原始顺序。</li>
 <li>您可以选择分类选项。如果勾选预测类，视图将提供有关预测类的信息。如果勾选了预测概率，该视图将提供有关分类器预测概率的信息。您还可以选择视图中显示的预测类。选项 Draw distribution bars 提供了概率的可视化。</li>
@@ -2180,14 +2315,16 @@
 <p>在第一个示例中，我们将使用 Attrition - 来自数据集小部件的训练数据。这是关于员工流失的数据。换句话说，我们想知道某个员工是否会辞职。我们将使用 Tree 小部件构建一个预测模型，并在 Predictions 中观察概率。</p>
 <p>对于预测，我们既需要训练数据，我们已经将其加载到第一个数据集小部件中，又需要要预测的数据，我们将在另一个数据集小部件中加载这些数据。这次我们将使用 Attrition - Predict 数据。将第二个数据集连接到 Predictions。现在我们可以看到来自第二个数据集的三个数据实例的预测。</p>
 <p>树模型预测没有员工会离开公司。您可以尝试其他模型，看看预测是否改变。或者先在“测试与评分”小部件中测试预测分数。</p>
-<p><img src="/images/Predictions-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Predictions-Example1.png" class="" title="img">
+
 <p>在第二个示例中，我们将了解如何正确使用 Preprocess with Predictions 或 Test &amp; Score。</p>
 <p>这次我们使用文件小部件中的 heart disease.tab 数据。您可以通过下拉菜单访问数据。这是一个包含 303 名因胸痛就医的患者的数据集。测试完成后，发现一些患者直径变窄，而其他患者则没有（这是我们的类变量）。</p>
 <p>心脏病数据有一些缺失值，我们希望对此进行说明。首先，我们将使用 Data Sampler 将数据集拆分为训练数据和测试数据。</p>
 <p>然后我们将数据样本发送到预处理。我们将使用 Ipute Missing Values，但您可以对数据尝试任意组合的预处理器。我们会将预处理后的数据发送到逻辑回归，将构建的模型发送到预测。</p>
 <p>最后，Predictions 还需要用于预测的数据。我们将使用数据采样器的输出进行预测，但这次不是数据样本，而是剩余数据，这是未用于训练模型的数据。</p>
 <p>请注意我们如何在不应用任何预处理的情况下将剩余数据直接发送到 Predictions。这是因为 Orange 在内部处理新数据的预处理，以防止模型构建中出现任何错误。用于训练数据的预处理器将用于预测。相同的过程适用于测试和评分。</p>
-<p><img src="/images/Predictions-Example2.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Predictions-Example2.png" class="" title="img">
+
 <p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
 <blockquote>
@@ -2218,7 +2355,8 @@
 </ul>
 </blockquote>
 <p>光谱部件(<strong>Spectra</strong>)允许对多个光谱进行可视化探索。要输出一些光谱，请单击选择它们。对于多重选择，请按住修改键（Ctrl或Cmd）或使用行选择（请参见”绘图选项菜单-<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/#PlotOptions">plot options menu</a>“）。选定的光谱将显示为虚线。</p>
-<p><img src="/1.orange_widget.assets/Spectra-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Spectra-stamped.png" class="" title="img">
+
 <ol>
 <li>打开”绘图选项菜单-<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/#PlotOptions">plot options menu</a>“</li>
 <li>一个光谱</li>
@@ -2255,7 +2393,8 @@
 <p>我们使用了“颜色-<em>Color</em>”选项来显示每个光谱的类型。或者您也可以按“C”，绘图将显示颜色。颜色由数据定义；要更改颜色，请使用”颜色部件(Color)”。</p>
 <p>现在，假设我对这些光谱感兴趣，它们在1027波数附近与其他光谱完全分离。我将按“S”并拖动一条线。这将选择我拖动的线下的光谱。</p>
 <p>我可以在另一个光谱部件(Spectra)中观察选择，或将其用于进一步分析。</p>
-<p><img src="/1.orange_widget.assets/Spectra-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Spectra-Example1.png" class="" title="img">
+
 <h2 id="HyperSpectra-超光谱-平面光谱"><a href="#HyperSpectra-超光谱-平面光谱" class="headerlink" title="HyperSpectra - 超光谱 - 平面光谱"></a><a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/spectroscopy/hyperspectra/">HyperSpectra - 超光谱 - 平面光谱</a></h2><blockquote>
 <p>绘制二维平面光谱地图。</p>
 <p><strong>输入：</strong></p>
@@ -2270,7 +2409,8 @@
 </blockquote>
 <p>HyperSpectra部件绘制从.map文件读取的超光谱。要将此部件用于红外光谱数据，您需要使用<strong>Reshape Map</strong>部件对其进行变换。</p>
 <p>在顶部，<strong>HyperSpectra</strong>部件显示了光谱切片的2D图。在底部，显示了光谱图，红线表示我们在顶部观察到的波数切片。</p>
-<p><img src="/1.orange_widget.assets/HyperSpectra-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/HyperSpectra-stamped.png" class="" title="img">
+
 <ol>
 <li>Image values-图像值：定义光谱的变换（通常是积分）或使用特征作为绘图值。前一种转换可以是从0开始的积分、从基线开始的积分，从0开始峰值，从基线开始峰值，最近值，从0到最大值的X值或从基线开始最大值的X-值。</li>
 <li>光谱切片的高光谱图。<ul>
@@ -2300,7 +2440,8 @@
 </ul>
 </blockquote>
 <p>插值部件(<strong>Interpolate</strong>)使您能够将数据集与不同的波数对齐。它具有自动插值功能，或者对齐您所提供的参考数据集。</p>
-<p><img src="/1.orange_widget.assets/Interpolate-stamped.png" alt="img"></p>
+
+
 <ol>
 <li>Enable automatic interpolation-启用自动插值：创建一个新域，从而启用测试数据值的插值。</li>
 <li>Linear interva-线性间隔：<ul>
@@ -2318,7 +2459,8 @@
 <p>第二个用例更高级。我们将使用插值部件(<strong>Interpolate</strong>)来确定我们可以在测量中损失多少粒度。假设我们希望更快地执行诊断。我们可以只测量每10个波数吗？或者每50次？</p>
 <p>我们将使用数据集部件(<strong>Datasets</strong>)中的肝脏光谱数据(<em>Liver spectroscopy</em>)。将部件连接到插值部件(<strong>Interpolate</strong>)并使用”线性间隔-<em>Linear interval</em>“选项。增量设置为10。然后在测试和评分部件(<strong>Test &amp; Score</strong>)中观察预测模型的性能。使用您想要的任何分类器；我们选择了逻辑回归(<strong>Logistic Regression</strong>)和随机森林(<strong>Random Forest</strong>)。AUC相当高。</p>
 <p>现在，将delta设为50，观察AUC的变化。不多尝试将增量设置为100或150。AUC仍然很高，这意味着分类器即使在如此低的分辨率下也是稳定的。这是一种很好的方法，可以确定您能够承受多大的粒度损失，从而仍然能够实现类值之间的良好分离。</p>
-<p><img src="/1.orange_widget.assets/Interpolate-example.png" alt="Interpolate-example"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Interpolate-example.png" class="" title="Interpolate-example">
+
 <h2 id="Preprocess-Spectra-预处理光谱"><a href="#Preprocess-Spectra-预处理光谱" class="headerlink" title="Preprocess Spectra - 预处理光谱"></a>Preprocess Spectra - 预处理光谱</h2><blockquote>
 <p>构造数据预处理管道。</p>
 <p><strong>输入</strong>：</p>
@@ -2337,7 +2479,8 @@
 <p>您可以通过按下右侧的三角形按钮来观察每个预处理步骤。要应用所有这些并观察<u>最终结果预览</u>，请按<em>Final preview</em>。要输出数据，请按<em>Commit</em>。</p>
 <p>参考数据集是沿着输入数据进行处理的：只有先预处理器的使用参考作为输入，且如果引用需要保持固定，请在<strong>Preprocess Spectra</strong>部件中对多个方法进行拆分，然后与参考进行连接。</p>
 <p>下面是<strong>Preprocess Spectra</strong>部件的示例，并对其主要功能进行了一些解释。</p>
-<p><img src="/1.orange_widget.assets/Preprocess-Spectra-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess-Spectra-stamped.png" class="" title="img">
+
 <ol>
 <li>从下拉菜单中添加预处理方法。</li>
 <li>使用编辑器菜单预览绘图，和在**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/spectroscopy/spectra/">Spectra</a>**部件中一样。上图显示了预处理前的数据和预处理后的数据。</li>
@@ -2391,7 +2534,8 @@
 <p>在<strong>Preprocess Spectra</strong>部件中，我们将选择一对预处理方法并观察它们的输出。首先，让我们使用基线校正(<em>Baseline Correction</em>)，该方法中从光谱中去除基线。</p>
 <p>然后我们将使用<strong>裁剪(保持)</strong>[<em>Cut (keep)</em> ]方法切割感兴趣的区域。要设置要保留的区域，在绘图中向左或向右拖动红线。您将看到底部如何随着选择的改变而改变。</p>
 <p>要查看预处理的最终结果，请按<em>Final preview</em>，一旦您对结果感到满意，请按<em>Commit</em>。我们可以在<strong>Spectra</strong>部件中观察最终结果，或者在下游分析中使用预处理数据。</p>
-<p><img src="/1.orange_widget.assets/Preprocess-Spectra-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Preprocess-Spectra-Example.png" class="" title="img">
+
 <h2 id="Integrate-Spectra-谱积分"><a href="#Integrate-Spectra-谱积分" class="headerlink" title="Integrate Spectra - 谱积分"></a>Integrate Spectra - 谱积分</h2><blockquote>
 <p>构造数据预处理管道。</p>
 <p><strong>输入</strong>：</p>
@@ -2405,7 +2549,8 @@
 </ul>
 </blockquote>
 <p><strong>Integrate Spectra</strong>部件允许您通过选择感兴趣的区域，将积分列添加到数据集中，并将其与多种方法集成。</p>
-<p><img src="/1.orange_widget.assets/Integrate-Spectra-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Integrate-Spectra-stamped.png" class="" title="img">
+
 <ol>
 <li>添加积分：<ul>
 <li>从0开始积分；</li>
@@ -2427,7 +2572,8 @@
 <p>我们正在使用<strong>Datasets</strong>部件中的肝脏光谱数据集(<em>liver spectroscopy</em>)。在<strong>Integrate Spectra</strong>部件中，我们选择<u>从0开始积分</u>(selected <em>integral from 0</em>)，并用红线设置下限和上限。我们也可以通过设置左侧的下限和上限值来实现。</p>
 <p>要观察积分区域，我们需要按下方法旁边的三角形播放按钮。要输出数据，我们需要按Commit。</p>
 <p>最后，我们可以在<strong>Data Table</strong>中观察带有区域积分值的附加列。</p>
-<p><img src="/1.orange_widget.assets/Integrate-Spectra-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Integrate-Spectra-Example.png" class="" title="img">
+
 <h2 id="Peak-Fit-峰值拟合"><a href="#Peak-Fit-峰值拟合" class="headerlink" title="Peak Fit - 峰值拟合"></a>Peak Fit - 峰值拟合</h2><blockquote>
 <p>将数据拟合到复合峰值模型。</p>
 <p><strong>输入</strong>：</p>
@@ -2443,7 +2589,8 @@
 </ul>
 </blockquote>
 <p><strong>Peak Fit</strong>部件计算任意用户定义的复合峰值模型的最小二乘最小化曲线拟合。它输出定义模型的最佳拟合参数和最终的总拟合。</p>
-<p><img src="/1.orange_widget.assets/Peak-Fit-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Peak-Fit-stamped.png" class="" title="img">
+
 <ol>
 <li>从下拉菜单中添加<strong>model</strong>组件。</li>
 <li>输入模型的初始参数和约束。</li>
@@ -2510,7 +2657,8 @@
 </ul>
 </blockquote>
 <p><strong>Multifile</strong>部件从不同的源加载数据，工作方式类似于光谱中的<strong>Concatenate</strong>部件。该部件将输出属性和特征的联合，其中缺少不匹配波数的值。要插入缺少的数据，请使用<strong>Interpolate</strong>部件。</p>
-<p><img src="/1.orange_widget.assets/Multifile-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Multifile-stamped.png" class="" title="img">
+
 <ol>
 <li>已加载文件。</li>
 <li>加载本地文件。</li>
@@ -2524,7 +2672,8 @@
 <p><strong>Example - 示例</strong></p>
 <p>下面是一个如何使用<strong>Multifile</strong>部件的简单示例。我们已经加载了存储在本地机器上的两个数据集。我们使用文件夹图标访问文件并加载它们。现在，我们的文件显示在顶部框中。我们已经给这些文件贴上了胶原蛋白(<em>collagen</em>)的标签，弄清楚它是什么。</p>
 <p>我们可以在<strong>Spectra</strong>部件或<strong>Data Table</strong>中观察连接的数据。</p>
-<p><img src="/1.orange_widget.assets/Multifile-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Multifile-Example.png" class="" title="img">
+
 <h2 id="Tile-File-平铺文件"><a href="#Tile-File-平铺文件" class="headerlink" title="Tile File - 平铺文件"></a>Tile File - 平铺文件</h2><blockquote>
 <p>从输入文件逐个读取数据，对光谱(spectra)进行预处理，并将数据表发送到输出。</p>
 <p><strong>输入</strong>：</p>
@@ -2539,7 +2688,8 @@
 <p><strong>Tilefile</strong>部件从马赛克光谱图像加载数据，并将提供的预处理器应用于数据。预处理一次应用一个马赛克拼块，生成的处理数据集被合并到单个数据表中。</p>
 <p>至少有一个预处理器应该减小数据集的大小（如<strong>Cut-剪切</strong>、<strong>Integrate-积分</strong>），以利用此文件加载器并减少总内存使用。</p>
 <p>默认情况下，小部件不会自动加载数据集。这防止了在配置所需的预处理器链之前将大型数据集加载到内存中。因此需要按“Reload-重新加载”按钮加载数据。</p>
-<p><img src="/1.orange_widget.assets/Tilefile-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Tilefile-stamped.png" class="" title="img">
+
 <ol>
 <li>浏览以前打开的数据文件，或加载任何示例文件。</li>
 <li>浏览数据文件。</li>
@@ -2554,7 +2704,8 @@
 <p><strong>Example</strong></p>
 <p>下面是一个关于如何使用<strong>Tilefile</strong>部件的简单示例。我们在<strong>Preprocess Spectra</strong>部件中配置了一个预处理器列表，并将<strong>预处理器(Preprocessor)<strong>输出连接到</strong>Tilefile</strong>部件的输入。我们加载了存储在本地机器上的马赛克数据集。我们使用文件夹图标访问文件并加载它们。我们检查将应用的预处理器，然后按“Reload-重新加载”加载数据。现在，有关预处理数据集的信息显示在信息框和域编辑器中。</p>
 <p>我们可以在<strong>HyperSpectra</strong>部件或<strong>Data Table</strong>部件中观察预处理的数据。</p>
-<p><img src="/1.orange_widget.assets/Tilefile-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Tilefile-Example.png" class="" title="img">
+
 <h2 id="Average-Spectra-平均光谱"><a href="#Average-Spectra-平均光谱" class="headerlink" title="Average Spectra - 平均光谱"></a>Average Spectra - 平均光谱</h2><blockquote>
 <p>平均光谱</p>
 <p><strong>输入</strong>：</p>
@@ -2567,7 +2718,8 @@
 </ul>
 </blockquote>
 <p><strong>Average Spectra</strong>部件允许您计算平均光谱。它可以输出整个数据集的平均值，或按类别特征定义的组输出平均值。</p>
-<p><img src="/1.orange_widget.assets/Average-Spectra-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Average-Spectra-stamped.png" class="" title="img">
+
 <p>使用<em>Group by</em>（分组依据）输出由分类特征定义的平均值。<br>如果该组中的每一行都具有相同的值，则非数值数据列将返回一个值，否则将返回Unknown。</p>
 <h2 id="Interferogram-to-Spectrum-干涉图到光谱"><a href="#Interferogram-to-Spectrum-干涉图到光谱" class="headerlink" title="Interferogram to Spectrum - 干涉图到光谱"></a>Interferogram to Spectrum - 干涉图到光谱</h2><blockquote>
 <p>对干涉图执行快速傅里叶变换，包括零填充、变迹和相位校正。</p>
@@ -2593,7 +2745,8 @@
 </ul>
 </blockquote>
 <p><strong>Reshape Map</strong>部件将输入数据转换为二维图。</p>
-<p><img src="/1.orange_widget.assets/Reshape-Map-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Reshape-Map-stamped.png" class="" title="img">
+
 <ol>
 <li>贴图形状：<ul>
 <li>X维度。</li>
@@ -2629,16 +2782,19 @@
 
 <p>使用<em>Select axis:x</em>选择一个轴，该轴将作为由数字元定义的坐标系的第一个元素。</p>
 <p>使用<em>Select axis: y</em>选择一个轴，该轴将作为数字元定义的坐标系的第二个元素。</p>
-<p><img src="/1.orange_widget.assets/snr_print.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/snr_print.png" class="" title="img">
+
 <p>在上面的示例中，结果将是：<br>输出&#x3D;信噪比（列、行）  <strong>output &#x3D; Signal-to-noise ratio(column, row)</strong></p>
 <p>$SNR &#x3D; (\frac{\overline{Spectra_{column, row}}}{\sigma _{column, row}})$</p>
 <hr>
 
 <p>如果只选择一个轴：</p>
-<p><img src="/1.orange_widget.assets/snr_average_x.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/snr_average_x.png" class="" title="img">
+
 <p>输出&#x3D;平均值（x）  <strong>output &#x3D; Average(x)</strong></p>
 <p>$Average &#x3D; (\overline{Spectra_{column}})$ 或者</p>
-<p><img src="/1.orange_widget.assets/snr_std_y.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/snr_std_y.png" class="" title="img">
+
 <p>输出&#x3D;标准差(x)  <strong>output &#x3D; Standard Deviation(x)</strong></p>
 <p>$Standard Deviation &#x3D; (\sigma _{column})$</p>
 <p>如果您想要完整数据集的结果，可以将两者都保留为None。</p>
@@ -2654,14 +2810,16 @@
 </ul>
 </blockquote>
 <p>此部件将任何数据表重新解释为时间序列，因此它可以与此插件中的其他小部件一起使用。在小部件中，您可以设置哪个数据属性表示时间变量。</p>
-<p><img src="/1.orange_widget.assets/as-timeseries-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/as-timeseries-stamped.png" class="" title="img">
+
 <ol>
 <li>时间属性，其值表示测量的顺序和间隔。可以是任何连续属性。</li>
 <li>或者，可以指定时间序列序列由实例顺序表示。</li>
 </ol>
 <p><strong>Example - 示例</strong></p>
 <p>该部件的输入来自任何可进行数据发送的部件，例如<strong>File</strong>部件。注意，无论何时使用Orange核心部件（如 <strong>Select Columns</strong>部件）进行一些处理，都需要将转换重新应用到时间序列中。</p>
-<p><img src="/1.orange_widget.assets/as-timeseries-ex1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/as-timeseries-ex1.png" class="" title="img">
+
 <h2 id="Interpolate-插值-1"><a href="#Interpolate-插值-1" class="headerlink" title="Interpolate - 插值"></a>Interpolate - 插值</h2><blockquote>
 <p>通过插值法补充时间序列中的缺失值。</p>
 <p><strong>输入</strong>：</p>
@@ -2675,7 +2833,8 @@
 </ul>
 </blockquote>
 <p>大多数时间序列算法假设，数据中没有任何缺失的值。在这个小部件中，您可以选择插值方法来计算缺失的值。默认情况下，它是线性插值（快速合理的默认值）。</p>
-<p><img src="/1.orange_widget.assets/interpolate-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/interpolate-stamped.png" class="" title="img">
+
 <ol>
 <li>插值类型。可以选择线性、三次样条曲线、邻近或平均插值之一：<ul>
 <li><strong>线性插值</strong>将丢失的值替换为两个最近定义的数据点之间的线性间隔值。</li>
@@ -2689,7 +2848,8 @@
 <p>序列端点（头部和尾部）上的缺失值始终使用*邻近值(nearest)<em>的方法进行插值。除非将插值方法设置为</em>邻近值(nearest)*，否则离散时间序列（即序列）总是以序列模式（最频繁的值-众数）进行插补。</p>
 <p><strong>Example - 示例</strong></p>
 <p>传递缺少值的时间序列，得到插值时间序列。</p>
-<p><img src="/1.orange_widget.assets/interpolate-ex1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/interpolate-ex1.png" class="" title="img">
+
 <h2 id="Moving-Transform-移动变换"><a href="#Moving-Transform-移动变换" class="headerlink" title="Moving Transform - 移动变换"></a>Moving Transform - 移动变换</h2><blockquote>
 <p>在滑动窗口、连续块或时间序列的时间段上计算聚合。</p>
 <p><strong>输入</strong>：</p>
@@ -2701,7 +2861,8 @@
 <li>Time series-时间序列: 计算聚合数据的时间序列</li>
 </ul>
 </blockquote>
-<p><img src="/1.orange_widget.assets/moving-transform.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/moving-transform.png" class="" title="img">
+
 <ol>
 <li>定义形成数据块的方法：<ul>
 <li>滑动窗：使用指定宽度的滑动窗。该函数通常用于平滑数据。<ul>
@@ -2748,9 +2909,10 @@
 </ol>
 <p><strong>Examples-示例</strong></p>
 <p>移动变换的一个简单用例是在时间序列上应用平滑函数。我们使用**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/moving_transform_w/yahoo_finance.md">Yahoo Finance</a>部件<strong>检索亚马逊（AMZN）的每日股票价值，并将数据传递给</strong>Moving Transform**。为了得到一个5天的移动平均线，我们使用了一个具有平均值聚合的滚动窗口。在折线图( <a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/line_chart/">Line Chart</a>)中，我们可以看到High变量的初始（蓝色）值现在被平滑（红线）。</p>
-<p><img src="/1.orange_widget.assets/Moving-Transform-Example1.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Moving-Transform-Example1.png" class="" title="img">
+
 <p>另一种使用<strong>Moving Transform</strong>的方法是按给定周期聚合数据。假设我们希望观察**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datasets/">Datasets</a><strong>部件中网络安全漏洞(<em>Cyber security breaches</em>)数据的年平均值。我们在 <strong><a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/as_timeseries/">As Timeseries</a><strong>中将<em>breach_start</em>设置为时间变量。在</strong>Moving Transform</strong>中，我们按年份进行汇总，并使用美国国家(<em>US State</em>)和违约类型(<em>Type of Breach</em>)和个人受影响程度(<em>Individuals Affected</em>)变量的总和。在</strong><a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/data/datatable/">Data Table</a>**中，我们可以看到聚合数据。共有14个实例，每个实例代表一年。</p>
-<p><img src="https://orangedatamining.com/widget-catalog/time-series/images/Moving-Transform-Example2.png" alt="img"></p>
+<p><img src="https://orangedatamining.com/widget-catalog/time-series/1.orange_widget/Moving-Transform-Example2.png" alt="img"></p>
 <p>更多内容见<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/seasonal_adjustment/">Seasonal Adjustment</a></p>
 <h2 id="Line-Chart-折线图"><a href="#Line-Chart-折线图" class="headerlink" title="Line Chart - 折线图"></a>Line Chart - 折线图</h2><blockquote>
 <p>在最基本的时间序列可视化中，可视化时间序列的顺序和进程。</p>
@@ -2762,7 +2924,8 @@
 </ul>
 </blockquote>
 <p>您可以在此部件中可视化时间序列。请注意，<em>line</em>选项将数据显示为连接的线。如果不存在日期，部件将显示它们，然后将绘制一条线，将上一个已知值与下一个值连接起来。在缺少值的情况下，小部件将不会在给定位置绘制线，从而使图表断开连接。为了更好地查看缺少的值，我们建议使用列(<em>column</em>)选项。</p>
-<p><img src="/1.orange_widget.assets/LineChart.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/LineChart.png" class="" title="img">
+
 <ol>
 <li>在当前图表下方添加新的折线图。该小部件最多可以显示5个平行图表。</li>
 <li>设置图表类型。选项有：直线、阶梯线、列、区域。X按钮删除关联的图表。</li>
@@ -2772,7 +2935,8 @@
 <p><strong>Example - 示例</strong></p>
 <p>该示例使用了上一年的**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/yahoo_finance/">Yahoo Finance</a><strong>数据。我们可以观察</strong>Line Chart**中的数据。</p>
 <p>为了查看预测，我们使用<strong>VAR模型</strong>(<strong><a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/var/">VAR Model</a></strong>)来训练模型。随后，我们将模型的预测附加到折线图的预测输入信号上。预测用虚线绘制，置信区间作为范围区域。</p>
-<p><img src="/1.orange_widget.assets/LineChart-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/LineChart-Example.png" class="" title="img">
+
 <h2 id="Periodogram-周期性"><a href="#Periodogram-周期性" class="headerlink" title="Periodogram-周期性"></a>Periodogram-周期性</h2><blockquote>
 <p>可视化时间序列的周期、季节性、周期性和最重要的时期。</p>
 <p><strong>输入</strong>：</p>
@@ -2781,14 +2945,16 @@
 </ul>
 </blockquote>
 <p>在这个小部件中，您可以可视化时间序列中最重要的时段。</p>
-<p><img src="/1.orange_widget.assets/periodogram.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/periodogram.png" class="" title="img">
+
 <ol>
 <li>选择要计算周期图的系列。</li>
 </ol>
 <p>使用 Lomb-Scargle 方法计算非等间距序列的周期图。</p>
 <p><strong>Example - 示例</strong></p>
 <p>下面是一个关于如何使用周期图小部件的简单示例。我们已经将**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/yahoo_finance/">Yahoo Finance</a>**传递给部件，并绘制了过去6年亚马逊股票的周期性。</p>
-<p><img src="/1.orange_widget.assets/Periodogram-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Periodogram-Example.png" class="" title="img">
+
 <p>更多内容见<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/correlogram/">Correlogram-相关性</a></p>
 <h2 id="Correlogram-相关性"><a href="#Correlogram-相关性" class="headerlink" title="Correlogram - 相关性"></a>Correlogram - 相关性</h2><blockquote>
 <p>可视化变量的自相关性。</p>
@@ -2798,14 +2964,16 @@
 </ul>
 </blockquote>
 <p>在这个小部件中，您可以可视化所选时间序列的自相关系数。</p>
-<p><img src="/1.orange_widget.assets/correlogram.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/correlogram.png" class="" title="img">
+
 <ol>
 <li>选择要计算自相关的系列。</li>
 <li>选择使用偏自相关函数（PACF）来计算系数。选择绘制95%显著性区间（水平虚线）。超出此区间的系数可能很重要。</li>
 </ol>
 <p><strong>Example - 示例</strong></p>
 <p>下面是一个关于如何使用周期图小部件的简单示例。我们已经将**<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/yahoo_finance/">Yahoo Finance</a>**传递给小部件，并绘制了过去6年亚马逊股票的自相关性。</p>
-<p><img src="/1.orange_widget.assets/Correlogram-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Correlogram-Example.png" class="" title="img">
+
 <p>更多内容见<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/periodogram_w/">Periodogram-周期性</a></p>
 <h2 id="Spiralogram-螺旋线图"><a href="#Spiralogram-螺旋线图" class="headerlink" title="Spiralogram - 螺旋线图"></a>Spiralogram - 螺旋线图</h2><blockquote>
 <p>在螺旋热图中可视化时间序列的周期性。</p>
@@ -2820,7 +2988,8 @@
 </ul>
 </blockquote>
 <p>螺旋图用于可视化时间序列，并通过分类变量比较属性值。实例可以从绘图中选择并发送到下游。</p>
-<p><img src="/1.orange_widget.assets/spiralogram.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/spiralogram.png" class="" title="img">
+
 <ol>
 <li>圆周上的单位。选项包括：一年中的一个月（12个单位）、一年中一天（365个单位），一个月中的一天（~30个单位）和一周中的一周（周一至周日，7个单位）以及一天中的一小时（24个单位）及数据中的所有变量。</li>
 <li>垂直轴的单位。隐藏内部标签将删除垂直轴上的标签。</li>
@@ -2831,7 +3000,8 @@
 <p>我们将使用<a target="_blank" rel="noopener" href="https://orangedatamining.com/widget-catalog/time-series/as_timeseries/">As Timeseries</a>设置条目创建日期(<em>Entry creation date</em>)作为时间序列变量。然后我们将数据传递给<strong>Spiralogram</strong>。该小部件提供了许多选项，因此我们将在这里显示稍微复杂一些的设置。</p>
 <p>我们把这个圈子分成一年中的几个月。接下来，我们用一个属性“已清理(<em>cleaned</em>)”来分割垂直轴，这意味着外圈显示已清理的垃圾堆，内圈显示带有垃圾的垃圾堆。最后，我们将颜色设置为轮胎(<em>Tires</em>)[%]，并使用默认的平均值。这将显示每个月发现的轮胎的平均百分比，分为已清洁和未清洁的站点。从图中，我们可以看到，1月和11月登记的场地在垃圾场中轮胎的比例较高。可能，这与11月强制更换冬季轮胎有关，导致在自然环境中倾倒的旧轮胎数量高于平均值。已清理和未清理的场地之间没有明显区别。</p>
 <p>我们还选择了11月登记并已清理的场地。我们将数据传递到数据表，在那里我们可以检查各个垃圾场。</p>
-<p><img src="/1.orange_widget.assets/Spiralogram-Example.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/Spiralogram-Example.png" class="" title="img">
+
 <h2 id="Granger-Causality-因果关系"><a href="#Granger-Causality-因果关系" class="headerlink" title="Granger Causality - 因果关系"></a>Granger Causality - 因果关系</h2><blockquote>
 <p>测试一个时间序列Granger因果关系（即可以是另一时间序列的指标）。</p>
 <p><strong>输入</strong>：</p>
@@ -2840,7 +3010,8 @@
 </ul>
 </blockquote>
 <p>这个小部件执行一系列统计测试，以确定导致其他序列的序列，因此我们可以使用前者来预测后者。</p>
-<p><img src="/1.orange_widget.assets/granger-causality-stamped.png" alt="img"></p>
+<img src="/2024/03/18/1.MachineLearning/Orange/1.orange_widget/1.orange_widget/granger-causality-stamped.png" class="" title="img">
+
 <ol>
 <li>期望的信心水平。</li>
 <li>要测试的最大延迟。</li>
