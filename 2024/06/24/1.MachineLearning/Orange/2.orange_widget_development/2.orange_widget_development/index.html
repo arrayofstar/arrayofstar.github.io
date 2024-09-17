@@ -157,7 +157,7 @@
 </blockquote>
 <h1 id="准备开始-Getting-Started"><a href="#准备开始-Getting-Started" class="headerlink" title="准备开始 - Getting Started"></a>准备开始 - Getting Started</h1><p>Orange Widgets是Orange的可视化编程环境Orange Canvas中的组件。它们代表了一些自带功能，并提供图形用户界面（GUI）。小部件(Widgets)之间相互通信，并通过通信通道传递对象，以便从左到右与其他小部件交互。<br>在这个部分，我们将从一些简单的要点开始，向您展示如何构建一个简单的小部件，并使该小部件可以在Orange Canvas中运行。</p>
 <h2 id="先决条件-Prerequisites"><a href="#先决条件-Prerequisites" class="headerlink" title="先决条件 - Prerequisites"></a>先决条件 - Prerequisites</h2><p>每个Orange小部件都属于一个类别，并且在该类别中具有相关的优先级。打开Orange Canvas（Orange附带的可视化编程环境）时，小部件列在左侧的工具箱中：</p>
-<p><img src="https://img-blog.csdnimg.cn/direct/36dc65ffb02a43f58b950240d603457d.png" alt="_images/widgettoolbox.png"></p>
+<p><img src="images/2.orange_widget_development/36dc65ffb02a43f58b950240d603457d.png" alt="_images/widgettoolbox.png"></p>
 <p>每个小部件都有一个名称描述和一组输入&#x2F;输出（称为小部件的元描述）。</p>
 <p>这些元数据是在Orange Canvas应用程序启动时发现，该应用程序利用了setuptools&#x2F;displit及其<a target="_blank" rel="noopener" href="https://pythonhosted.org/setuptools/setuptools.html#dynamic-discovery-of-services-and-plugins">入口点协议</a>。Orange Canvas使用<code>Orange.widgets</code>入口点查找小部件。</p>
 <h2 id="Defining-a-widget-定义小部件"><a href="#Defining-a-widget-定义小部件" class="headerlink" title="Defining a widget - 定义小部件"></a>Defining a widget - 定义小部件</h2><p><a target="_blank" rel="noopener" href="https://orange-widget-base.readthedocs.io/en/latest/widget.html#orangewidget.widget.OWBaseWidget"><code>OWBaseWidget</code></a>是Orange Canvas工作流中小部件的基类。</p>
